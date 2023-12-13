@@ -5,10 +5,7 @@
   "dependencies": {
     "@ant-design/icons": "5.2.6",
     "@emotion/react": "11.11.1",
-    "@testing-library/jest-dom": "6.1.5",
-    "@testing-library/react": "14.1.2",
-    "@testing-library/user-event": "14.5.1",
-    "@types/jest": "29.5.11",
+    "@emotion/styled": "11.11.0",
     "@types/node": "20.10.4",
     "@types/react": "18.2.45",
     "@types/react-dom": "18.2.17",
@@ -18,8 +15,7 @@
     "react-bootstrap": "2.9.1",
     "react-dom": "18.2.0",
     "react-router-dom": "6.20.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "3.5.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

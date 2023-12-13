@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { css } from "@emotion/css";
+import { css } from "@emotion/react";
 
 const CityCardsRow1 = () => {
   return (

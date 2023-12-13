@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
-import { css } from "@emotion/css";
+import { css } from "@emotion/react";
 
 const Form = () => {
   return (
