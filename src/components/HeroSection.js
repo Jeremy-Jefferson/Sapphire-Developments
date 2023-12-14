@@ -1,80 +1,26 @@
-import { css } from "@emotion/css";
 import RentSale from "./RentSale";
 
 const HeroSection = () => {
   return (
     <section
-      className={css`
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: var(--padding-101xl) var(--padding-11xl);
-        background-image: url("/hero-section@3x.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-      `}
+      className="self-stretch flex flex-col items-center justify-start py-[120px] px-[30px] bg-[url('/public/png/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top]"
       id="Hero Section"
     >
       <div
-        className={css`
-          align-self: stretch;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: var(--gap-43xl);
-          max-width: 95%px;
-        `}
+        className="self-stretch flex flex-col items-center justify-center gap-[62px] max-w-[95%]"
         id="Hero Contents"
       >
         <header
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            mix-blend-mode: normal;
-            text-align: center;
-            font-size: var(--font-size-45xl);
-            color: var(--color-white);
-            font-family: var(--header-heading-4);
-            @media screen and (max-width: 960px) {
-              max-width: 100%;
-            }
-          `}
+          className="self-stretch flex flex-col items-center justify-start mix-blend-normal text-center text-45xl text-white font-header-heading-4 md:max-w-full"
           id="Find Your Dream Home"
         >
           <h1
-            className={css`
-              margin: 0;
-              align-self: stretch;
-              position: relative;
-              line-height: 72px;
-              mix-blend-mode: normal;
-              font-size: inherit;
-              font-family: inherit;
-            `}
+            className="m-0 self-stretch relative leading-[72px] mix-blend-normal text-inherit font-inherit"
             id="Find Your Dream Home"
             Title="1"
           >
-            <p
-              className={css`
-                margin: 0;
-                font-weight: 600;
-              `}
-            >
-              Find Your Dream Home
-            </p>
-            <p
-              className={css`
-                margin: 0;
-                font-size: var(--font-size-13xl);
-              `}
-            >
+            <p className="m-0 font-semibold">Find Your Dream Home</p>
+            <p className="m-0 text-13xl">
               {" "}
               Your dream home is just a click away, find the home that fits your
               lifestyle below:

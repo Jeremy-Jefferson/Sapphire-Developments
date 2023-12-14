@@ -1,14 +1,7 @@
-import { css } from "@emotion/css";
-
 const LogoIcon = ({ imageDimensions }) => {
   return (
     <img
-      className={css`
-        position: relative;
-        width: 284px;
-        height: 81px;
-        object-fit: cover;
-      `}
+      className="relative w-[284px] h-[81px] object-cover"
       alt=""
       src={imageDimensions}
     />

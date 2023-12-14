@@ -1,264 +1,85 @@
 import LogoIcon from "./LogoIcon";
-import { css } from "@emotion/css";
 
 const Contact2 = () => {
   return (
     <div
-      className={css`
-        height: 307px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        mix-blend-mode: normal;
-      `}
+      className="h-[307px] shrink-0 flex flex-col items-start justify-between mix-blend-normal"
       id="Contact"
     >
-      <LogoIcon imageDimensions="/logo1@2x.png" />
-      <article
-        className={css`
-          width: 285px;
-          height: 160px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: space-between;
-          text-align: center;
-          font-size: var(--header-heading-4-size);
-          color: var(--gray-500);
-          font-family: var(--header-heading-4);
-        `}
-      >
-        <span
-          className={css`
-            position: relative;
-            line-height: 32px;
-            font-weight: 600;
-            color: var(--gray-black);
-          `}
-        >
+      <LogoIcon imageDimensions="/png/logo11@2x.png" />
+      <article className="w-[285px] h-40 flex flex-col items-start justify-between text-center text-5xl text-gray-500 font-header-heading-4">
+        <span className="relative leading-[32px] font-semibold text-gray-black">
           Contact Us:
         </span>
-        <span
-          className={css`
-            position: relative;
-            text-align: left;
-          `}
-        >
-          1-800-SAP-PHIRE
+        <span className="relative text-left">1-800-SAP-PHIRE</span>
+        <span className="relative text-left mix-blend-normal">
+          <p className="m-0">{`5874 Sapphire Dr. `}</p>
+          <p className="m-0">Houston, TX 75874</p>
         </span>
-        <span
-          className={css`
-            position: relative;
-            text-align: left;
-            mix-blend-mode: normal;
-          `}
-        >
-          <p
-            className={css`
-              margin: 0;
-            `}
-          >{`5874 Sapphire Dr. `}</p>
-          <p
-            className={css`
-              margin: 0;
-            `}
-          >
-            Houston, TX 75874
-          </p>
-        </span>
-        <span
-          className={css`
-            position: relative;
-            font-size: var(--font-size-3xl);
-          `}
-        >
-          contact@sapphiredev.com
-        </span>
+        <span className="relative text-3xl">contact@sapphiredev.com</span>
       </article>
-      <div
-        className={css`
-          width: 285px;
-          height: 56px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        `}
-      >
+      <div className="w-[285px] h-14 flex flex-row items-center justify-between">
         <button
-          className={css`
-            cursor: pointer;
-            border: none;
-            padding: var(--padding-sm);
-            background-color: var(--primary-50);
-            border-radius: var(--br-9xs);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          `}
+          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
           preload
         >
           <a
-            className={css`
-              text-decoration: none;
-              position: relative;
-              width: 20px;
-              height: 20px;
-            `}
+            className="[text-decoration:none] relative w-5 h-5"
             id="FB Icon"
             href="https://www.facebook.com/jeremyejefferson/"
             target="_blank"
           >
             <img
-              className={css`
-                position: absolute;
-                height: 108.5%;
-                width: 50%;
-                top: -4%;
-                right: 25%;
-                bottom: -4.5%;
-                left: 25%;
-                max-width: 100%;
-                overflow: hidden;
-                max-height: 100%;
-              `}
+              className="absolute h-[108.5%] w-6/12 top-[-4%] right-[25%] bottom-[-4.5%] left-[25%] max-w-full overflow-hidden max-h-full"
               alt=""
-              src="/vector.svg"
+              src="/svg/vector.svg"
             />
           </a>
         </button>
         <button
-          className={css`
-            cursor: pointer;
-            border: none;
-            padding: var(--padding-sm);
-            background-color: var(--primary-50);
-            border-radius: var(--br-9xs);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          `}
+          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
           id="LinedIn"
         >
           <a
-            className={css`
-              text-decoration: none;
-              position: relative;
-              width: 20px;
-              height: 20px;
-              overflow: hidden;
-              flex-shrink: 0;
-            `}
+            className="[text-decoration:none] relative w-5 h-5 overflow-hidden shrink-0"
             id="LinkedIn"
             href="https://www.linkedin.com/in/jeremyejefferson/"
           >
             <img
-              className={css`
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                top: 0%;
-                right: 0%;
-                bottom: 0%;
-                left: 0%;
-                max-width: 100%;
-                overflow: hidden;
-                max-height: 100%;
-              `}
+              className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full"
               alt=""
-              src="/vector1.svg"
+              src="/svg/vector11.svg"
             />
           </a>
         </button>
         <button
-          className={css`
-            cursor: pointer;
-            border: none;
-            padding: var(--padding-sm);
-            background-color: var(--primary-50);
-            border-radius: var(--br-9xs);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          `}
+          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
           id="IG"
         >
           <a
-            className={css`
-              text-decoration: none;
-              position: relative;
-              width: 20px;
-              height: 20px;
-              overflow: hidden;
-              flex-shrink: 0;
-            `}
+            className="[text-decoration:none] relative w-5 h-5 overflow-hidden shrink-0"
             href="https://www.instagram.com/jeremyejefferson/"
           >
             <img
-              className={css`
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                top: 0%;
-                right: 0%;
-                bottom: 0%;
-                left: 0%;
-                max-width: 100%;
-                overflow: hidden;
-                max-height: 100%;
-              `}
+              className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full"
               alt=""
-              src="/vector2.svg"
+              src="/svg/vector21.svg"
             />
           </a>
         </button>
         <button
-          className={css`
-            cursor: pointer;
-            border: none;
-            padding: var(--padding-sm);
-            background-color: var(--primary-50);
-            border-radius: var(--br-9xs);
-            width: 48px;
-            height: 48px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
-          `}
+          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded w-12 h-12 flex flex-col items-center justify-center box-border"
           id="GitHub"
         >
           <a
-            className={css`
-              text-decoration: none;
-              position: relative;
-              width: 30px;
-              height: 30px;
-            `}
+            className="[text-decoration:none] relative w-[30px] h-[30px]"
             id="Github"
             href="https://github.com/jeremy-jefferson"
           >
             <img
-              className={css`
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                top: 0%;
-                right: 0%;
-                bottom: 0%;
-                left: 0%;
-                max-width: 100%;
-                overflow: hidden;
-                max-height: 100%;
-                object-fit: cover;
-              `}
+              className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full object-cover"
               alt=""
-              src="/github@2x.png"
+              src="/png/github2@2x.png"
             />
           </a>
         </button>

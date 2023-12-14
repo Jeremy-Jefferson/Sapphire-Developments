@@ -6,20 +6,11 @@ import PropertiesForRent from "./PropertiesForRent";
 import VacationPropSection from "./VacationPropSection";
 import ContactSection from "./ContactSection";
 import LPFooter from "./LPFooter";
-import { css } from "@emotion/css";
 
 const LandingPage = () => {
   return (
     <main
-      className={css`
-        background-color: var(--color-white);
-        width: 1920px;
-        height: 5096px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-      `}
+      className="bg-white w-[1920px] h-[5096px] flex flex-col items-center justify-start"
       id="Landing Page"
     >
       <LPHeader />

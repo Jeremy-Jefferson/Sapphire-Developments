@@ -1,288 +1,64 @@
 import Contact from "./Contact";
-import { css } from "@emotion/css";
 
 const LPFooter = () => {
   return (
     <section
-      className={css`
-        align-self: stretch;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: var(--padding-31xl);
-        @media screen and (max-width: 960px) {
-          align-self: stretch;
-          width: auto;
-          flex-direction: row;
-          gap: var(--gap-0);
-        }
-        @media screen and (max-width: 420px) {
-          flex-direction: column;
-        }
-      `}
+      className="self-stretch flex flex-row items-start justify-start p-[50px] md:self-stretch md:w-auto md:flex-row md:gap-[0px] sm:flex-col"
       id="Footer"
     >
-      <footer
-        className={css`
-          flex: 1;
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
-          mix-blend-mode: normal;
-          text-align: left;
-          font-size: var(--header-heading-4-size);
-          color: var(--gray-black);
-          font-family: var(--header-heading-4);
-          @media screen and (max-width: 960px) {
-            flex-direction: column;
-            gap: var(--gap-31xl);
-          }
-          @media screen and (max-width: 420px) {
-            flex-direction: column;
-            gap: var(--gap-31xl);
-            flex: unset;
-            align-self: stretch;
-          }
-        `}
-      >
+      <footer className="flex-1 shrink-0 flex flex-row items-start justify-between mix-blend-normal text-left text-5xl text-gray-black font-header-heading-4 md:flex-col md:gap-[50px] sm:flex-col sm:gap-[50px] sm:flex-[unset] sm:self-stretch">
         <Contact />
         <div
-          className={css`
-            width: 173px;
-            height: 248px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: var(--gap-13xl);
-            mix-blend-mode: normal;
-          `}
+          className="w-[173px] h-[248px] flex flex-col items-start justify-start gap-[32px] mix-blend-normal"
           id="Features"
         >
           <h3
-            className={css`
-              margin: 0;
-              position: relative;
-              font-size: inherit;
-              line-height: 32px;
-              font-weight: 600;
-              font-family: inherit;
-            `}
+            className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit"
             id="Features"
           >
             Features
           </h3>
-          <article
-            className={css`
-              align-self: stretch;
-              height: 184px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-              text-align: left;
-              font-size: var(--header-heading-4-size);
-              color: var(--gray-500);
-              font-family: var(--header-heading-4);
-            `}
-          >
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Home
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Become a Host
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Pricing
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Blog
-            </span>
-            <div
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Contact
-            </div>
+          <article className="self-stretch h-[184px] flex flex-col items-start justify-start gap-[16px] text-left text-5xl text-gray-500 font-header-heading-4">
+            <span className="relative leading-[24px]">Home</span>
+            <span className="relative leading-[24px]">Become a Host</span>
+            <span className="relative leading-[24px]">Pricing</span>
+            <span className="relative leading-[24px]">Blog</span>
+            <div className="relative leading-[24px]">Contact</div>
           </article>
         </div>
         <div
-          className={css`
-            width: 173px;
-            height: 248px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: var(--gap-13xl);
-            mix-blend-mode: normal;
-          `}
+          className="w-[173px] h-[248px] flex flex-col items-start justify-start gap-[32px] mix-blend-normal"
           id="Company"
         >
-          <h3
-            className={css`
-              margin: 0;
-              position: relative;
-              font-size: inherit;
-              line-height: 32px;
-              font-weight: 600;
-              font-family: inherit;
-              mix-blend-mode: normal;
-            `}
-          >
+          <h3 className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit mix-blend-normal">
             Company
           </h3>
-          <article
-            className={css`
-              align-self: stretch;
-              height: 184px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-              mix-blend-mode: normal;
-              text-align: left;
-              font-size: var(--header-heading-4-size);
-              color: var(--gray-500);
-              font-family: var(--header-heading-4);
-            `}
-          >
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              About Us
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Press
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Contact
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Careers
-            </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Blog
-            </span>
+          <article className="self-stretch h-[184px] flex flex-col items-start justify-start gap-[16px] mix-blend-normal text-left text-5xl text-gray-500 font-header-heading-4">
+            <span className="relative leading-[24px]">About Us</span>
+            <span className="relative leading-[24px]">Press</span>
+            <span className="relative leading-[24px]">Contact</span>
+            <span className="relative leading-[24px]">Careers</span>
+            <span className="relative leading-[24px]">Blog</span>
           </article>
         </div>
         <div
-          className={css`
-            width: 203px;
-            height: 168px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: var(--gap-13xl);
-            mix-blend-mode: normal;
-          `}
+          className="w-[203px] h-[168px] flex flex-col items-start justify-start gap-[32px] mix-blend-normal"
           id="Terms and Policies"
         >
           <h3
-            className={css`
-              margin: 0;
-              position: relative;
-              font-size: inherit;
-              line-height: 32px;
-              font-weight: 600;
-              font-family: inherit;
-              mix-blend-mode: normal;
-            `}
+            className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit mix-blend-normal"
             id={`Team & Policies`}
           >
             Team and policies
           </h3>
-          <article
-            className={css`
-              align-self: stretch;
-              height: 104px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-              mix-blend-mode: normal;
-              text-align: left;
-              font-size: var(--header-heading-4-size);
-              color: var(--gray-500);
-              font-family: var(--header-heading-4);
-            `}
-          >
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-                mix-blend-mode: normal;
-              `}
-            >
+          <article className="self-stretch h-[104px] flex flex-col items-start justify-start gap-[16px] mix-blend-normal text-left text-5xl text-gray-500 font-header-heading-4">
+            <span className="relative leading-[24px] mix-blend-normal">
               Terms of servies
             </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-                mix-blend-mode: normal;
-              `}
-            >
+            <span className="relative leading-[24px] mix-blend-normal">
               Privacy Policy
             </span>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-                mix-blend-mode: normal;
-              `}
-            >
+            <span className="relative leading-[24px] mix-blend-normal">
               Security
             </span>
           </article>

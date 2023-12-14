@@ -4,110 +4,44 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { Dropdown, Menu, Button as AntButton } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import { css } from "@emotion/css";
 import { useNavigate } from "react-router-dom";
 
 const RentSale = () => {
   const navigate = useNavigate();
 
   const onSearchCTAClick = useCallback(() => {
-    navigate("/");
+    navigate("/properties-grid-view");
   }, [navigate]);
 
   return (
     <main
-      className={css`
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: var(--gap-mid);
-        text-align: left;
-        font-size: var(--heading-heading-5-size);
-        color: var(--primary-700);
-        font-family: var(--body-large-400);
-      `}
+      className="self-stretch flex flex-col items-center justify-start gap-[17px] text-left text-base text-primary-700 font-body-large-400"
       id="HeroMain"
     >
       <div
-        className={css`
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: flex-start;
-          gap: var(--gap-3xs);
-        `}
+        className="flex flex-row items-start justify-start gap-[10px]"
         id="Buttons"
       >
-        <Button className={css``} name="Rent" variant="primary">
+        <Button name="Rent" variant="primary">
           Rent
         </Button>
-        <Button className={css``} name="Sale" variant="light">
+        <Button name="Sale" variant="light">
           Sale
         </Button>
       </div>
-      <div
-        className={css`
-          align-self: stretch;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: flex-start;
-          justify-content: center;
-        `}
-      >
+      <div className="self-stretch flex flex-row flex-wrap items-start justify-center">
         <div
-          className={css`
-            flex: 1;
-            border-radius: var(--br-5xs);
-            background-color: var(--color-white);
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: var(--padding-13xl) var(--padding-43xl);
-            box-sizing: border-box;
-            max-width: 1400px;
-            @media screen and (max-width: 960px) {
-              width: 300px;
-              flex-direction: column;
-              gap: var(--gap-xl);
-              align-items: flex-start;
-              justify-content: flex-start;
-              margin-left: auto;
-              margin-right: auto;
-            }
-          `}
+          className="flex-1 rounded-lg bg-white shrink-0 flex flex-row items-center justify-between py-8 px-[62px] box-border max-w-[1400px] md:w-[300px] md:flex-col md:gap-[20px] md:items-start md:justify-start md:ml-[auto] md:mr-[auto]"
           id="Form"
         >
-          <div
-            className={css`
-              width: 137px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-              text-align: center;
-            `}
-          >
+          <div className="w-[137px] flex flex-col items-start justify-start gap-[16px] text-center">
             <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 24px;
-                text-transform: capitalize;
-                font-weight: 600;
-                font-family: inherit;
-              `}
+              className="m-0 relative text-inherit leading-[24px] capitalize font-semibold font-inherit"
               id="Locations"
             >
               Locations
             </h1>
             <Dropdown
-              className={css``}
               overlay={
                 <Menu>
                   {[
@@ -127,44 +61,24 @@ const RentSale = () => {
               }
               trigger={["hover"]}
             >
-              <AntButton className={css``} onClick={(e) => e.preventDefault()}>
+              <AntButton onClick={(e) => e.preventDefault()}>
                 {`Select City `}
-                <DownOutlined className={css``} />
+                <DownOutlined />
               </AntButton>
             </Dropdown>
           </div>
           <div
-            className={css`
-              width: 177px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-            `}
+            className="w-[177px] flex flex-col items-start justify-start gap-[16px]"
             id="properties"
           >
             <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 24px;
-                text-transform: capitalize;
-                font-weight: 600;
-                font-family: inherit;
-                display: flex;
-                align-items: flex-end;
-                width: 150px;
-              `}
+              className="m-0 relative text-inherit leading-[24px] capitalize font-semibold font-inherit flex items-end w-[150px]"
               id="Property Type"
             >
               Property Type
             </h1>
             <Dropdown
-              className={css`
-                align-self: stretch;
-              `}
+              className="self-stretch"
               overlay={
                 <Menu>
                   {[
@@ -183,44 +97,24 @@ const RentSale = () => {
               }
               trigger={["hover"]}
             >
-              <AntButton className={css``} onClick={(e) => e.preventDefault()}>
+              <AntButton onClick={(e) => e.preventDefault()}>
                 {`Select property type `}
-                <DownOutlined className={css``} />
+                <DownOutlined />
               </AntButton>
             </Dropdown>
           </div>
           <div
-            className={css`
-              width: 155px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-            `}
+            className="w-[155px] flex flex-col items-start justify-start gap-[16px]"
             id="price"
           >
             <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 24px;
-                text-transform: capitalize;
-                font-weight: 600;
-                font-family: inherit;
-                display: flex;
-                align-items: flex-end;
-                width: 150px;
-              `}
+              className="m-0 relative text-inherit leading-[24px] capitalize font-semibold font-inherit flex items-end w-[150px]"
               id="Rent Range"
             >
               Price Range
             </h1>
             <Dropdown
-              className={css`
-                align-self: stretch;
-              `}
+              className="self-stretch"
               overlay={
                 <Menu>
                   {[
@@ -238,17 +132,14 @@ const RentSale = () => {
               }
               trigger={["hover"]}
             >
-              <AntButton className={css``} onClick={(e) => e.preventDefault()}>
+              <AntButton onClick={(e) => e.preventDefault()}>
                 {`Select rent range `}
-                <DownOutlined className={css``} />
+                <DownOutlined />
               </AntButton>
             </Dropdown>
           </div>
           <Button
-            className={css`
-              width: 102px;
-              cursor: pointer;
-            `}
+            className="w-[102px] cursor-pointer"
             name="Search"
             variant="primary"
             size="lg"

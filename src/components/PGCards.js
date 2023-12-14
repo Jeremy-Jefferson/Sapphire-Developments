@@ -1,2640 +1,814 @@
-import { css } from "@emotion/css";
-
 const PGCards = () => {
   return (
     <div
-      className={css`
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: center;
-        gap: var(--gap-5xs);
-        text-align: left;
-        font-size: 14.51px;
-        color: var(--gray-700);
-        font-family: var(--body-large-400);
-      `}
+      className="flex-1 shrink-0 flex flex-row flex-wrap items-start justify-center gap-[8px] text-left text-[14.51px] text-gray-700 font-body-large-400"
       id="Cards"
     >
-      <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 350px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
-      >
+      <div className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[350px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5">
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           id="Rental 2"
           alt=""
-          src="/Rental 2@2x.png"
+          src="/png/Rental 21@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
-          <div
-            className={css`
-              flex: 1;
-              position: relative;
-              line-height: 20.32px;
-              font-weight: 500;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
+          <div className="flex-1 relative leading-[20.32px] font-medium">
             2166 Marlin Ct. Miami, FL 33134
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 2,660,840
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
-        >
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]">
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental card footer 2"
         >
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]"
             id="User"
           >
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               alt=""
-              src="/ellipse-1@2x.png"
+              src="/png/ellipse-11@2x.png"
             />
-            <h2
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h2 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h2>
           </div>
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
+            className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]"
             id="buttons"
           >
-            <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
-            >
+            <button className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start">
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/sharenetwork.svg"
+                src="/svg/sharenetwork.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
-      <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 350px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
-      >
+      <div className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[350px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5">
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           id="Rental 3"
           alt=""
-          src="/Rental 3@2x.png"
+          src="/png/Rental 31@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
-          <h1
-            className={css`
-              margin: 0;
-              flex: 1;
-              position: relative;
-              font-size: inherit;
-              line-height: 20.32px;
-              font-weight: 500;
-              font-family: inherit;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
+          <h1 className="m-0 flex-1 relative text-inherit leading-[20.32px] font-medium font-inherit">
             3455 Marvel Dr. Houston, TX 77445
           </h1>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 890,693
           </div>
         </div>
         <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
+          className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]"
           id="Rental 3"
         >
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental card footer 3"
         >
-          <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
-          >
+          <div className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]">
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               alt=""
-              src="/ellipse-1@2x.png"
+              src="/png/ellipse-11@2x.png"
             />
-            <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h1 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h1>
           </div>
-          <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
-          >
+          <div className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]">
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/sharenetwork.svg"
+                src="/svg/sharenetwork.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
       <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 355px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          min-width: 355px;
-          max-width: 400px;
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
+        className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[355px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] min-w-[355px] max-w-[400px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5"
         id="rental 4"
       >
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           alt=""
-          src="/property-image4@2x.png"
+          src="/png/property-image41@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
           <h1
-            className={css`
-              margin: 0;
-              flex: 1;
-              position: relative;
-              font-size: inherit;
-              line-height: 20.32px;
-              font-weight: 500;
-              font-family: inherit;
-            `}
+            className="m-0 flex-1 relative text-inherit leading-[20.32px] font-medium font-inherit"
             id="4456 Ozarka St. Las Vegas, NV 81566"
           >
             4456 Ozarka St. Las Vegas, NV 89134
           </h1>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 725,903
           </div>
         </div>
         <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
+          className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]"
           id="details"
         >
           <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400"
             id="Parking"
           >
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental card footer 4"
         >
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]"
             id="User"
           >
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               alt=""
-              src="/ellipse-1@2x.png"
+              src="/png/ellipse-11@2x.png"
             />
-            <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h1 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h1>
           </div>
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
+            className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]"
             id="Buttons"
           >
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/sharenetwork.svg"
+                src="/svg/sharenetwork.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
       <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 355px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          min-width: 355px;
-          max-width: 400px;
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
+        className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[355px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] min-w-[355px] max-w-[400px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5"
         id="Rental 1"
       >
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           alt=""
-          src="/Rental 1@2x.png"
+          src="/png/Rental 11@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
-          <div
-            className={css`
-              flex: 1;
-              position: relative;
-              line-height: 20.32px;
-              font-weight: 500;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
+          <div className="flex-1 relative leading-[20.32px] font-medium">
             713 Arturo Ln. Los Angeles, CA 90401
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 920,544
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
-        >
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]">
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               loading="lazy"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental 1 card footer"
         >
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]"
             id="User"
           >
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               loading="lazy"
               alt=""
-              src="/ellipse-1@2x.png"
+              src="/png/ellipse-11@2x.png"
             />
-            <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h1 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h1>
           </div>
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
+            className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]"
             id="Buttons"
           >
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                  object-fit: cover;
-                `}
+                className="relative w-[14.5px] h-[14.5px] object-cover"
                 alt=""
-                src="/share@2x.png"
+                src="/png/share1@2x.png"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="Fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="Add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
-      <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 355px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          min-width: 355px;
-          max-width: 400px;
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
-      >
+      <div className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[355px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] min-w-[355px] max-w-[400px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5">
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           id="Rental 2"
           alt=""
-          src="/Rental 21@2x.png"
+          src="/png/Rental 211@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
-          <div
-            className={css`
-              flex: 1;
-              position: relative;
-              line-height: 20.32px;
-              font-weight: 500;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
+          <div className="flex-1 relative leading-[20.32px] font-medium">
             4560 Willow St. Miami, FL 33134
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 4,590,240
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
-        >
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]">
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental card footer 2"
         >
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]"
             id="User"
           >
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               alt=""
-              src="/ellipse-1@2x.png"
+              src="/png/ellipse-11@2x.png"
             />
-            <h2
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h2 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h2>
           </div>
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
+            className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]"
             id="buttons"
           >
-            <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
-            >
+            <button className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start">
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/sharenetwork.svg"
+                src="/svg/sharenetwork.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
-      <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 355px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          min-width: 355px;
-          max-width: 400px;
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
-      >
+      <div className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[355px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] min-w-[355px] max-w-[400px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5">
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           id="Rental 3"
           alt=""
-          src="/Rental 31@2x.png"
+          src="/png/Rental 311@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
-          <h1
-            className={css`
-              margin: 0;
-              flex: 1;
-              position: relative;
-              font-size: inherit;
-              line-height: 20.32px;
-              font-weight: 500;
-              font-family: inherit;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
+          <h1 className="m-0 flex-1 relative text-inherit leading-[20.32px] font-medium font-inherit">
             2634 Sycamore Ln. Los Angeles, CA 90210
           </h1>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 1,590,693
           </div>
         </div>
         <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
+          className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]"
           id="Rental 3"
         >
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental card footer 3"
         >
-          <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
-          >
+          <div className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]">
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               alt=""
-              src="/ellipse-11@2x.png"
+              src="/png/ellipse-111@2x.png"
             />
-            <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h1 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h1>
           </div>
-          <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
-          >
+          <div className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]">
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/sharenetwork.svg"
+                src="/svg/sharenetwork.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
       <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 355px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          min-width: 355px;
-          max-width: 400px;
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
+        className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[355px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] min-w-[355px] max-w-[400px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5"
         id="rental 4"
       >
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           alt=""
-          src="/property-image41@2x.png"
+          src="/png/property-image411@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
           <h1
-            className={css`
-              margin: 0;
-              flex: 1;
-              position: relative;
-              font-size: inherit;
-              line-height: 20.32px;
-              font-weight: 500;
-              font-family: inherit;
-            `}
+            className="m-0 flex-1 relative text-inherit leading-[20.32px] font-medium font-inherit"
             id="4456 Ozarka St. Las Vegas, NV 81566"
           >
             234 Oakwood Dr. Las Vegas, NV 89101
           </h1>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 3,525,903
           </div>
         </div>
         <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
+          className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]"
           id="details"
         >
           <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400"
             id="Parking"
           >
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental card footer 4"
         >
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]"
             id="User"
           >
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               alt=""
-              src="/ellipse-11@2x.png"
+              src="/png/ellipse-111@2x.png"
             />
-            <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h1 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h1>
           </div>
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
+            className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]"
             id="Buttons"
           >
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/sharenetwork.svg"
+                src="/svg/sharenetwork.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>
         </footer>
       </div>
       <div
-        className={css`
-          border-radius: var(--br-3xs);
-          background-color: var(--color-white);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-          border: 1px solid var(--color-whitesmoke-100);
-          box-sizing: border-box;
-          width: 350px;
-          height: 467px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: var(--padding-mini) var(--padding-smi);
-          gap: var(--gap-4xl);
-          &:hover {
-            background-color: var(--color-gainsboro);
-            cursor: pointer;
-          }
-          @media screen and (max-width: 420px) {
-            width: 100% !important;
-            margin-bottom: 20px;
-          }
-        `}
+        className="rounded-3xs bg-white shadow-[0px_10px_10px_rgba(0,_0,_0,_0.25)] box-border w-[350px] h-[467px] flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5"
         id="Rental 1"
       >
         <img
-          className={css`
-            align-self: stretch;
-            position: relative;
-            border-radius: var(--br-3xs);
-            max-width: 100%;
-            overflow: hidden;
-            height: 200px;
-            flex-shrink: 0;
-            object-fit: cover;
-          `}
+          className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           alt=""
-          src="/Rental 11@2x.png"
+          src="/png/Rental 111@2x.png"
         />
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-          `}
-        >
-          <div
-            className={css`
-              flex: 1;
-              position: relative;
-              line-height: 20.32px;
-              font-weight: 500;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5">
+          <div className="flex-1 relative leading-[20.32px] font-medium">
             890 Birch Ave. Houston, TX 77021
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-3xs);
-            font-size: 13.55px;
-            color: var(--color-darkslateblue-100);
-          `}
-        >
-          <div
-            className={css`
-              position: relative;
-              line-height: 18.98px;
-              font-weight: 600;
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-[13.55px] text-darkslateblue">
+          <div className="relative leading-[18.98px] font-semibold">
             $ 12,720,180
           </div>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px var(--padding-3xs);
-            gap: var(--gap-mid);
-          `}
-        >
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+        <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px]">
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/car.svg"
+              src="/svg/car.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               alt=""
-              src="/bathtub.svg"
+              src="/svg/bathtub.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
-              4
-            </small>
+            <small className="relative leading-[16.27px] font-medium">4</small>
           </fieldset>
-          <fieldset
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 4.35px;
-              text-align: left;
-              font-size: 10.84px;
-              color: var(--gray-500);
-              font-family: var(--body-large-400);
-            `}
-          >
+          <fieldset className="shrink-0 flex flex-row items-center justify-start gap-[4.35px] text-left text-[10.84px] text-gray-500 font-body-large-400">
             <img
-              className={css`
-                position: relative;
-                width: 17.4px;
-                height: 17.4px;
-              `}
+              className="relative w-[17.4px] h-[17.4px]"
               loading="lazy"
               alt=""
-              src="/arrowsout.svg"
+              src="/svg/arrowsout.svg"
             />
-            <small
-              className={css`
-                position: relative;
-                line-height: 16.27px;
-                font-weight: 500;
-              `}
-            >
+            <small className="relative leading-[16.27px] font-medium">
               2,096.00 ft
             </small>
           </fieldset>
         </div>
         <footer
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 11.61px;
-            color: var(--gray-700);
-            font-family: var(--body-large-400);
-          `}
+          className="self-stretch flex flex-row items-center justify-between text-center text-[11.61px] text-gray-700 font-body-large-400"
           id="Rental 1 card footer"
         >
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: flex-start;
-              gap: 5.81px;
-            `}
+            className="shrink-0 flex flex-row items-center justify-start gap-[5.81px]"
             id="User"
           >
             <img
-              className={css`
-                position: relative;
-                border-radius: 50%;
-                width: 27.6px;
-                height: 27.6px;
-                object-fit: cover;
-              `}
+              className="relative rounded-[50%] w-[27.6px] h-[27.6px] object-cover"
               loading="lazy"
               alt=""
-              src="/ellipse-11@2x.png"
+              src="/png/ellipse-111@2x.png"
             />
-            <h1
-              className={css`
-                margin: 0;
-                position: relative;
-                font-size: inherit;
-                line-height: 17.42px;
-                font-weight: 500;
-                font-family: inherit;
-              `}
-            >
+            <h1 className="m-0 relative text-inherit leading-[17.42px] font-medium font-inherit">
               Jenny Wilson
             </h1>
           </div>
           <div
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 8.71px;
-            `}
+            className="shrink-0 flex flex-row items-start justify-start gap-[8.71px]"
             id="Buttons"
           >
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                  object-fit: cover;
-                `}
+                className="relative w-[14.5px] h-[14.5px] object-cover"
                 alt=""
-                src="/share1@2x.png"
+                src="/png/share11@2x.png"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="Fave"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/heart.svg"
+                src="/svg/heart.svg"
               />
             </button>
             <button
-              className={css`
-                cursor: pointer;
-                border: none;
-                padding: 2.902620315551758px;
-                background-color: var(--primary-50);
-                border-radius: 1.45px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              `}
+              className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="Add"
             >
               <img
-                className={css`
-                  position: relative;
-                  width: 14.5px;
-                  height: 14.5px;
-                `}
+                className="relative w-[14.5px] h-[14.5px]"
                 alt=""
-                src="/plus.svg"
+                src="/svg/plus.svg"
               />
             </button>
           </div>

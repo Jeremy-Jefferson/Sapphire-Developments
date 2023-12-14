@@ -1,105 +1,29 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { css } from "@emotion/react";
 
 const CardLink = ({ location1, propBackgroundImage }) => {
+  const card1Style = useMemo(() => {
+    return {
+      backgroundImage: propBackgroundImage,
+    };
+  }, [propBackgroundImage]);
+
   return (
     <Link
-      className={css`
-        cursor: pointer;
-        text-decoration: none;
-        flex: 1;
-        border-radius: var(--br-7xs);
-        height: 426px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        padding: var(--padding-5xl);
-        box-sizing: border-box;
-        background-image: url("/card-11@3x.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        min-width: 355px;
-        max-width: 370px;
-        background-image: ${propBackgroundImage};
-      `}
-      to="/"
+      className="cursor-pointer [text-decoration:none] flex-1 rounded-md h-[426px] flex flex-col items-center justify-end p-6 box-border bg-[url('/public/png/card-11@3x.png')] bg-cover bg-no-repeat bg-[top] min-w-[355px] max-w-[370px]"
+      to="/properties-grid-view"
+      style={card1Style}
     >
-      <footer
-        className={css`
-          align-self: stretch;
-          height: 24px;
-          display: flex;
-          flex-direction: row;
-          align-items: flex-end;
-          justify-content: center;
-          gap: var(--gap-13xl);
-        `}
-      >
-        <fieldset
-          className={css`
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-end;
-            gap: var(--gap-5xs);
-            text-align: left;
-            font-size: var(--heading-heading-5-size);
-            color: var(--color-white);
-            font-family: var(--body-large-400);
-          `}
-        >
-          <img
-            className={css`
-              position: relative;
-              width: 24px;
-              height: 24px;
-            `}
-            alt=""
-            src="/pin(icon).svg"
-          />
-          <small
-            className={css`
-              position: relative;
-              line-height: 24px;
-              font-weight: 500;
-            `}
-          >
+      <footer className="self-stretch h-6 flex flex-row items-end justify-center gap-[32px]">
+        <fieldset className="flex flex-row items-start justify-end gap-[8px] text-left text-base text-white font-body-large-400">
+          <img className="relative w-6 h-6" alt="" src="/svg/pin(icon).svg" />
+          <small className="relative leading-[24px] font-medium">
             {location1}
           </small>
         </fieldset>
-        <fieldset
-          className={css`
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-end;
-            gap: var(--gap-5xs);
-            text-align: left;
-            font-size: var(--heading-heading-5-size);
-            color: var(--color-white);
-            font-family: var(--body-large-400);
-          `}
-        >
-          <img
-            className={css`
-              position: relative;
-              width: 24px;
-              height: 24px;
-            `}
-            alt=""
-            src="/arrowsout1.svg"
-          />
-          <small
-            className={css`
-              position: relative;
-              line-height: 24px;
-              font-weight: 500;
-            `}
-          >
-            12000
-          </small>
+        <fieldset className="flex flex-row items-start justify-end gap-[8px] text-left text-base text-white font-body-large-400">
+          <img className="relative w-6 h-6" alt="" src="/svg/arrowsout1.svg" />
+          <small className="relative leading-[24px] font-medium">12000</small>
         </fieldset>
       </footer>
     </Link>

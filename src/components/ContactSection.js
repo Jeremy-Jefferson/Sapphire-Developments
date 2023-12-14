@@ -1,81 +1,21 @@
-import { css } from "@emotion/css";
-import Form from "Form";
+import Form from "./Form";
 
 const ContactSection = () => {
   return (
     <section
-      className={css`
-        align-self: stretch;
-        background-color: var(--primary-50);
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: center;
-        padding: var(--padding-67xl) var(--padding-8xs);
-        text-align: center;
-        font-size: var(--heading-heading-1-size);
-        color: var(--primary-800);
-        font-family: var(--body-large-400);
-      `}
+      className="self-stretch bg-primary-50 flex flex-row flex-wrap items-start justify-center py-[86px] px-[5px] text-center text-21xl text-primary-800 font-body-large-400"
       id="Contact"
     >
-      <div
-        className={css`
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 0px var(--padding-3xs);
-          box-sizing: border-box;
-          gap: var(--gap-21xl);
-          max-width: 900px;
-        `}
-      >
-        <div
-          className={css`
-            width: 688px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: var(--gap-5xl);
-            max-width: 95%px;
-            @media screen and (max-width: 1200px) {
-              max-width: 95%;
-            }
-            @media screen and (max-width: 960px) {
-              align-self: stretch;
-              width: auto;
-            }
-          `}
-        >
+      <div className="flex-1 flex flex-col items-center justify-start py-0 px-2.5 box-border gap-[40px] max-w-[900px]">
+        <div className="w-[688px] flex flex-col items-center justify-start gap-[24px] max-w-[95%] lg:max-w-[95%] md:self-stretch md:w-auto">
           <h1
-            className={css`
-              margin: 0;
-              align-self: stretch;
-              position: relative;
-              font-size: inherit;
-              line-height: 48px;
-              font-weight: 600;
-              font-family: inherit;
-            `}
+            className="m-0 self-stretch relative text-inherit leading-[48px] font-semibold font-inherit"
             id="Contact Us"
           >
             Contact Us
           </h1>
           <h2
-            className={css`
-              margin: 0;
-              align-self: stretch;
-              position: relative;
-              font-size: var(--body-large-400-size);
-              line-height: 28px;
-              font-weight: 400;
-              font-family: inherit;
-              color: var(--color-lightslategray);
-            `}
+            className="m-0 self-stretch relative text-xl leading-[28px] font-normal font-inherit text-lightslategray"
             id="Sapphire Developments is committed to assisting you in finding your perfect property, contact us for a personalized real estate experience."
           >
             Sapphire Developments is committed to assisting you in finding your

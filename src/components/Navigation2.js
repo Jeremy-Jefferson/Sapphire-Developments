@@ -1,133 +1,44 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { css } from "@emotion/css";
 
 const Navigation2 = () => {
   return (
     <nav
-      className={css`
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: var(--gap-11xl);
-        mix-blend-mode: normal;
-        text-align: center;
-        font-size: var(--body-large-400-size);
-        color: var(--primary-900);
-        font-family: var(--body-large-400);
-        @media screen and (max-width: 1200px) {
-          display: none;
-        }
-      `}
+      className="m-0 shrink-0 flex flex-row items-center justify-center gap-[30px] mix-blend-normal text-center text-xl text-primary-900 font-body-large-400 lg:hidden"
       id="Nav1"
       NAV="1"
     >
       <Link
-        className={css`
-          cursor: pointer;
-          text-decoration: none;
-          position: relative;
-          line-height: 22px;
-          color: inherit;
-          mix-blend-mode: normal;
-        `}
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
         id="HOME"
-        to="/landing-page"
+        to="/"
       >
         HOME
       </Link>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-          mix-blend-mode: normal;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         ABOUT US
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-          mix-blend-mode: normal;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         OUR AGENTS
       </h1>
       <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 600;
-          font-family: inherit;
-          color: var(--color-darkslateblue-100);
-          mix-blend-mode: normal;
-        `}
+        className="m-0 relative text-inherit leading-[22px] font-semibold font-inherit text-darkslateblue mix-blend-normal"
         id="PROPERTIES"
       >
         PROPERTIES
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-          mix-blend-mode: normal;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         GALLERY
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-          mix-blend-mode: normal;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         BLOG
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-          mix-blend-mode: normal;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         CONTACT US
       </h1>
-      <Form
-        className={css`
-          border: none;
-          background-color: transparent;
-          position: relative;
-          mix-blend-mode: normal;
-        `}
-      >
-        <Form.Control className={css``} type="search" placeholder="SEARCH" />
+      <Form className="[border:none] bg-[transparent] relative mix-blend-normal">
+        <Form.Control type="search" placeholder="SEARCH" />
       </Form>
     </nav>
   );

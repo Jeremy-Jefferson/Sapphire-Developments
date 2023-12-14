@@ -6,175 +6,56 @@ import {
   ArrowRightOutlined,
 } from "@ant-design/icons";
 import PHeader from "./PHeader";
-import { css } from "@emotion/css";
 import PGCards from "./PGCards";
 import PGFooter from "./PGFooter";
 
 const PropertiesGridView = () => {
   return (
     <main
-      className={css`
-        background-color: var(--color-white);
-        width: 1920px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-      `}
+      className="bg-white w-[1920px] flex flex-col items-start justify-start"
       id="Properties Grid View"
     >
       <PHeader />
       <section
-        className={css`
-          align-self: stretch;
-          height: 240px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background-image: url("/category@3x.png");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top;
-          text-align: center;
-          font-size: var(--display-size);
-          color: var(--color-white);
-          font-family: var(--header-heading-4);
-        `}
+        className="self-stretch h-60 flex flex-col items-center justify-center bg-[url('/public/png/category@3x.png')] bg-cover bg-no-repeat bg-[top] text-center text-33xl text-white font-header-heading-4"
         id="Properties (Hero)"
       >
         <div
-          className={css`
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 12px;
-          `}
+          className="flex flex-col items-center justify-start gap-[12px]"
           id="Properties"
         >
           <h1
-            className={css`
-              margin: 0;
-              position: relative;
-              font-size: inherit;
-              line-height: 72px;
-              font-weight: 600;
-              font-family: inherit;
-            `}
+            className="m-0 relative text-inherit leading-[72px] font-semibold font-inherit"
             id="Properties"
           >
             Properties
           </h1>
-          <h1
-            className={css`
-              margin: 0;
-              position: relative;
-              font-size: var(--heading-heading-5-size);
-              line-height: 24px;
-              color: #e7e9eb;
-              font-family: var(--body-large-400);
-            `}
-          >
-            <span className={css``}>{`Home / `}</span>
-            <span
-              className={css`
-                font-weight: 500;
-                color: var(--color-white);
-              `}
-            >
-              Properties
-            </span>
+          <h1 className="m-0 relative text-base leading-[24px] text-whitesmoke-200 font-body-large-400">
+            <span>{`Home / `}</span>
+            <span className="font-medium text-white">Properties</span>
           </h1>
         </div>
       </section>
       <section
-        className={css`
-          align-self: stretch;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 64px 0px 8px;
-          gap: 95px;
-          @media screen and (max-width: 1200px) {
-            padding-left: var(--padding-101xl);
-            padding-right: var(--padding-101xl);
-            box-sizing: border-box;
-          }
-          @media screen and (max-width: 960px) {
-            padding-left: var(--padding-41xl);
-            padding-right: var(--padding-41xl);
-            box-sizing: border-box;
-          }
-          @media screen and (max-width: 420px) {
-            padding-left: var(--padding-xl);
-            padding-right: var(--padding-xl);
-            box-sizing: border-box;
-          }
-        `}
+        className="self-stretch flex flex-col items-center justify-start pt-16 px-0 pb-2 gap-[95px] lg:pl-[120px] lg:pr-[120px] lg:box-border md:pl-[60px] md:pr-[60px] md:box-border sm:pl-5 sm:pr-5 sm:box-border"
         id="Properties"
       >
-        <div
-          className={css`
-            width: 272px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-          `}
-        >
-          <article
-            className={css`
-              display: flex;
-              flex-direction: row;
-              align-items: flex-end;
-              justify-content: flex-start;
-              gap: var(--gap-base);
-              text-align: left;
-              font-size: var(--heading-heading-5-size);
-              color: var(--gray-black);
-              font-family: var(--body-large-400);
-            `}
-          >
-            <div
-              className={css`
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: var(--gap-5xs);
-              `}
-            >
+        <div className="w-[272px] flex flex-row items-center justify-start">
+          <article className="shrink-0 flex flex-row items-end justify-start gap-[16px] text-left text-base text-gray-black font-body-large-400">
+            <div className="shrink-0 flex flex-row items-start justify-start gap-[8px]">
               <img
-                className={css`
-                  position: relative;
-                  width: 24px;
-                  height: 24px;
-                `}
+                className="relative w-6 h-6"
                 alt=""
-                src="/BulletList.svg"
+                src="/svg/BulletList.svg"
               />
               <img
-                className={css`
-                  position: relative;
-                  width: 24px;
-                  height: 24px;
-                `}
+                className="relative w-6 h-6"
                 alt=""
-                src="/GridView.svg"
+                src="/svg/GridView.svg"
               />
             </div>
-            <span
-              className={css`
-                position: relative;
-                line-height: 24px;
-              `}
-            >
-              Sort by:
-            </span>
+            <span className="relative leading-[24px]">Sort by:</span>
             <Dropdown
-              className={css``}
               overlay={
                 <Menu>
                   {[
@@ -193,62 +74,37 @@ const PropertiesGridView = () => {
               arrow={undefined}
               trigger={["hover"]}
             >
-              <a className={css``} onClick={(e) => e.preventDefault()}>
+              <a onClick={(e) => e.preventDefault()}>
                 {`Default Order `}
-                <DownOutlined className={css``} />
+                <DownOutlined />
               </a>
             </Dropdown>
           </article>
         </div>
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: center;
-          `}
-        >
+        <div className="self-stretch flex flex-row flex-wrap items-start justify-center">
           <PGCards />
         </div>
         <div
-          className={css`
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: center;
-            gap: var(--gap-5xs);
-          `}
+          className="flex flex-row items-end justify-center gap-[8px]"
           id="Pagination"
         >
-          <Button
-            className={css``}
-            size="middle"
-            type="default"
-            icon={<ArrowLeftOutlined />}
-          />
-          <Button className={css``} size="middle" type="primary">
+          <Button size="middle" type="default" icon={<ArrowLeftOutlined />} />
+          <Button size="middle" type="primary">
             1
           </Button>
-          <Button className={css``} size="middle" type="default">
+          <Button size="middle" type="default">
             2
           </Button>
-          <Button className={css``} size="middle" type="default">
+          <Button size="middle" type="default">
             3
           </Button>
-          <Button className={css``} size="middle" type="default">
+          <Button size="middle" type="default">
             ...
           </Button>
-          <Button className={css``} size="middle" type="default">
+          <Button size="middle" type="default">
             54
           </Button>
-          <Button
-            className={css``}
-            size="middle"
-            type="primary"
-            icon={<ArrowRightOutlined />}
-          />
+          <Button size="middle" type="primary" icon={<ArrowRightOutlined />} />
         </div>
       </section>
       <PGFooter />

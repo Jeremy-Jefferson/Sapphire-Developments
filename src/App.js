@@ -5,7 +5,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Logo from "./components/Logo";
+import Navigation1 from "./components/Navigation1";
 
 function App() {
   const action = useNavigationType();
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Logo />} />
+      <Route path="/" element={<Navigation1 />} />
     </Routes>
   );
 }

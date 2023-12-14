@@ -1,122 +1,42 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { css } from "@emotion/css";
 
 const Navigation1 = () => {
   return (
     <nav
-      className={css`
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: var(--gap-11xl);
-        text-align: center;
-        font-size: var(--body-large-400-size);
-        color: var(--primary-900);
-        font-family: var(--body-large-400);
-        @media screen and (max-width: 1200px) {
-          display: none;
-        }
-      `}
+      className="m-0 shrink-0 flex flex-row items-center justify-center gap-[30px] text-center text-xl text-primary-900 font-body-large-400 lg:hidden"
       id="Nav1"
       NAV="1"
     >
       <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 600;
-          font-family: inherit;
-          color: var(--color-darkslateblue-100);
-        `}
+        className="m-0 relative text-inherit leading-[22px] font-semibold font-inherit text-darkslateblue"
         id="HOME"
       >
         HOME
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
         ABOUT US
       </h1>
-      <h2
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-        `}
-      >
+      <h2 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
         OUR AGENTS
       </h2>
       <Link
-        className={css`
-          cursor: pointer;
-          text-decoration: none;
-          position: relative;
-          line-height: 22px;
-          font-weight: 600;
-          color: inherit;
-        `}
-        to="/"
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold text-[inherit]"
+        to="/properties-grid-view"
       >
         PROPERTIES
       </Link>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
         GALLERY
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
         BLOG
       </h1>
-      <h1
-        className={css`
-          margin: 0;
-          position: relative;
-          font-size: inherit;
-          line-height: 22px;
-          font-weight: 400;
-          font-family: inherit;
-        `}
-      >
+      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
         CONTACT US
       </h1>
-      <Button
-        className={css`
-          position: relative;
-        `}
-        variant="primary"
-      >
+      <Button className="relative" variant="primary">
         SEARCH
       </Button>
     </nav>

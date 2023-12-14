@@ -1,65 +1,20 @@
-import { css } from "@emotion/css";
 import CityCardWrapper from "./CityCardWrapper";
 
 const PropertiesByAreaSection = () => {
   return (
     <section
-      className={css`
-        align-self: stretch;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: var(--padding-34xl) var(--padding-31xl);
-        gap: var(--gap-26xl);
-        text-align: center;
-        font-size: var(--font-size-26xl);
-        color: var(--primary-800);
-        font-family: var(--body-large-400);
-      `}
+      className="self-stretch flex-1 flex flex-col items-center justify-start py-[53px] px-[50px] gap-[45px] text-center text-26xl text-primary-800 font-body-large-400"
       id="Props By Area"
     >
-      <div
-        className={css`
-          align-self: stretch;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 0px var(--padding-11xl);
-          gap: var(--gap-5xl);
-          @media screen and (max-width: 960px) {
-            align-self: stretch;
-            width: auto;
-          }
-        `}
-      >
+      <div className="self-stretch flex flex-col items-center justify-start py-0 px-[30px] gap-[24px] md:self-stretch md:w-auto">
         <h1
-          className={css`
-            margin: 0;
-            align-self: stretch;
-            position: relative;
-            font-size: inherit;
-            line-height: 48px;
-            font-weight: 600;
-            font-family: inherit;
-          `}
+          className="m-0 self-stretch relative text-inherit leading-[48px] font-semibold font-inherit"
           id="Props by Area"
         >
           Properties by City
         </h1>
         <h2
-          className={css`
-            margin: 0;
-            align-self: stretch;
-            position: relative;
-            font-size: var(--header-heading-4-size);
-            line-height: 28px;
-            font-weight: 400;
-            font-family: inherit;
-            color: var(--color-lightslategray);
-          `}
+          className="m-0 self-stretch relative text-5xl leading-[28px] font-normal font-inherit text-lightslategray"
           id="Take a look at our gorgeous properties, grouped by city. Find your city below."
         >
           Take a look at our gorgeous properties, grouped by city. Find your
@@ -67,18 +22,7 @@ const PropertiesByAreaSection = () => {
         </h2>
       </div>
       <div
-        className={css`
-          align-self: stretch;
-          flex: 1;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: flex-start;
-          justify-content: center;
-          padding: 0px var(--padding-3xs);
-          box-sizing: border-box;
-          max-width: 95%px;
-        `}
+        className="self-stretch flex-1 flex flex-row flex-wrap items-start justify-center py-0 px-2.5 box-border max-w-[95%]"
         id="Cardss"
         Cards
       >
