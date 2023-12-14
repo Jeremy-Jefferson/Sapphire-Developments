@@ -1,6 +1,7 @@
 # Sapphire-Developments
 
-## Real estate project site for Sapphire Developments; made with React, styled with Tailwind CSS ![tailwind-css-icon](https://github.com/Jeremy-Jefferson/Sapphire-Developments/assets/127449038/dad592ee-ff63-4a39-ac27-e942b7d98150)
+## Real estate project site for Sapphire Developments; made with React, styled with Tailwind CSS ![tail](https://github.com/Jeremy-Jefferson/Sapphire-Developments/assets/127449038/440488ae-fac9-4d1c-98b2-da62650140f9)
+
 
 
 
