@@ -46,7 +46,7 @@ const CityCardsRow1 = () => {
       >
         <header
           className="my-0 mx-[!important] absolute top-[16px] left-[16px] flex flex-col items-start justify-start z-[0] text-left text-5xl text-white font-body-large-400"
-          id="MIami, FL: 25 Listings"
+          id="Miami, FL: 25 Listings"
         >
           <h1
             className="m-0 relative leading-[32px] text-inherit font-inherit"

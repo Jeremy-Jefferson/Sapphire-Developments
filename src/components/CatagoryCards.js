@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const CatagoryCards = () => {
   return (
@@ -28,15 +29,17 @@ const CatagoryCards = () => {
               className="m-0 relative text-base leading-[24px] text-lightslategray flex items-end justify-center w-[268px]"
               id="Residential paragraph"
             >{`View residential homes for purchase. Discover wonderful family homes. `}</p>
-            <Button
-              className="relative"
-              name="Read More"
-              id="1"
-              variant="outline-primary"
-              size="sm"
-            >
-              Read More
-            </Button>
+            <Link to="/properties-grid-view">
+              <Button
+                className="relative"
+                name="Read More"
+                id="1"
+                variant="outline-primary"
+                size="sm"
+              >
+                Read More
+              </Button>
+            </Link>
           </article>
         </article>
       </div>
@@ -70,15 +73,17 @@ const CatagoryCards = () => {
               View rental properties. Great places to live temporarily, or rent
               to own.
             </p>
-            <Button
-              className="relative"
-              name="Read More"
-              id="2"
-              variant="outline-primary"
-              size="sm"
-            >
-              Read More
-            </Button>
+            <Link to="/properties-grid-view">
+              <Button
+                className="relative"
+                name="Read More"
+                id="2"
+                variant="outline-primary"
+                size="sm"
+              >
+                Read More
+              </Button>
+            </Link>
           </article>
         </article>
       </div>
@@ -112,15 +117,17 @@ const CatagoryCards = () => {
               View vacation properties. Gorgeous getaways to feel at home away
               from home
             </p>
-            <Button
-              className="relative"
-              name="Read More"
-              id="3"
-              variant="outline-primary"
-              size="sm"
-            >
-              Read More
-            </Button>
+            <Link to="/properties-grid-view">
+              <Button
+                className="relative"
+                name="Read More"
+                id="3"
+                variant="outline-primary"
+                size="sm"
+              >
+                Read More
+              </Button>
+            </Link>
           </article>
         </article>
       </div>
@@ -153,15 +160,17 @@ const CatagoryCards = () => {
             >
               View luxury properties. Lavish mansions and estates.
             </p>
-            <Button
-              className="relative"
-              name="Read More"
-              id="4"
-              variant="outline-primary"
-              size="sm"
-            >
-              Read More
-            </Button>
+            <Link to="/properties-grid-view">
+              <Button
+                className="relative"
+                name="Read More"
+                id="4"
+                variant="outline-primary"
+                size="sm"
+              >
+                Read More
+              </Button>
+            </Link>
           </article>
         </article>
       </div>

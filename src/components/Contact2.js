@@ -22,11 +22,13 @@ const Contact2 = () => {
         <button
           className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
           preload
+          aria-label="Facebook"
         >
           <a
             className="[text-decoration:none] relative w-5 h-5"
             id="FB Icon"
-            href="https://www.facebook.com/jeremyejefferson/"
+            aria-label="Facebook"
+            href="https://www.facebook.com/jeremyejefferson/" rel="noopener noreferrer"
             target="_blank"
           >
             <img
@@ -39,11 +41,13 @@ const Contact2 = () => {
         <button
           className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
           id="LinedIn"
+          aria-label="LinkedIn"
         >
           <a
             className="[text-decoration:none] relative w-5 h-5 overflow-hidden shrink-0"
             id="LinkedIn"
-            href="https://www.linkedin.com/in/jeremyejefferson/"
+            aria-label="LinkedIn"
+            href="https://www.linkedin.com/in/jeremyejefferson/" rel="noopener noreferrer"
           >
             <img
               className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full"
@@ -55,10 +59,12 @@ const Contact2 = () => {
         <button
           className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
           id="IG"
+          aria-label="Instagram"
         >
           <a
             className="[text-decoration:none] relative w-5 h-5 overflow-hidden shrink-0"
             href="https://www.instagram.com/jeremyejefferson/"
+            aria-label="Instagram" rel="noopener noreferrer"
           >
             <img
               className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full"
@@ -70,11 +76,13 @@ const Contact2 = () => {
         <button
           className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded w-12 h-12 flex flex-col items-center justify-center box-border"
           id="GitHub"
+          aria-label="GitHub"
         >
           <a
             className="[text-decoration:none] relative w-[30px] h-[30px]"
             id="Github"
-            href="https://github.com/jeremy-jefferson"
+            aria-label="GitHub"
+            href="https://github.com/jeremy-jefferson" rel="noopener noreferrer"
           >
             <img
               className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full object-cover"

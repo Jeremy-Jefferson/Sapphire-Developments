@@ -1,9 +1,10 @@
 import Contact2 from "./Contact2";
+import { Link } from "react-router-dom";
 
 const PGFooter = () => {
   return (
     <section
-      className="w-[1920px] overflow-hidden flex flex-row items-start justify-start p-[50px] box-border md:self-stretch md:w-auto md:flex-row md:gap-[0px] sm:flex-col"
+      className="w-full overflow-hidden flex flex-row items-start justify-start p-[50px] box-border md:self-stretch md:w-auto md:flex-row md:gap-[0px] sm:flex-col"
       id="Footer"
     >
       <footer className="flex-1 shrink-0 flex flex-row items-start justify-between mix-blend-normal text-left text-5xl text-gray-black font-header-heading-4 md:flex-col md:gap-[50px] sm:flex-col sm:gap-[50px] sm:flex-[unset] sm:self-stretch">
@@ -19,11 +20,11 @@ const PGFooter = () => {
             Features
           </h3>
           <article className="self-stretch h-[184px] flex flex-col items-start justify-start gap-[16px] text-left text-5xl text-gray-500 font-header-heading-4">
-            <span className="relative leading-[24px]">Home</span>
-            <span className="relative leading-[24px]">Become a Host</span>
-            <span className="relative leading-[24px]">Pricing</span>
-            <span className="relative leading-[24px]">Blog</span>
-            <span className="relative leading-[24px]">Contact</span>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Home</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Become a Host</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Pricing</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Blog</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Contact</Link>
           </article>
         </div>
         <div
@@ -34,11 +35,11 @@ const PGFooter = () => {
             Company
           </h3>
           <article className="self-stretch h-[184px] flex flex-col items-start justify-start gap-[16px] mix-blend-normal text-left text-5xl text-gray-500 font-header-heading-4">
-            <span className="relative leading-[24px]">About Us</span>
-            <span className="relative leading-[24px]">Press</span>
-            <span className="relative leading-[24px]">Contact</span>
-            <span className="relative leading-[24px]">Careers</span>
-            <span className="relative leading-[24px]">Blog</span>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">About Us</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Press</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Contact</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Careers</Link>
+            <Link to="/" className="relative leading-[24px] text-gray-500 hover:text-primary-500 no-underline">Blog</Link>
           </article>
         </div>
         <div
@@ -52,15 +53,9 @@ const PGFooter = () => {
             Team and policies
           </h3>
           <article className="self-stretch h-[104px] flex flex-col items-start justify-start gap-[16px] mix-blend-normal text-left text-5xl text-gray-500 font-header-heading-4">
-            <span className="relative leading-[24px] mix-blend-normal">
-              Terms of servies
-            </span>
-            <span className="relative leading-[24px] mix-blend-normal">
-              Privacy Policy
-            </span>
-            <span className="relative leading-[24px] mix-blend-normal">
-              Security
-            </span>
+            <Link to="/" className="relative leading-[24px] mix-blend-normal text-gray-500 hover:text-primary-500 no-underline">Terms of Services</Link>
+            <Link to="/" className="relative leading-[24px] mix-blend-normal text-gray-500 hover:text-primary-500 no-underline">Privacy Policy</Link>
+            <Link to="/" className="relative leading-[24px] mix-blend-normal text-gray-500 hover:text-primary-500 no-underline">Security</Link>
           </article>
         </div>
       </footer>

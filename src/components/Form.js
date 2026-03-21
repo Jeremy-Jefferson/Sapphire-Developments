@@ -39,6 +39,7 @@ const Form = () => {
           className="[outline:none] font-roboto text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-darkgray border-[1px] border-solid border-gray1"
           name="Email"
           placeholder="Email id"
+            type="email"
           type="text"
           value={destinationNameInputValue}
           onChange={(event) => setDestinationNameInputValue(event.target.value)}

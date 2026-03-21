@@ -16,12 +16,18 @@ const Navigation2 = () => {
       >
         HOME
       </Link>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
+        to="/"
+      >
         ABOUT US
-      </h1>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
+        to="/"
+      >
         OUR AGENTS
-      </h1>
+      </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold font-inherit text-darkslateblue mix-blend-normal"
         id="PROPERTIES"
@@ -29,15 +35,24 @@ const Navigation2 = () => {
       >
         PROPERTIES
       </Link>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
+        to="/"
+      >
         GALLERY
-      </h1>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
+        to="/"
+      >
         BLOG
-      </h1>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
+        to="/"
+      >
         CONTACT US
-      </h1>
+      </Link>
       <Form className="[border:none] bg-[transparent] relative mix-blend-normal">
         <Form.Control type="search" placeholder="SEARCH" />
       </Form>

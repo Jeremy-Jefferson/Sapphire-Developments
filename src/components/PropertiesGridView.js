@@ -12,7 +12,7 @@ import PGFooter from "./PGFooter";
 const PropertiesGridView = () => {
   return (
     <main
-      className="bg-white w-[1920px] flex flex-col items-start justify-start"
+      className="bg-white w-full min-h-screen flex flex-col items-start justify-start"
       id="Properties Grid View"
     >
       <PHeader />
