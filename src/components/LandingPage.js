@@ -4,7 +4,8 @@ import PropertiesByAreaSection from "./PropertiesByAreaSection";
 import PropertiesByCatagory from "./PropertiesByCatagory";
 import PropertiesForRent from "./PropertiesForRent";
 import VacationPropSection from "./VacationPropSection";
-import ContactSection from "./ContactSection";
+import StatsSection from "./StatsSection";
+import WhyChooseUs from "./WhyChooseUs";
 import LPFooter from "./LPFooter";
 
 const LandingPage = () => {
@@ -19,7 +20,8 @@ const LandingPage = () => {
       <PropertiesByCatagory />
       <PropertiesForRent />
       <VacationPropSection />
-      <ContactSection />
+      <StatsSection />
+      <WhyChooseUs />
       <LPFooter />
     </main>
   );

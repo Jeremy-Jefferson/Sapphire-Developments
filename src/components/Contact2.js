@@ -7,20 +7,20 @@ const Contact2 = () => {
       id="Contact"
     >
       <LogoIcon imageDimensions="/png/logo11@2x.png" />
-      <article className="w-[285px] h-40 flex flex-col items-start justify-between text-center text-5xl text-gray-500 font-header-heading-4">
-        <span className="relative leading-[32px] font-semibold text-gray-black">
+      <article className="w-[285px] h-40 flex flex-col items-start justify-between text-center text-5xl text-gray-300 font-header-heading-4">
+        <span className="relative leading-[32px] font-semibold text-white">
           Contact Us:
         </span>
-        <span className="relative text-left">1-800-SAP-PHIRE</span>
-        <span className="relative text-left mix-blend-normal">
-          <p className="m-0">{`5874 Sapphire Dr. `}</p>
-          <p className="m-0">Houston, TX 75874</p>
+        <span className="relative text-left text-gray-300">1-800-SAP-PHIRE</span>
+        <span className="relative text-left mix-blend-normal text-gray-300">
+          <p className="m-0">3411 Cummins ST</p>
+          <p className="m-0">Houston, TX 77027</p>
         </span>
-        <span className="relative text-3xl">contact@sapphiredev.com</span>
+        <span className="relative text-3xl text-gray-300">contact@sapphiredev.com</span>
       </article>
       <div className="w-[285px] h-14 flex flex-row items-center justify-between">
         <button
-          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
+          className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
           preload
           aria-label="Facebook"
         >
@@ -39,7 +39,7 @@ const Contact2 = () => {
           </a>
         </button>
         <button
-          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
+          className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
           id="LinedIn"
           aria-label="LinkedIn"
         >
@@ -57,7 +57,7 @@ const Contact2 = () => {
           </a>
         </button>
         <button
-          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded flex flex-col items-center justify-center"
+          className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
           id="IG"
           aria-label="Instagram"
         >
@@ -74,7 +74,7 @@ const Contact2 = () => {
           </a>
         </button>
         <button
-          className="cursor-pointer [border:none] p-3.5 bg-primary-50 rounded w-12 h-12 flex flex-col items-center justify-center box-border"
+          className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded w-12 h-12 flex flex-col items-center justify-center box-border hover:bg-white/20 transition-colors"
           id="GitHub"
           aria-label="GitHub"
         >

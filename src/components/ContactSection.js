@@ -3,7 +3,7 @@ import Form from "./Form";
 const ContactSection = () => {
   return (
     <section
-      className="self-stretch bg-primary-50 flex flex-row flex-wrap items-start justify-center py-[86px] px-[5px] text-center text-21xl text-primary-800 font-body-large-400"
+      className="self-stretch bg-primary-50 flex flex-row flex-wrap items-start justify-center py-[86px] px-[5px] text-center text-slate-800 font-body-large-400"
       id="Contact"
     >
       <div className="flex-1 flex flex-col items-center justify-start py-0 px-2.5 box-border gap-[40px] max-w-[900px]">
@@ -15,7 +15,7 @@ const ContactSection = () => {
             Contact Us
           </h1>
           <h2
-            className="m-0 self-stretch relative text-xl leading-[28px] font-normal font-inherit text-lightslategray"
+            className="m-0 self-stretch relative text-xl leading-[28px] font-normal font-inherit text-slate-500"
             id="Sapphire Developments is committed to assisting you in finding your perfect property, contact us for a personalized real estate experience."
           >
             Sapphire Developments is committed to assisting you in finding your

@@ -18,37 +18,31 @@ const Navigation1 = () => {
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
-        to="/"
+        to="/about-us"
       >
         ABOUT US
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
-        to="/"
+        to="/our-agents"
       >
         OUR AGENTS
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold text-[inherit]"
-        to="/properties-grid-view"
+        to="/properties"
       >
         PROPERTIES
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
-        to="/"
+        to="/gallery"
       >
         GALLERY
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
-        to="/"
-      >
-        BLOG
-      </Link>
-      <Link
-        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
-        to="/"
+        to="/contact-us"
       >
         CONTACT US
       </Link>

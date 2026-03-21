@@ -18,38 +18,32 @@ const Navigation2 = () => {
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
-        to="/"
+        to="/about-us"
       >
         ABOUT US
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
-        to="/"
+        to="/our-agents"
       >
         OUR AGENTS
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold font-inherit text-darkslateblue mix-blend-normal"
         id="PROPERTIES"
-        to="/properties-grid-view"
+        to="/properties"
       >
         PROPERTIES
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
-        to="/"
+        to="/gallery"
       >
         GALLERY
       </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
-        to="/"
-      >
-        BLOG
-      </Link>
-      <Link
-        className="cursor-pointer [text-decoration:none] relative leading-[22px] text-[inherit] mix-blend-normal"
-        to="/"
+        to="/contact-us"
       >
         CONTACT US
       </Link>

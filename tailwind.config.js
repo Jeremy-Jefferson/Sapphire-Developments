@@ -4,24 +4,75 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Base colors
         white: "#fff",
-        "gray-500": "#6d737a",
-        "gray-black": "#1b1d1f",
-        "primary-50": "#edeff6",
-        gray1: "rgba(0, 0, 0, 0.5)",
-        darkgray: "#9c9c9c",
-        darkslategray: "#434343",
-        lightslategray: "#889099",
-        "primary-800": "#1e2640",
-        whitesmoke: {
-          "100": "#eaeaea",
-          "200": "#e7e9eb",
+        "gray-100": "#f3f4f6",
+        "gray-200": "#e5e7eb",
+        "gray-300": "#d1d5db",
+        "gray-400": "#9ca3af",
+        "gray-500": "#6b7280",
+        "gray-600": "#4b5563",
+        "gray-700": "#374151",
+        "gray-800": "#1f2937",
+        "gray-900": "#111827",
+        
+        // Brand colors - Blue/Slate theme
+        primary: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6", // Main primary blue
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
         },
+        
+        // Legacy color mappings for consistency
+        "gray-black": "#1e3a8a",
+        "gray-500": "#6b7280",
+        
+        // Primary brand (navy/slate blue)
+        "primary-50": "#eff6ff",
+        "primary-500": "#3b82f6",
+        "primary-600": "#2563eb",
+        "primary-700": "#1d4ed8",
+        "primary-800": "#1e40af",
+        "primary-900": "#1e3a8a",
+        
+        // Gray variants
+        "gray1": "rgba(0, 0, 0, 0.5)",
+        "darkgray": "#6b7280",
+        "darkslategray": "#475569",
+        "lightslategray": "#64748b",
+        
+        // Slate variants for modern look
+        slate: {
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+        },
+        
+        // Legacy whitesmoke
+        whitesmoke: {
+          "100": "#f8fafc",
+          "200": "#f1f5f9",
+        },
+        
+        // Legacy gainsboro
         gainsboro: "rgba(226, 226, 226, 0.1)",
-        "gray-700": "#363a3d",
-        darkslateblue: "#4a60a1",
-        "primary-700": "#2c3a61",
-        "primary-900": "#0f1320",
+        
+        // Legacy darkslateblue
+        darkslateblue: "#3b82f6",
       },
       spacing: {},
       fontFamily: {

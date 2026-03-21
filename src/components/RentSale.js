@@ -121,7 +121,7 @@ const RentSale = () => {
 
   return (
     <main
-      className="self-stretch flex flex-col items-center justify-start gap-[17px] text-left text-base text-primary-700 font-body-large-400"
+      className="self-stretch flex flex-col items-center justify-start gap-[17px] text-left text-base text-slate-700 font-body-large-400"
       id="HeroMain"
     >
       <div

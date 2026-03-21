@@ -11,7 +11,7 @@ const PropertiesByCatagory = () => {
         id="Properties by Category"
       >
         <header
-          className="self-stretch flex flex-col items-center justify-start py-0 px-[30px] box-border gap-[24px] max-w-[95%] text-center text-26xl text-primary-800 font-body-large-400"
+          className="self-stretch flex flex-col items-center justify-start py-0 px-[30px] box-border gap-[24px] max-w-[95%] text-center text-26xl text-slate-800 font-body-large-400"
           id="Category Header"
         >
           <h1
@@ -21,7 +21,7 @@ const PropertiesByCatagory = () => {
             Properties by Category
           </h1>
           <h2
-            className="m-0 self-stretch relative text-5xl leading-[28px] font-normal font-inherit text-lightslategray"
+            className="m-0 self-stretch relative text-5xl leading-[28px] font-normal font-inherit text-slate-500"
             id="Take a look at our wonderful homes, arranged by category. The four categories, rental, residential, vacation, and luxury, are below."
             Subtitle3
           >
