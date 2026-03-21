@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Logo = () => {
   return (
-    <div className="relative w-[199px] h-14" id="LOGO">
+    <Link to="/" className="relative w-[199px] h-14" id="LOGO">
       <img
         className="absolute h-full w-[97.19%] top-[0%] right-[2.81%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full object-cover"
         alt=""
@@ -11,7 +13,7 @@ const Logo = () => {
         alt=""
         src="/png/copyright@2x.png"
       />
-    </div>
+    </Link>
   );
 };
 

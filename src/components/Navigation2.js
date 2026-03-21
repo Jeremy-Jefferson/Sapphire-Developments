@@ -22,12 +22,13 @@ const Navigation2 = () => {
       <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         OUR AGENTS
       </h1>
-      <h1
-        className="m-0 relative text-inherit leading-[22px] font-semibold font-inherit text-darkslateblue mix-blend-normal"
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold font-inherit text-darkslateblue mix-blend-normal"
         id="PROPERTIES"
+        to="/properties-grid-view"
       >
         PROPERTIES
-      </h1>
+      </Link>
       <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit mix-blend-normal">
         GALLERY
       </h1>

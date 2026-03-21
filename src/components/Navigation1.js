@@ -9,33 +9,49 @@ const Navigation1 = () => {
       id="Nav1"
       NAV="1"
     >
-      <h1
-        className="m-0 relative text-inherit leading-[22px] font-semibold font-inherit text-darkslateblue"
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold font-inherit text-darkslateblue"
         id="HOME"
+        to="/"
       >
         HOME
-      </h1>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
+        to="/"
+      >
         ABOUT US
-      </h1>
-      <h2 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
+        to="/"
+      >
         OUR AGENTS
-      </h2>
+      </Link>
       <Link
         className="cursor-pointer [text-decoration:none] relative leading-[22px] font-semibold text-[inherit]"
         to="/properties-grid-view"
       >
         PROPERTIES
       </Link>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
+        to="/"
+      >
         GALLERY
-      </h1>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
+        to="/"
+      >
         BLOG
-      </h1>
-      <h1 className="m-0 relative text-inherit leading-[22px] font-normal font-inherit">
+      </Link>
+      <Link
+        className="cursor-pointer [text-decoration:none] relative leading-[22px] font-normal text-[inherit]"
+        to="/"
+      >
         CONTACT US
-      </h1>
+      </Link>
       <Button className="relative" variant="primary">
         SEARCH
       </Button>
