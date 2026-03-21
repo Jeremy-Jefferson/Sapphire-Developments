@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useState, useCallback } from "react";
 import "antd/dist/antd.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
@@ -8,6 +8,11 @@ import { useNavigate } from "react-router-dom";
 
 const RentSale = () => {
   const navigate = useNavigate();
+  const [propertyType, setPropertyType] = useState("rent");
+
+  const handlePropertyTypeChange = useCallback((type) => {
+    setPropertyType(type);
+  }, []);
 
   const onSearchCTAClick = useCallback(() => {
     navigate("/properties-grid-view");
@@ -21,11 +26,25 @@ const RentSale = () => {
       <div
         className="flex flex-row items-start justify-start gap-[10px]"
         id="Buttons"
+        role="tablist"
+        aria-label="Property type selection"
       >
-        <Button name="Rent" variant="primary">
+        <Button 
+          name="Rent" 
+          variant={propertyType === "rent" ? "primary" : "light"}
+          onClick={() => handlePropertyTypeChange("rent")}
+          aria-selected={propertyType === "rent"}
+          role="tab"
+        >
           Rent
         </Button>
-        <Button name="Sale" variant="light">
+        <Button 
+          name="Sale" 
+          variant={propertyType === "sale" ? "primary" : "light"}
+          onClick={() => handlePropertyTypeChange("sale")}
+          aria-selected={propertyType === "sale"}
+          role="tab"
+        >
           Sale
         </Button>
       </div>

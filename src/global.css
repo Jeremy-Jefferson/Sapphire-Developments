@@ -5,11 +5,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply leading-[normal] m-0;
 }
+
 *,
 ::before,
 ::after {
   border-width: 0;
+}
+
+/* Skip to content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1e2640;
+  color: white;
+  padding: 8px 16px;
+  z-index: 9999;
+  transition: top 0.3s;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #1e2640;
+  outline-offset: 2px;
+}
+
+/* Smooth hover transitions */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Improve button hover effects */
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Card hover effects */
+button:active {
+  transform: translateY(0);
 }
