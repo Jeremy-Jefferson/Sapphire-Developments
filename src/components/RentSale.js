@@ -2,21 +2,122 @@ import { useState, useCallback } from "react";
 import "antd/dist/antd.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
-import { Dropdown, Menu, Button as AntButton } from "antd";
+import { Dropdown, Menu, Button as AntButton, message } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const RentSale = () => {
   const navigate = useNavigate();
-  const [propertyType, setPropertyType] = useState("rent");
+  const [searchParams] = useSearchParams();
+  const [propertyType, setPropertyType] = useState(searchParams.get("type") || "rent");
+  
+  // State for dropdown selections
+  const [selectedCity, setSelectedCity] = useState("Select City");
+  const [selectedPropertyType, setSelectedPropertyType] = useState("Select property type");
+  const [selectedPriceRange, setSelectedPriceRange] = useState("Select price range");
 
   const handlePropertyTypeChange = useCallback((type) => {
     setPropertyType(type);
   }, []);
 
+  // City options
+  const cities = [
+    { value: "Houston" },
+    { value: "Las Vegas" },
+    { value: "Los Angeles" },
+    { value: "Miami" },
+    { value: "New York" },
+  ];
+
+  // Property type options
+  const propertyTypes = [
+    { value: "Luxury" },
+    { value: "Rental" },
+    { value: "Residential" },
+    { value: "Vacation" },
+  ];
+
+  // Price range options based on property type
+  const getPriceRanges = () => {
+    if (propertyType === "rent") {
+      return [
+        { value: "$500-$2,000", min: 500, max: 2000 },
+        { value: "$2,000-$5,000", min: 2000, max: 5000 },
+        { value: "$5,000-$10,000", min: 5000, max: 10000 },
+        { value: "$10,000+", min: 10000, max: Infinity },
+      ];
+    } else {
+      return [
+        { value: "$100K-$300K", min: 100000, max: 300000 },
+        { value: "$300K-$500K", min: 300000, max: 500000 },
+        { value: "$500K-$1M", min: 500000, max: 1000000 },
+        { value: "$1M+", min: 1000000, max: Infinity },
+      ];
+    }
+  };
+
   const onSearchCTAClick = useCallback(() => {
-    navigate("/properties-grid-view");
-  }, [navigate]);
+    // Build query params
+    const params = new URLSearchParams();
+    params.set("type", propertyType);
+    if (selectedCity !== "Select City") {
+      params.set("city", selectedCity);
+    }
+    if (selectedPropertyType !== "Select property type") {
+      params.set("propertyType", selectedPropertyType);
+    }
+    if (selectedPriceRange !== "Select price range") {
+      const range = getPriceRanges().find(r => r.value === selectedPriceRange);
+      if (range) {
+        params.set("minPrice", range.min);
+        params.set("maxPrice", range.max);
+      }
+    }
+    message.loading({ content: 'Searching properties...', key: 'search' });
+    setTimeout(() => {
+      navigate(`/properties-grid-view?${params.toString()}`);
+    }, 1000);
+  }, [navigate, propertyType, selectedCity, selectedPropertyType, selectedPriceRange]);
+
+  // Create menus with click handlers
+  const cityMenu = (
+    <Menu>
+      {cities.map((option, index) => (
+        <Menu.Item 
+          key={index}
+          onClick={() => setSelectedCity(option.value)}
+        >
+          {option.value}
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
+  const propertyTypeMenu = (
+    <Menu>
+      {propertyTypes.map((option, index) => (
+        <Menu.Item 
+          key={index}
+          onClick={() => setSelectedPropertyType(option.value)}
+        >
+          {option.value}
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
+  const priceMenu = (
+    <Menu>
+      {getPriceRanges().map((option, index) => (
+        <Menu.Item 
+          key={index}
+          onClick={() => setSelectedPriceRange(option.value)}
+        >
+          {option.value}
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
 
   return (
     <main
@@ -61,28 +162,11 @@ const RentSale = () => {
               Locations
             </h1>
             <Dropdown
-              overlay={
-                <Menu>
-                  {[
-                    { value: "Houston" },
-                    { value: "Las Vegas" },
-                    { value: "Los Angeles" },
-                    { value: "Miami" },
-                    { value: "New York" },
-                  ].map((option, index) => (
-                    <Menu.Item key={index}>
-                      <a onClick={(e) => e.preventDefault()}>
-                        {option.value || ""}
-                      </a>
-                    </Menu.Item>
-                  ))}
-                </Menu>
-              }
-              trigger={["hover"]}
+              overlay={cityMenu}
+              trigger={["click"]}
             >
-              <AntButton onClick={(e) => e.preventDefault()}>
-                {`Select City `}
-                <DownOutlined />
+              <AntButton className="w-full">
+                {selectedCity} <DownOutlined />
               </AntButton>
             </Dropdown>
           </div>
@@ -98,27 +182,11 @@ const RentSale = () => {
             </h1>
             <Dropdown
               className="self-stretch"
-              overlay={
-                <Menu>
-                  {[
-                    { value: "Luxury" },
-                    { value: "Rental" },
-                    { value: "Residential" },
-                    { value: "Vacation" },
-                  ].map((option, index) => (
-                    <Menu.Item key={index}>
-                      <a onClick={(e) => e.preventDefault()}>
-                        {option.value || ""}
-                      </a>
-                    </Menu.Item>
-                  ))}
-                </Menu>
-              }
-              trigger={["hover"]}
+              overlay={propertyTypeMenu}
+              trigger={["click"]}
             >
-              <AntButton onClick={(e) => e.preventDefault()}>
-                {`Select property type `}
-                <DownOutlined />
+              <AntButton className="w-full">
+                {selectedPropertyType} <DownOutlined />
               </AntButton>
             </Dropdown>
           </div>
@@ -134,26 +202,11 @@ const RentSale = () => {
             </h1>
             <Dropdown
               className="self-stretch"
-              overlay={
-                <Menu>
-                  {[
-                    { value: "$500-$2000" },
-                    { value: "$2500-$10000" },
-                    { value: "$10000+" },
-                  ].map((option, index) => (
-                    <Menu.Item key={index}>
-                      <a onClick={(e) => e.preventDefault()}>
-                        {option.value || ""}
-                      </a>
-                    </Menu.Item>
-                  ))}
-                </Menu>
-              }
-              trigger={["hover"]}
+              overlay={priceMenu}
+              trigger={["click"]}
             >
-              <AntButton onClick={(e) => e.preventDefault()}>
-                {`Select rent range `}
-                <DownOutlined />
+              <AntButton className="w-full">
+                {selectedPriceRange} <DownOutlined />
               </AntButton>
             </Dropdown>
           </div>

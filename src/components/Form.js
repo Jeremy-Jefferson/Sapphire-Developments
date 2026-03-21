@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
+import { Button, message } from "react-bootstrap";
 
 const Form = () => {
   const [firstName, setFirstName] = useState("");
@@ -32,6 +32,24 @@ const Form = () => {
     }
     setErrors({});
     setIsSubmitted(true);
+    
+    // Store form data in localStorage
+    const formData = {
+      id: Date.now(),
+      firstName,
+      lastName,
+      email,
+      message,
+      timestamp: new Date().toISOString()
+    };
+    
+    // Get existing submissions or initialize empty array
+    const existingSubmissions = JSON.parse(localStorage.getItem('formSubmissions') || '[]');
+    existingSubmissions.push(formData);
+    localStorage.setItem('formSubmissions', JSON.stringify(existingSubmissions));
+    
+    message.success("Thank you! Your message has been sent successfully.");
+    
     // Reset form after successful submission
     setTimeout(() => {
       setFirstName("");

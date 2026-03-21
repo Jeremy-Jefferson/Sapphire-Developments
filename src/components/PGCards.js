@@ -1,4 +1,19 @@
-const PGCards = () => {
+import { HeartOutlined, ShareAltOutlined, PlusOutlined, HeartFilled } from "@ant-design/icons";
+
+const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
+  const propertyIds = [1, 2, 3, 4, 5]; // IDs for 5 cards
+  
+  const handleFavorite = (id) => {
+    if (onFavorite) onFavorite(id);
+  };
+  
+  const handleShare = () => {
+    if (onShare) onShare();
+  };
+  
+  const handleAddToCompare = () => {
+    if (onAddToCompare) onAddToCompare();
+  };
   return (
     <div
       className="flex-1 shrink-0 flex flex-row flex-wrap items-start justify-center gap-[8px] text-left text-[14.51px] text-gray-700 font-body-large-400"
@@ -166,32 +181,23 @@ const PGCards = () => {
             <button
               className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="share"
+              onClick={handleShare}
             >
-              <img
-                className="relative w-[14.5px] h-[14.5px]"
-                alt=""
-                src="/svg/sharenetwork.svg"
-              />
+              <ShareAltOutlined style={{ fontSize: 14 }} />
             </button>
             <button
               className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="fave"
+              onClick={() => handleFavorite(2)}
             >
-              <img
-                className="relative w-[14.5px] h-[14.5px]"
-                alt=""
-                src="/svg/heart.svg"
-              />
+              {favorites.includes(2) ? <HeartFilled style={{ fontSize: 14, color: '#ff4d4f' }} /> : <HeartOutlined style={{ fontSize: 14 }} />}
             </button>
             <button
               className="cursor-pointer [border:none] p-[2.902620315551758px] bg-primary-50 rounded-[1.45px] shrink-0 flex flex-row items-start justify-start"
               id="add"
+              onClick={handleAddToCompare}
             >
-              <img
-                className="relative w-[14.5px] h-[14.5px]"
-                alt=""
-                src="/svg/plus.svg"
-              />
+              <PlusOutlined style={{ fontSize: 14 }} />
             </button>
           </div>
         </footer>
