@@ -1,26 +1,39 @@
 import { Routes, Route } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
-import PropertiesGridView from "./components/PropertiesGridView";
-import AboutUs from "./pages/AboutUs";
-import OurAgents from "./pages/OurAgents";
-import Gallery from "./pages/Gallery";
-import ContactUs from "./pages/ContactUs";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+import LoadingSpinner from "./components/LoadingSpinner";
+import ScrollToTop from "./components/ScrollToTop";
+import ErrorBoundary from "./components/ErrorBoundary";
+import SkipToContent from "./components/SkipToContent";
+
+// Lazy load pages for better performance
+const LandingPage = lazy(() => import("./components/LandingPage"));
+const PropertiesGridView = lazy(() => import("./components/PropertiesGridView"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const OurAgents = lazy(() => import("./pages/OurAgents"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/our-agents" element={<OurAgents />} />
-      <Route path="/properties" element={<PropertiesGridView />} />
-      <Route path="/properties-grid-view" element={<PropertiesGridView />} />
-      <Route path="/rent" element={<PropertiesGridView />} />
-      <Route path="/sale" element={<PropertiesGridView />} />
-      <Route path="/gallery" element={<Gallery />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <ErrorBoundary>
+      <SkipToContent />
+      <Suspense fallback={<LoadingSpinner />}>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/our-agents" element={<OurAgents />} />
+          <Route path="/properties" element={<PropertiesGridView />} />
+          <Route path="/properties-grid-view" element={<PropertiesGridView />} />
+          <Route path="/rent" element={<PropertiesGridView />} />
+          <Route path="/sale" element={<PropertiesGridView />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

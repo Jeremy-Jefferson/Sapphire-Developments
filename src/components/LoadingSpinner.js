@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 const LoadingSpinner = ({ size = "medium", fullPage = false }) => {
   const sizeClasses = {
     small: "w-6 h-6",
@@ -28,11 +26,6 @@ const LoadingSpinner = ({ size = "medium", fullPage = false }) => {
   }
 
   return spinner;
-};
-
-LoadingSpinner.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  fullPage: PropTypes.bool,
 };
 
 export default LoadingSpinner;

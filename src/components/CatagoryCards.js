@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const categories = [
@@ -43,7 +41,7 @@ const CatagoryCards = () => {
       {categories.map((category) => (
         <div
           key={category.id}
-          className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
         >
           {/* Icon Container */}
           <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
@@ -62,13 +60,10 @@ const CatagoryCards = () => {
             <p className="text-slate-500 text-sm leading-relaxed">
               {category.description}
             </p>
-            <Link to={category.link} className="mt-2">
-              <Button
-                className="px-6 py-2 rounded-full border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white transition-all duration-300 font-medium"
-                variant="outline-primary"
-              >
+            <Link to={category.link} className="w-full">
+              <button className="w-full px-6 py-3 rounded-full border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg">
                 Read More
-              </Button>
+              </button>
             </Link>
           </div>
 

@@ -6,6 +6,8 @@ const LPFooter = () => {
     <section
       className="self-stretch bg-slate-900 flex flex-row items-start justify-start p-[50px] md:self-stretch md:w-auto md:flex-row md:gap-[0px] sm:flex-col"
       id="Footer"
+      role="contentinfo"
+      aria-label="Footer"
     >
       <footer className="flex-1 shrink-0 flex flex-row items-start justify-between mix-blend-normal text-left text-5xl text-gray-300 font-header-heading-4 md:flex-col md:gap-[50px] sm:flex-col sm:gap-[50px] sm:flex-[unset] sm:self-stretch">
         <Contact />

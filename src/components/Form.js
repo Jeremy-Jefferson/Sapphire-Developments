@@ -1,12 +1,10 @@
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, message } from "react-bootstrap";
 
 const Form = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [messageText, setMessageText] = useState("");
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -19,7 +17,7 @@ const Form = () => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Please enter a valid email";
     }
-    if (!message.trim()) newErrors.message = "Message is required";
+    if (!messageText.trim()) newErrors.message = "Message is required";
     return newErrors;
   };
 
@@ -39,101 +37,83 @@ const Form = () => {
       firstName,
       lastName,
       email,
-      message,
+      message: messageText,
       timestamp: new Date().toISOString()
     };
     
-    // Get existing submissions or initialize empty array
     const existingSubmissions = JSON.parse(localStorage.getItem('formSubmissions') || '[]');
     existingSubmissions.push(formData);
     localStorage.setItem('formSubmissions', JSON.stringify(existingSubmissions));
     
-    message.success("Thank you! Your message has been sent successfully.");
+    console.log("Form submitted successfully!");
     
-    // Reset form after successful submission
+    // Reset form
     setTimeout(() => {
       setFirstName("");
       setLastName("");
       setEmail("");
-      setMessage("");
+      setMessageText("");
       setIsSubmitted(false);
     }, 3000);
   };
 
   return (
-    <div className="self-stretch rounded-xl bg-white shadow-[0px_25px_25px_rgba(59,_77,_129,_0.25)] flex flex-col items-center justify-start py-7 px-[30px] gap-[17px]">
+    <div className="self-stretch rounded-xl bg-white shadow-[0px_25px_25px_rgba(59,_77,_129,_0.25)] flex flex-col items-center justify-start p-11 gap-4">
       <textarea
-        className="[border:none] bg-[transparent] flex font-poppins text-5xl [outline:none] self-stretch flex-col items-center justify-start font-bold text-darkslategray"
+        className="border-none bg-transparent w-full text-5xl font-bold text-slate-800 outline-none resize-none mb-4"
+        rows="3"
         placeholder="Inquiry Form"
         defaultValue="Are you looking for details about a certain property? Ask us a question using the form below."
+        readOnly
       />
-      <div className="self-stretch flex flex-col items-center justify-start gap-[10px]">
-        <div className="self-stretch flex flex-row items-start justify-center gap-[10px] md:flex-col md:gap-[10px] md:items-start md:justify-center">
-          <div className="flex-1">
-            <input
-              className={`[outline:none] font-roboto text-base bg-[transparent] self-stretch flex-1 rounded flex flex-col items-start justify-start py-4 px-3 text-darkgray border-[1px] border-solid ${errors.firstName ? 'border-red-500' : 'border-gray1'} md:flex-[unset] md:self-stretch w-full`}
-              name="First Name"
-              value={firstName}
-              placeholder="First name *"
-              type="text"
-              onChange={(e) => setFirstName(e.target.value)}
-              autoComplete="given-name"
-              aria-invalid={!!errors.firstName}
-            />
-            {errors.firstName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
-          </div>
-          <div className="flex-1">
-            <input
-              className={`[outline:none] font-roboto text-base bg-[transparent] self-stretch flex-1 rounded flex flex-col items-start justify-center py-4 px-3 text-darkgray border-[1px] border-solid ${errors.lastName ? 'border-red-500' : 'border-gray1'} md:flex-[unset] md:self-stretch w-full`}
-              name="Last Name"
-              placeholder="Last name *"
-              type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              autoComplete="family-name"
-              aria-invalid={!!errors.lastName}
-            />
-            {errors.lastName && <span className="text-red-500 text-sm">{errors.lastName}</span>}
-          </div>
-        </div>
-        <div>
+      <div className="w-full flex flex-col items-center gap-3">
+        <div className="w-full flex flex-row gap-3 md:flex-col lg:flex-row">
           <input
-            className={`[outline:none] font-roboto text-base bg-[transparent] self-stretch rounded flex flex-col items-start justify-start py-4 px-3 text-darkgray border-[1px] border-solid ${errors.email ? 'border-red-500' : 'border-gray1'} w-full`}
-            name="Email"
-            placeholder="Email id *"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            autoComplete="email"
-            aria-invalid={!!errors.email}
+            className={`w-full p-4 rounded border ${errors.firstName ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all`}
+            placeholder="First name *"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            aria-invalid={!!errors.firstName}
           />
-          {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
-        </div>
-        <div>
-          <textarea
-            className={`[outline:none] font-roboto text-base bg-[transparent] self-stretch rounded box-border h-[105px] flex flex-col items-start justify-start p-3 text-darkgray border-[1px] border-solid ${errors.message ? 'border-red-500' : 'border-gray1'} w-full`}
-            name="Comments or questions..."
-            placeholder="Comments or questions *"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            aria-invalid={!!errors.message}
+          {errors.firstName && <span className="text-red-500 text-sm w-full">{errors.firstName}</span>}
+          <input
+            className={`w-full p-4 rounded border ${errors.lastName ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all`}
+            placeholder="Last name *"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            aria-invalid={!!errors.lastName}
           />
-          {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
+          {errors.lastName && <span className="text-red-500 text-sm w-full">{errors.lastName}</span>}
         </div>
-        {isSubmitted && <div className="text-green-600 font-semibold">Thank you! Your message has been sent successfully.</div>}
-        <Button 
-          className="w-[222px]" 
-          name="Submit" 
-          variant="primary" 
-          size="lg"
+        <input
+          className={`w-full p-4 rounded border ${errors.email ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all`}
+          placeholder="Email id *"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          aria-invalid={!!errors.email}
+        />
+        {errors.email && <span className="text-red-500 text-sm w-full">{errors.email}</span>}
+        <textarea
+          className={`w-full p-3 rounded border ${errors.messageText ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-vertical h-[105px]`}
+          placeholder="Comments or questions *"
+          value={messageText}
+          onChange={(e) => setMessageText(e.target.value)}
+          aria-invalid={!!errors.messageText}
+        />
+        {errors.messageText && <span className="text-red-500 text-sm w-full">{errors.message}</span>}
+        {isSubmitted && <div className="w-full text-green-600 font-semibold text-center">Thank you! Your message has been sent successfully.</div>}
+        <button 
+          className="w-[222px] px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-300"
           onClick={handleSubmit}
           disabled={isSubmitted}
         >
           {isSubmitted ? 'Sent!' : 'Submit'}
-        </Button>
+        </button>
       </div>
     </div>
   );
 };
 
 export default Form;
+

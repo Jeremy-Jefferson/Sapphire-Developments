@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center px-4 py-16">
+    <main className="min-h-screen bg-slate-900 flex flex-col items-center justify-center px-4 py-16" role="main" aria-labelledby="not-found-heading">
       <div className="text-center">
         {/* 404 Number */}
-        <h1 className="text-[150px] md:text-[200px] font-bold text-primary-500 leading-none mb-4">
+        <h1 className="text-[150px] md:text-[200px] font-bold text-primary-500 leading-none mb-4" aria-hidden="true">
           404
         </h1>
         
         {/* Message */}
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 id="not-found-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
           Page Not Found
         </h2>
         <p className="text-xl text-slate-400 mb-8 max-w-md mx-auto">
@@ -41,11 +41,11 @@ const NotFound = () => {
       </div>
       
       {/* Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary-500 rounded-full blur-3xl opacity-10"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-3xl opacity-10"></div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -5,6 +5,7 @@ const HeroSection = () => {
     <section
       className="self-stretch flex flex-col items-center justify-center py-20 md:py-32 px-4 bg-slate-900 relative overflow-hidden"
       id="Hero Section"
+      aria-labelledby="hero-heading"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -34,7 +35,7 @@ const HeroSection = () => {
         >
           <h1
             className="m-0 relative leading-tight font-bold text-4xl md:text-5xl lg:text-6xl text-center"
-            id="Find Your Dream Home"
+            id="hero-heading"
           >
             <span className="block text-center text-white">Find Your</span>
             <span className="block text-center text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-400">Dream Home</span>

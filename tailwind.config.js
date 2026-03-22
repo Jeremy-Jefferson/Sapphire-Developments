@@ -116,6 +116,6 @@ module.exports = {
     },
   },
   corePlugins: {
-    preflight: false,
+    preflight: true,
   },
 };

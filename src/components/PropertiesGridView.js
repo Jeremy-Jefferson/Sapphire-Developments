@@ -1,56 +1,8 @@
 import { useState, useEffect } from "react";
-import "antd/dist/antd.min.css";
-import { Dropdown, Menu, Button, message, Input, Select, Tabs } from "antd";
-import {
-  DownOutlined,
-  ArrowLeftOutlined,
-  ArrowRightOutlined,
-  HeartOutlined,
-  ShareAltOutlined,
-  PlusOutlined,
-  HeartFilled,
-  SearchOutlined,
-  FilterOutlined,
-  HomeOutlined,
-  BuildOutlined,
-} from "@ant-design/icons";
 import PHeader from "./PHeader";
 import PGCards from "./PGCards";
 import PGFooter from "./PGFooter";
 import { useSearchParams } from "react-router-dom";
-
-const { Option } = Select;
-const { TabPane } = Tabs;
-
-const propertyTypes = [
-  { key: "all", label: "All Properties", icon: <HomeOutlined /> },
-  { key: "sale", label: "For Sale", icon: <BuildOutlined /> },
-  { key: "rent", label: "For Rent", icon: <HomeOutlined /> },
-];
-
-const locationOptions = [
-  "Miami, FL",
-  "Los Angeles, CA",
-  "New York, NY",
-  "Houston, TX",
-  "Chicago, IL",
-];
-
-const priceRanges = [
-  { value: "all", label: "Any Price" },
-  { value: "0-500000", label: "Under $500K" },
-  { value: "500000-1000000", label: "$500K - $1M" },
-  { value: "1000000-2000000", label: "$1M - $2M" },
-  { value: "2000000-5000000", label: "$2M - $5M" },
-  { value: "5000000+", label: "$5M+" },
-];
-
-const propertyStatuses = [
-  { value: "all", label: "Any Status" },
-  { value: "active", label: "Active" },
-  { value: "pending", label: "Pending" },
-  { value: "sold", label: "Sold" },
-];
 
 const PropertiesGridView = () => {
   const [searchParams] = useSearchParams();
@@ -64,6 +16,7 @@ const PropertiesGridView = () => {
   const [bedrooms, setBedrooms] = useState("all");
   const [bathrooms, setBathrooms] = useState("all");
   const [showFilters, setShowFilters] = useState(false);
+  const [showSort, setShowSort] = useState(false);
 
   // Stats for the properties page
   const stats = [
@@ -73,14 +26,52 @@ const PropertiesGridView = () => {
     { number: "15+", label: "Years Experience" }
   ];
 
+  const propertyTypes = [
+    { key: "all", label: "All Properties" },
+    { key: "sale", label: "For Sale" },
+    { key: "rent", label: "For Rent" },
+  ];
+
+  const locationOptions = [
+    "Miami, FL",
+    "Los Angeles, CA",
+    "New York, NY",
+    "Houston, TX",
+    "Chicago, IL",
+  ];
+
+  const priceRanges = [
+    { value: "all", label: "Any Price" },
+    { value: "0-500000", label: "Under $500K" },
+    { value: "500000-1000000", label: "$500K - $1M" },
+    { value: "1000000-2000000", label: "$1M - $2M" },
+    { value: "2000000-5000000", label: "$2M - $5M" },
+    { value: "5000000+", label: "$5M+" },
+  ];
+
+  const sortOptions = [
+    { value: "default", label: "Default Order" },
+    { value: "popular", label: "Popular properties" },
+    { value: "newest", label: "Latest properties" },
+    { value: "price-asc", label: "Price: Low to High" },
+    { value: "price-desc", label: "Price: High to Low" },
+  ];
+
+  const propertyStatuses = [
+    { value: "all", label: "Any Status" },
+    { value: "active", label: "Active" },
+    { value: "pending", label: "Pending" },
+    { value: "sold", label: "Sold" },
+  ];
+
   // Handle favorite toggle
   const handleFavorite = (propertyId) => {
     setFavorites((prev) => {
       if (prev.includes(propertyId)) {
-        message.success("Removed from favorites");
+        // message.success("Removed from favorites");
         return prev.filter((id) => id !== propertyId);
       } else {
-        message.success("Added to favorites");
+        // message.success("Added to favorites");
         return [...prev, propertyId];
       }
     });
@@ -90,15 +81,18 @@ const PropertiesGridView = () => {
   const handleShare = () => {
     const shareUrl = window.location.href;
     navigator.clipboard.writeText(shareUrl).then(() => {
-      message.success("Link copied to clipboard!");
+      // message.success("Link copied to clipboard!");
+      console.log("Link copied to clipboard!");
     }).catch(() => {
-      message.error("Failed to copy link");
+      // message.error("Failed to copy link");
+      console.error("Failed to copy link");
     });
   };
 
   // Handle add to compare
   const handleAddToCompare = () => {
-    message.info("Added to comparison list");
+    // message.info("Added to comparison list");
+    console.log("Added to comparison list");
   };
 
   // Handle page change
@@ -182,23 +176,23 @@ const PropertiesGridView = () => {
       {/* Property Type Tabs */}
       <section className="self-stretch bg-slate-50 py-6 px-4 border-b border-slate-200">
         <div className="max-w-[1200px] mx-auto">
-          <Tabs 
-            activeKey={propertyType} 
-            onChange={setPropertyType}
-            className="property-tabs"
-          >
-            {propertyTypes.map((type) => (
-              <TabPane 
-                tab={
-                  <span className="flex items-center gap-2 px-4">
-                    {type.icon}
-                    {type.label}
-                  </span>
-                } 
-                key={type.key}
-              />
-            ))}
-          </Tabs>
+          <div className="border-b border-slate-200">
+            <nav className="-mb-px flex space-x-8">
+              {propertyTypes.map((type) => (
+                <button
+                  key={type.key}
+                  onClick={() => setPropertyType(type.key)}
+                  className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap focus:outline-none transition-colors ${
+                    propertyType === type.key
+                      ? 'border-primary-500 text-primary-600'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  {type.label}
+                </button>
+              ))}
+            </nav>
+          </div>
         </div>
       </section>
 
@@ -207,69 +201,63 @@ const PropertiesGridView = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             {/* Search Input */}
-            <div className="flex-1 w-full">
-              <Input
-                size="large"
+            <div className="flex-1 w-full relative">
+              <svg className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="text"
                 placeholder="Search by location, property name..."
-                prefix={<SearchOutlined className="text-slate-400" />}
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
-                className="w-full"
+                className="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
               />
             </div>
             
             {/* Location Filter */}
-            <Select
-              size="large"
-              value={selectedLocation}
+            <SelectFilter 
+              value={selectedLocation} 
               onChange={setSelectedLocation}
-              className="w-full md:w-48"
+              options={[{value: "all", label: "All Locations"}, ...locationOptions.map(loc => ({value: loc, label: loc})) ]} 
               placeholder="Location"
-            >
-              <Option value="all">All Locations</Option>
-              {locationOptions.map((loc) => (
-                <Option key={loc} value={loc}>{loc}</Option>
-              ))}
-            </Select>
+              className="w-full md:w-48"
+            />
             
             {/* Price Filter */}
-            <Select
-              size="large"
-              value={selectedPrice}
+            <SelectFilter 
+              value={selectedPrice} 
               onChange={setSelectedPrice}
-              className="w-full md:w-48"
+              options={priceRanges} 
               placeholder="Price"
-            >
-              {priceRanges.map((range) => (
-                <Option key={range.value} value={range.value}>{range.label}</Option>
-              ))}
-            </Select>
+              className="w-full md:w-48"
+            />
             
             {/* Bedrooms Filter */}
-            <Select
-              size="large"
-              value={bedrooms}
+            <SelectFilter 
+              value={bedrooms} 
               onChange={setBedrooms}
-              className="w-full md:w-32"
+              options={[
+                {value: "all", label: "Beds"},
+                {value: "1", label: "1+"},
+                {value: "2", label: "2+"},
+                {value: "3", label: "3+"},
+                {value: "4", label: "4+"},
+                {value: "5", label: "5+"}
+              ]}
               placeholder="Beds"
-            >
-              <Option value="all">Beds</Option>
-              <Option value="1">1+</Option>
-              <Option value="2">2+</Option>
-              <Option value="3">3+</Option>
-              <Option value="4">4+</Option>
-              <Option value="5">5+</Option>
-            </Select>
+              className="w-full md:w-32"
+            />
             
             {/* More Filters Toggle */}
-            <Button 
-              size="large"
-              icon={<FilterOutlined />}
+            <button 
               onClick={() => setShowFilters(!showFilters)}
-              className="w-full md:w-auto"
+              className="flex items-center gap-2 px-4 py-3 border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all w-full md:w-auto font-medium"
             >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
               Filters
-            </Button>
+            </button>
           </div>
           
           {/* Extended Filters */}
@@ -277,33 +265,32 @@ const PropertiesGridView = () => {
             <div className="mt-4 pt-4 border-t border-slate-200">
               <div className="flex flex-wrap gap-4 items-center">
                 <span className="text-slate-500 font-medium">More filters:</span>
-                <Select
-                  size="medium"
+                <SelectFilter
                   value={bathrooms}
                   onChange={setBathrooms}
-                  className="w-32"
+                  options={[
+                    {value: "all", label: "Baths"},
+                    {value: "1", label: "1+"},
+                    {value: "2", label: "2+"},
+                    {value: "3", label: "3+"},
+                    {value: "4", label: "4+"}
+                  ]}
                   placeholder="Baths"
-                >
-                  <Option value="all">Baths</Option>
-                  <Option value="1">1+</Option>
-                  <Option value="2">2+</Option>
-                  <Option value="3">3+</Option>
-                  <Option value="4">4+</Option>
-                </Select>
-                <Select
-                  size="medium"
-                  value={propertyStatuses.find(s => s.value === propertyType)?.value || "all"}
-                  onChange={(val) => setPropertyType(val)}
-                  className="w-40"
+                  className="w-32"
+                />
+                <SelectFilter
+                  value={propertyType}
+                  onChange={setPropertyType}
+                  options={propertyStatuses}
                   placeholder="Status"
+                  className="w-40"
+                />
+                <button 
+                  onClick={clearFilters} 
+                  className="text-primary-500 hover:text-primary-600 font-medium underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
                 >
-                  {propertyStatuses.map((status) => (
-                    <Option key={status.value} value={status.value}>{status.label}</Option>
-                  ))}
-                </Select>
-                <Button type="link" onClick={clearFilters} className="text-primary-500">
                   Clear all filters
-                </Button>
+                </button>
               </div>
             </div>
           )}
@@ -319,29 +306,32 @@ const PropertiesGridView = () => {
             Showing <span className="font-semibold text-slate-700">6</span> properties
           </div>
           
-          <div className="flex items-center gap-4">
-            <span className="text-slate-500">Sort by:</span>
-            <Dropdown
-              overlay={
-                <Menu onClick={({ key }) => setSortBy(key)}>
-                  <Menu.Item key="default">Default Order</Menu.Item>
-                  <Menu.Item key="popular">Popular properties</Menu.Item>
-                  <Menu.Item key="newest">Latest properties</Menu.Item>
-                  <Menu.Item key="price-asc">Price: Low to High</Menu.Item>
-                  <Menu.Item key="price-desc">Price: High to Low</Menu.Item>
-                </Menu>
-              }
-              trigger={["click"]}
+          <div className="relative">
+            <button
+              onClick={() => setShowSort(!showSort)}
+              className="flex items-center gap-2 px-4 py-2 text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
             >
-              <Button className="cursor-pointer flex items-center gap-2">
-                {sortBy === "default" ? "Default Order" : 
-                 sortBy === "popular" ? "Popular properties" :
-                 sortBy === "newest" ? "Latest properties" :
-                 sortBy === "price-asc" ? "Price: Low to High" : 
-                 sortBy === "price-desc" ? "Price: High to Low" : "Default Order"}
-                <DownOutlined />
-              </Button>
-            </Dropdown>
+              {sortOptions.find(opt => opt.value === sortBy)?.label || "Default Order"}
+              <svg className={`h-4 w-4 transition-transform ${showSort ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {showSort && (
+              <div className="absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-lg z-10 py-1">
+                {sortOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    onClick={() => {
+                      setSortBy(option.value);
+                      setShowSort(false);
+                    }}
+                    className="w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-1 focus:ring-primary-500 first:rounded-t-lg last:rounded-b-lg"
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -366,49 +356,58 @@ const PropertiesGridView = () => {
       <section
         className="self-stretch flex flex-col items-center justify-start pb-16 px-4"
       >
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <Button 
-            size="middle" 
-            type="default" 
-            icon={<ArrowLeftOutlined />} 
+        <nav className="flex flex-wrap items-center justify-center gap-1 bg-white p-2 rounded-lg shadow-sm border">
+          <button 
             onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
             disabled={currentPage === 1}
-          />
-          <Button 
-            size="middle" 
-            type={currentPage === 1 ? "primary" : "default"} 
+            className="flex items-center justify-center w-10 h-10 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button 
             onClick={() => handlePageChange(1)}
+            className={`flex items-center justify-center w-10 h-10 rounded-lg mx-1 font-medium transition-all ${
+              currentPage === 1 
+                ? 'bg-primary-500 text-white shadow-md' 
+                : 'text-slate-700 hover:bg-slate-100'
+            }`}
           >
             1
-          </Button>
-          <Button 
-            size="middle" 
-            type={currentPage === 2 ? "primary" : "default"} 
+          </button>
+          <button 
             onClick={() => handlePageChange(2)}
+            className={`flex items-center justify-center w-10 h-10 rounded-lg mx-1 font-medium transition-all ${
+              currentPage === 2 
+                ? 'bg-primary-500 text-white shadow-md' 
+                : 'text-slate-700 hover:bg-slate-100'
+            }`}
           >
             2
-          </Button>
-          <Button 
-            size="middle" 
-            type={currentPage === 3 ? "primary" : "default"} 
+          </button>
+          <button 
             onClick={() => handlePageChange(3)}
+            className={`flex items-center justify-center w-10 h-10 rounded-lg mx-1 font-medium transition-all ${
+              currentPage === 3 
+                ? 'bg-primary-500 text-white shadow-md' 
+                : 'text-slate-700 hover:bg-slate-100'
+            }`}
           >
             3
-          </Button>
-          <Button size="middle" type="default" disabled>
-            ...
-          </Button>
-          <Button size="middle" type="default" disabled>
-            54
-          </Button>
-          <Button 
-            size="middle" 
-            type="primary" 
-            icon={<ArrowRightOutlined />} 
+          </button>
+          <span className="flex items-center px-3 py-2 text-sm text-slate-500">...</span>
+          <span className="flex items-center px-3 py-2 text-sm text-slate-500 font-medium">54</span>
+          <button 
             onClick={() => handlePageChange(Math.min(54, currentPage + 1))}
             disabled={currentPage === 54}
-          />
-        </div>
+            className="flex items-center justify-center w-10 h-10 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </nav>
       </section>
 
       {/* CTA Section */}
@@ -419,12 +418,12 @@ const PropertiesGridView = () => {
             Let our expert agents help you find your perfect property. We have access to exclusive listings.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button type="primary" size="large" className="bg-primary-500 border-primary-500 hover:bg-primary-600">
+            <button className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all border border-primary-500">
               Contact an Agent
-            </Button>
-            <Button size="large" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
+            </button>
+            <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold border border-white/30 transition-all backdrop-blur-sm">
               Browse Gallery
-            </Button>
+            </button>
           </div>
         </div>
       </section>
@@ -434,4 +433,42 @@ const PropertiesGridView = () => {
   );
 };
 
+// Simple SelectFilter component (Tailwind only)
+const SelectFilter = ({ value, onChange, options, placeholder, className = "" }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className={`w-full text-left py-3 px-4 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all pr-8 ${className}`}
+      >
+        <span className="block truncate">
+          {(options.find(opt => opt.value === value)?.label) || placeholder}
+        </span>
+        <svg className={`absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && (
+        <div className="absolute z-20 w-full mt-1 bg-white border border-slate-200 rounded-xl shadow-lg max-h-60 overflow-auto">
+          {options.map((option) => (
+            <button
+              key={option.value}
+              onClick={() => {
+                onChange(option.value);
+                setOpen(false);
+              }}
+              className="w-full text-left px-4 py-2 text-sm hover:bg-slate-50 focus:outline-none focus:bg-slate-50 first:rounded-t-xl last:rounded-b-xl"
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 export default PropertiesGridView;
+

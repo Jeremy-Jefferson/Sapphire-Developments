@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
 
 const MobileNav = ({ variant = "landing" }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,10 +81,6 @@ const MobileNav = ({ variant = "landing" }) => {
       </div>
     </div>
   );
-};
-
-MobileNav.propTypes = {
-  variant: PropTypes.oneOf(['landing', 'properties']),
 };
 
 export default MobileNav;

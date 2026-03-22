@@ -1,166 +1,102 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
-import { css } from "@emotion/react";
+import { useState } from "react";
 
-const Form = () => {
+const ContactForm = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [comments, setComments] = useState("");
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = {};
+    
+    if (!firstName.trim()) newErrors.firstName = "First name is required";
+    if (!lastName.trim()) newErrors.lastName = "Last name is required";
+    if (!email.trim()) newErrors.email = "Email is required";
+    if (!comments.trim()) newErrors.comments = "Comments are required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Simulate form submission
+    console.log('Form data:', { firstName, lastName, email, comments });
+    setSubmitted(true);
+    
+    // Reset after delay
+    setTimeout(() => {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setComments("");
+      setSubmitted(false);
+      setErrors({});
+    }, 2000);
+  };
+
   return (
-    <div
-      className={css`
-        align-self: stretch;
-        border-radius: var(--br-xs);
-        background-color: var(--color-white);
-        box-shadow: 0px 25px 25px rgba(59, 77, 129, 0.25);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: var(--padding-9xl) var(--padding-11xl);
-        gap: var(--gap-mid);
-      `}
-    >
+    <div className="w-full max-w-md mx-auto bg-white rounded-[10px] shadow-[0_25px_25px_rgba(59,77,129,0.25)] p-12 flex flex-col items-center gap-6">
       <textarea
-        className={css`
-          border: none;
-          background-color: transparent;
-          display: flex;
-          font-family: var(--font-poppins);
-          font-size: var(--header-heading-4-size);
-          align-self: stretch;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-        `}
+        className="w-full text-5xl font-bold text-slate-800 border-none bg-transparent outline-none resize-none pb-8"
         placeholder="Inquiry Form"
-        defaultValue="Are you looking for details about a certain property? Ask us a question using the form below."
+        value="Are you looking for details about a certain property? Ask us a question using the form below."
+        readOnly
+        rows="2"
       />
-      <div
-        className={css`
-          align-self: stretch;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          gap: var(--gap-3xs);
-        `}
-      >
-        <div
-          className={css`
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-            gap: var(--gap-3xs);
-            @media screen and (max-width: 960px) {
-              flex-direction: column;
-              gap: var(--gap-3xs);
-              align-items: flex-start;
-              justify-content: center;
-            }
-          `}
-        >
-          <input
-            className={css`
-              border: 1px solid var(--color-gray-100);
-              font-family: var(--font-roboto);
-              font-size: var(--heading-heading-5-size);
-              background-color: transparent;
-              align-self: stretch;
-              flex: 1;
-              border-radius: var(--br-9xs);
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              padding: var(--padding-base) var(--padding-xs);
-              @media screen and (max-width: 960px) {
-                flex: unset;
-                align-self: stretch;
-              }
-            `}
-            name="First Name"
-            value="First name"
-            placeholder="First name"
-            type="text"
-            autoComplete="on"
-          />
-          <input
-            className={css`
-              border: 1px solid var(--color-gray-100);
-              font-family: var(--font-roboto);
-              font-size: var(--heading-heading-5-size);
-              background-color: transparent;
-              align-self: stretch;
-              flex: 1;
-              border-radius: var(--br-9xs);
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: center;
-              padding: var(--padding-base) var(--padding-xs);
-              @media screen and (max-width: 960px) {
-                flex: unset;
-                align-self: stretch;
-              }
-            `}
-            name="Last Name"
-            placeholder="Last name"
-            type="text"
-            autoComplete="on"
-          />
+      
+      <div className="w-full flex flex-col gap-4">
+        <div className="flex gap-4">
+          <div className="flex-1">
+            <input
+              className={`w-full p-4 rounded border ${errors.firstName ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500`}
+              placeholder="First name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+          </div>
+          <div className="flex-1">
+            <input
+              className={`w-full p-4 rounded border ${errors.lastName ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500`}
+              placeholder="Last name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+          </div>
         </div>
+
         <input
-          className={css`
-            border: 1px solid var(--color-gray-100);
-            font-family: var(--font-roboto);
-            font-size: var(--heading-heading-5-size);
-            background-color: transparent;
-            align-self: stretch;
-            border-radius: var(--br-9xs);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-base) var(--padding-xs);
-          `}
-          name="Email"
+          className={`w-full p-4 rounded border ${errors.email ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500`}
           placeholder="Email id"
-          type="text"
-          autoComplete="on"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          className={css`
-            border: 1px solid var(--color-gray-100);
-            font-family: var(--font-roboto);
-            font-size: var(--heading-heading-5-size);
-            background-color: transparent;
-            align-self: stretch;
-            border-radius: var(--br-9xs);
-            box-sizing: border-box;
-            height: 105px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--padding-xs);
-          `}
-          name="Comments or questions..."
+        {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+
+        <textarea
+          className={`w-full p-4 rounded border ${errors.comments ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 resize-vertical h-[105px]`}
           placeholder="Comments or questions"
-          type="text"
+          value={comments}
+          onChange={(e) => setComments(e.target.value)}
         />
-        <Button
-          className={css`
-            width: 222px;
-          `}
-          name="Submit"
-          variant="primary"
-          size="lg"
+        {errors.comments && <p className="text-red-500 text-xs mt-1">{errors.comments}</p>}
+
+        <button
+          className="w-[222px] mx-auto px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-200"
+          onClick={handleSubmit}
+          disabled={submitted}
         >
-          Submit
-        </Button>
+          {submitted ? "Submitted!" : "Submit"}
+        </button>
       </div>
     </div>
   );
 };
 
-export default Form;
+export default ContactForm;
+
