@@ -1,4 +1,6 @@
-const StatsSection = () => {
+import React from 'react';
+
+const StatsSection = React.memo(() => {
   const stats = [
     { number: "500+", label: "Properties Sold" },
     { number: "200+", label: "Happy Clients" },
@@ -20,6 +22,6 @@ const StatsSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default StatsSection;

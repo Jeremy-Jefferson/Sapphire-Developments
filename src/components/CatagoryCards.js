@@ -2,178 +2,80 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+const categories = [
+  {
+    id: "residential",
+    icon: "/svg/Res House Icon.svg",
+    title: "Residential Homes",
+    description: "View residential homes for purchase. Discover wonderful family homes.",
+    link: "/properties-grid-view",
+    color: "from-blue-500 to-blue-600"
+  },
+  {
+    id: "rental",
+    icon: "/svg/Rent Icon.svg",
+    title: "Rental Properties",
+    description: "View rental properties. Great places to live temporarily, or rent to own.",
+    link: "/properties-grid-view",
+    color: "from-green-500 to-green-600"
+  },
+  {
+    id: "vacation",
+    icon: "/svg/Vacation.svg",
+    title: "Vacation Homes",
+    description: "View vacation properties. Gorgeous getaways to feel at home away from home.",
+    link: "/properties-grid-view",
+    color: "from-purple-500 to-purple-600"
+  },
+  {
+    id: "luxury",
+    icon: "/Luxury.svg",
+    title: "Luxury Properties",
+    description: "View luxury properties. Lavish mansions and estates.",
+    link: "/properties-grid-view",
+    color: "from-amber-500 to-amber-600"
+  }
+];
+
 const CatagoryCards = () => {
   return (
-    <div className="self-stretch flex flex-row flex-wrap items-center justify-center gap-[86px]">
-      <div
-        className="relative rounded-3xs bg-white shadow-[0px_25px_50px_rgba(59,_77,_129,_0.25)] w-[312px] h-[322px] min-w-[300px] max-w-[340px]"
-        id="Residential"
-      >
-        <article className="absolute top-[calc(50%_-_127px)] left-[calc(50%_-_134px)] h-[255px] flex flex-col items-center justify-between">
-          <img
-            className="relative w-[78px] h-[78px] overflow-hidden shrink-0"
-            alt=""
-            src="/svg/Res House Icon.svg"
-          />
-          <article
-            className="shrink-0 flex flex-col items-center justify-center gap-[24px] text-center text-5xl text-gray-700 font-body-large-400"
-            id="Residential Property Desc."
-          >
-            <h1
-              className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit"
-              id="Residential Homes"
-            >
-              Residential Homes
-            </h1>
-            <p
-              className="m-0 relative text-base leading-[24px] text-lightslategray flex items-end justify-center w-[268px]"
-              id="Residential paragraph"
-            >{`View residential homes for purchase. Discover wonderful family homes. `}</p>
-            <Link to="/properties-grid-view">
-              <Button
-                className="relative"
-                name="Read More"
-                id="1"
-                variant="outline-primary"
-                size="sm"
-              >
-                Read More
-              </Button>
-            </Link>
-          </article>
-        </article>
-      </div>
-      <div
-        className="relative rounded-3xs bg-white shadow-[0px_25px_50px_rgba(59,_77,_129,_0.25)] w-[312px] h-[322px] min-w-[300px] max-w-[340px]"
-        id="Rental"
-      >
-        <article
-          className="absolute top-[calc(50%_-_127px)] left-[calc(50%_-_134px)] h-[255px] flex flex-col items-center justify-between"
-          id="Rental Props"
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1200px]">
+      {categories.map((category) => (
+        <div
+          key={category.id}
+          className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
         >
-          <img
-            className="relative w-[78px] h-[78px] overflow-hidden shrink-0"
-            alt=""
-            src="/svg/Rent Icon.svg"
-          />
-          <article
-            className="shrink-0 flex flex-col items-center justify-center gap-[24px] text-center text-5xl text-gray-700 font-body-large-400"
-            id="Rental Property Desc."
-          >
-            <h1
-              className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit"
-              id="Rental Properties"
-            >
-              Rental Properties
-            </h1>
-            <p
-              className="m-0 relative text-base leading-[24px] text-lightslategray flex items-end justify-center w-[268px]"
-              id="View rental poperties"
-            >
-              View rental properties. Great places to live temporarily, or rent
-              to own.
+          {/* Icon Container */}
+          <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+            <img
+              className="w-16 h-16 object-contain filter brightness-0 invert"
+              alt={category.title}
+              src={category.icon}
+            />
+          </div>
+
+          {/* Content */}
+          <div className="p-6 flex flex-col items-center text-center gap-4">
+            <h2 className="text-xl font-semibold text-slate-800 group-hover:text-primary-600 transition-colors">
+              {category.title}
+            </h2>
+            <p className="text-slate-500 text-sm leading-relaxed">
+              {category.description}
             </p>
-            <Link to="/properties-grid-view">
+            <Link to={category.link} className="mt-2">
               <Button
-                className="relative"
-                name="Read More"
-                id="2"
+                className="px-6 py-2 rounded-full border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white transition-all duration-300 font-medium"
                 variant="outline-primary"
-                size="sm"
               >
                 Read More
               </Button>
             </Link>
-          </article>
-        </article>
-      </div>
-      <div
-        className="relative rounded-3xs bg-white shadow-[0px_25px_50px_rgba(59,_77,_129,_0.25)] w-[312px] h-[322px] min-w-[300px] max-w-[340px]"
-        id="Vacation"
-      >
-        <article
-          className="absolute top-[calc(50%_-_136px)] left-[calc(50%_-_134px)] h-[272px] flex flex-col items-center justify-between"
-          id="Vacation"
-        >
-          <img
-            className="relative w-[78px] h-[78px] overflow-hidden shrink-0"
-            alt=""
-            src="/svg/Vacation.svg"
-          />
-          <article
-            className="shrink-0 flex flex-col items-center justify-center gap-[24px] text-center text-5xl text-gray-700 font-body-large-400"
-            id="Vacation Property Desc."
-          >
-            <h1
-              className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit"
-              id="Vacation Homes"
-            >
-              Vacation Homes
-            </h1>
-            <p
-              className="m-0 relative text-base leading-[24px] text-lightslategray flex items-end justify-center w-[268px]"
-              id="View Vacation Properties"
-            >
-              View vacation properties. Gorgeous getaways to feel at home away
-              from home
-            </p>
-            <Link to="/properties-grid-view">
-              <Button
-                className="relative"
-                name="Read More"
-                id="3"
-                variant="outline-primary"
-                size="sm"
-              >
-                Read More
-              </Button>
-            </Link>
-          </article>
-        </article>
-      </div>
-      <div
-        className="relative rounded-3xs bg-white shadow-[0px_25px_50px_rgba(59,_77,_129,_0.25)] w-[312px] h-[322px] min-w-[300px] max-w-[340px]"
-        id="Luxury"
-      >
-        <article
-          className="absolute top-[calc(50%_-_127px)] left-[calc(50%_-_134px)] h-[255px] flex flex-col items-center justify-between"
-          id="Luxury"
-        >
-          <img
-            className="max-w-full overflow-hidden h-[79px] shrink-0"
-            alt=""
-            src="/Luxury.svg"
-          />
-          <article
-            className="shrink-0 flex flex-col items-center justify-center gap-[24px] text-center text-5xl text-gray-700 font-body-large-400"
-            id="Luxury Property Desc."
-          >
-            <h1
-              className="m-0 relative text-inherit leading-[32px] font-semibold font-inherit"
-              id="Luxury Properties"
-            >
-              Luxury Properties
-            </h1>
-            <p
-              className="m-0 relative text-base leading-[24px] text-lightslategray flex items-end justify-center w-[268px]"
-              id="View Luxury Properties"
-            >
-              View luxury properties. Lavish mansions and estates.
-            </p>
-            <Link to="/properties-grid-view">
-              <Button
-                className="relative"
-                name="Read More"
-                id="4"
-                variant="outline-primary"
-                size="sm"
-              >
-                Read More
-              </Button>
-            </Link>
-          </article>
-        </article>
-      </div>
+          </div>
+
+          {/* Hover overlay effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        </div>
+      ))}
     </div>
   );
 };

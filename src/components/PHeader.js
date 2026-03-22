@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import Navigation2 from "./Navigation2";
+import MobileNav from "./MobileNav";
 
 const PHeader = () => {
   return (
@@ -17,7 +18,10 @@ const PHeader = () => {
           id="NAV"
           NAV="1"
         >
-          <Navigation2 />
+          <div className="hidden lg:flex">
+            <Navigation2 />
+          </div>
+          <MobileNav variant="properties" />
         </div>
       </header>
     </header>

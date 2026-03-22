@@ -3,32 +3,31 @@ import CatagoryCards from "./CatagoryCards";
 const PropertiesByCatagory = () => {
   return (
     <section
-      className="self-stretch bg-primary-50 flex flex-col items-center justify-start py-[70px] px-0"
-      id="Props By Area"
+      className="self-stretch bg-gradient-to-b from-primary-50 to-white flex flex-col items-center justify-start py-20 px-4"
+      id="Props By Category"
     >
       <div
-        className="self-stretch flex flex-col items-center justify-start pt-[75px] px-0 pb-0 box-border gap-[54px] max-w-[95%]"
+        className="self-stretch flex flex-col items-center justify-start gap-10 max-w-[1200px] mx-auto w-full"
         id="Properties by Category"
       >
+        {/* Header */}
         <header
-          className="self-stretch flex flex-col items-center justify-start py-0 px-[30px] box-border gap-[24px] max-w-[95%] text-center text-26xl text-slate-800 font-body-large-400"
+          className="flex flex-col items-center justify-start gap-6 max-w-[700px] text-center"
           id="Category Header"
         >
-          <h1
-            className="m-0 self-stretch relative text-inherit leading-[48px] font-semibold font-inherit"
-            id="Props By Area"
-          >
+          <div className="flex items-center gap-2">
+            <span className="w-12 h-1 bg-primary-500 rounded-full"></span>
+            <span className="text-primary-600 font-medium text-sm uppercase tracking-wider">Browse</span>
+            <span className="w-12 h-1 bg-primary-500 rounded-full"></span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
             Properties by Category
           </h1>
-          <h2
-            className="m-0 self-stretch relative text-5xl leading-[28px] font-normal font-inherit text-slate-500"
-            id="Take a look at our wonderful homes, arranged by category. The four categories, rental, residential, vacation, and luxury, are below."
-            Subtitle3
-          >
-            Take a look at our wonderful homes, arranged by category. The four
-            categories, rental, residential, vacation, and luxury, are below.
-          </h2>
+          <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
+            Take a look at our wonderful homes, arranged by category. The four categories - rental, residential, vacation, and luxury - are below.
+          </p>
         </header>
+        
         <CatagoryCards />
       </div>
     </section>

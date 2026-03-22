@@ -1,44 +1,52 @@
 import { Link } from "react-router-dom";
 
+const cities = [
+  {
+    id: "las-vegas",
+    name: "Las Vegas, NV",
+    listings: 18,
+    image: "/png/card-4@3x.png"
+  },
+  {
+    id: "los-angeles",
+    name: "Los Angeles, CA",
+    listings: 32,
+    image: "/png/card-5@3x.png"
+  }
+];
+
 const CityCardRow2 = () => {
   return (
-    <div className="self-stretch flex flex-row items-start justify-center gap-[24px] lg:flex-row md:flex-col">
-      <Link
-        className="cursor-pointer [text-decoration:none] flex-1 rounded-lg h-[241px] flex flex-row items-start justify-start p-2.5 box-border relative bg-[url('/public/png/card-4@3x.png')] bg-cover bg-no-repeat bg-[top] md:flex-[unset] md:self-stretch"
-        id="Card4"
-        to="/properties-grid-view"
-      >
-        <header
-          className="my-0 mx-[!important] absolute top-[16px] left-[16px] flex flex-col items-start justify-start mix-blend-normal z-[0] text-left text-5xl text-white font-body-large-400"
-          id="Las Vegas, NV: 18 Listings"
+    <div className="self-stretch grid md:grid-cols-2 gap-6 w-full max-w-[900px]">
+      {cities.map((city) => (
+        <Link
+          key={city.id}
+          className="cursor-pointer group relative rounded-2xl h-[280px] overflow-hidden bg-cover bg-no-repeat bg-top hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          id={`Card-${city.id}`}
+          to="/properties-grid-view"
+          style={{ backgroundImage: `url('${city.image}')` }}
         >
-          <h1
-            className="m-0 relative leading-[32px] text-inherit font-inherit"
-            id="Las Vegas, NV"
-          >
-            <p className="m-0 font-semibold">Las Vegas, NV</p>
-            <p className="m-0 text-lg">18 Listings</p>
-          </h1>
-        </header>
-      </Link>
-      <Link
-        className="cursor-pointer [text-decoration:none] flex-1 rounded-lg h-[241px] flex flex-row items-start justify-start p-2.5 box-border relative bg-[url('/public/png/card-5@3x.png')] bg-cover bg-no-repeat bg-[top] md:flex-[unset] md:self-stretch"
-        id="Card5"
-        to="/properties-grid-view"
-      >
-        <header
-          className="my-0 mx-[!important] absolute top-[16px] left-[16px] flex flex-col items-start justify-start z-[0] text-left text-5xl text-white font-body-large-400"
-          id="Los Angeles, CA: 32 Listings"
-        >
-          <h1
-            className="m-0 relative leading-[32px] text-inherit font-inherit"
-            id="Los Angeles, CA"
-          >
-            <p className="m-0 font-semibold">Los Angeles, CA</p>
-            <p className="m-0 text-lg">32 Listings</p>
-          </h1>
-        </header>
-      </Link>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+          
+          {/* Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <h2 className="text-2xl font-bold text-white mb-1 group-hover:text-primary-400 transition-colors">
+              {city.name}
+            </h2>
+            <p className="text-white/80 text-lg font-medium">
+              {city.listings} Listings
+            </p>
+          </div>
+
+          {/* Arrow indicator */}
+          <div className="absolute top-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-[-10px] group-hover:translate-y-0 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };

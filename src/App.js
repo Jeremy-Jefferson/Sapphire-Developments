@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import OurAgents from "./pages/OurAgents";
 import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/sale" element={<PropertiesGridView />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

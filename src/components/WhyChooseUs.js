@@ -1,6 +1,7 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 
-const WhyChooseUs = () => {
+const WhyChooseUs = React.memo(() => {
   const features = [
     {
       icon: "🏠",
@@ -83,6 +84,6 @@ const WhyChooseUs = () => {
       </div>
     </section>
   );
-};
+});
 
 export default WhyChooseUs;
