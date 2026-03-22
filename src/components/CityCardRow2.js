@@ -12,16 +12,22 @@ const cities = [
     name: "Los Angeles, CA",
     listings: 32,
     image: "/png/card-5@3x.png"
+  },
+  {
+    id: "chicago",
+    name: "Chicago, IL",
+    listings: 14,
+    image: "/luxury-home-8.jpg"
   }
 ];
 
 const CityCardRow2 = () => {
   return (
-    <div className="self-stretch grid md:grid-cols-2 gap-6 w-full max-w-[900px]">
+    <div className="self-stretch grid md:grid-cols-3 gap-6 w-full">
       {cities.map((city) => (
         <Link
           key={city.id}
-          className="cursor-pointer group relative rounded-2xl h-[280px] overflow-hidden bg-cover bg-no-repeat bg-top hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          className="cursor-pointer group relative rounded-2xl h-[280px] overflow-hidden bg-cover bg-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
           id={`Card-${city.id}`}
           to="/properties-grid-view"
           style={{ backgroundImage: `url('${city.image}')` }}

@@ -27,7 +27,7 @@ const CityCardsRow1 = () => {
       {cities.map((city) => (
         <Link
           key={city.id}
-          className="cursor-pointer group relative rounded-2xl h-[280px] overflow-hidden bg-cover bg-no-repeat bg-top hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          className="cursor-pointer group relative rounded-2xl h-[280px] overflow-hidden bg-cover bg-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
           id={`Card-${city.id}`}
           to="/properties-grid-view"
           style={{ backgroundImage: `url('${city.image}')` }}

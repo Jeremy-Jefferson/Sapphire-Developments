@@ -3,7 +3,6 @@ import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
-import SkipToContent from "./components/SkipToContent";
 
 // Lazy load pages for better performance
 const LandingPage = lazy(() => import("./components/LandingPage"));
@@ -17,7 +16,6 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 function App() {
   return (
     <ErrorBoundary>
-      <SkipToContent />
       <Suspense fallback={<LoadingSpinner />}>
         <ScrollToTop />
         <Routes>

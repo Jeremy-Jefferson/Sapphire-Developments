@@ -5,25 +5,28 @@ import MobileNav from "./MobileNav";
 const LPHeader = () => {
   return (
     <header
-      className="self-stretch bg-white h-[98px] flex flex-row items-center justify-center py-[22px] px-20 box-border sticky w-full top-[0] [background:white] z-[2] lg:pl-10 lg:pr-10 lg:box-border md:pl-6 md:pr-6 md:box-border"
+      className="self-stretch bg-white h-auto min-h-[80px] flex flex-row items-center justify-center py-4 px-4 md:px-8 lg:px-20 box-border sticky w-full top-[0] z-[100] shadow-sm"
       id="Top Header (Nav)"
     >
-      <header
-        className="flex-1 flex flex-row items-center justify-between"
+      <div
+        className="flex-1 flex flex-row items-center justify-between max-w-[1400px] w-full"
         id="HEADER"
       >
         <Logo />
-        <header
-          className="shrink-0 flex flex-row items-center justify-center sm:flex"
+        <div
+          className="shrink-0 flex flex-row items-center justify-center"
           id="NAV"
-          NAV="1"
         >
-          <div className="hidden lg:flex">
+          {/* Desktop Navigation - shows on lg screens and above */}
+          <div className="hidden lg:block">
             <Navigation1 />
           </div>
-          <MobileNav variant="landing" />
-        </header>
-      </header>
+          {/* Mobile Navigation - shows on screens smaller than lg */}
+          <div className="lg:hidden">
+            <MobileNav variant="landing" />
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

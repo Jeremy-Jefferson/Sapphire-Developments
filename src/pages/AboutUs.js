@@ -38,25 +38,25 @@ const AboutUs = () => {
     {
       name: "Sarah Johnson",
       role: "CEO & Founder",
-      image: "/png/ellipse-1@2x.png",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
       bio: "With over 15 years in real estate, Sarah founded Sapphire Developments with a vision to transform how people find their dream homes."
     },
     {
       name: "Michael Chen",
       role: "Chief Operating Officer",
-      image: "/png/ellipse-11@2x.png",
+      image: "https://randomuser.me/api/portraits/men/11.jpg",
       bio: "Michael brings 12 years of operational expertise to ensure seamless experiences for every client."
     },
     {
       name: "Emily Rodriguez",
       role: "Head of Sales",
-      image: "/png/ellipse-12@2x.png",
+      image: "https://randomuser.me/api/portraits/women/68.jpg",
       bio: "Emily has closed over 300 deals and specializes in luxury properties and first-time home buyers."
     },
     {
       name: "David Williams",
       role: "Director of Marketing",
-      image: "/png/ellipse-111@2x.png",
+      image: "https://randomuser.me/api/portraits/men/75.jpg",
       bio: "David leads our marketing initiatives with innovative strategies that connect buyers with perfect properties."
     }
   ];
@@ -65,21 +65,21 @@ const AboutUs = () => {
     {
       name: "James & Lisa Thompson",
       location: "Houston, TX",
-      image: "/png/ellipse-1@2x.png",
+      image: "https://randomuser.me/api/portraits/men/46.jpg",
       text: "Sapphire Developments made finding our dream home an absolute pleasure. Their team was professional, knowledgeable, and always available to answer our questions.",
       rating: 5
     },
     {
       name: "Robert Martinez",
       location: "Miami, FL",
-      image: "/png/ellipse-11@2x.png",
+      image: "https://randomuser.me/api/portraits/men/22.jpg",
       text: "As a first-time buyer, I was nervous about the process. The team at Sapphire guided me every step of the way and helped me find the perfect condo within my budget.",
       rating: 5
     },
     {
       name: "Amanda & Chris Lee",
       location: "Los Angeles, CA",
-      image: "/png/ellipse-12@2x.png",
+      image: "https://randomuser.me/api/portraits/women/28.jpg",
       text: "We sold our home in just 2 weeks thanks to their expert marketing and negotiation skills. Highly recommend!",
       rating: 5
     }
@@ -178,8 +178,8 @@ const AboutUs = () => {
             </div>
             <div className="relative h-[450px] rounded-2xl overflow-hidden shadow-2xl group">
               <img 
-                src="/png/property-image4@2x.png" 
-                alt="Sapphire Developments Property" 
+                src="/luxury-home-1.jpg" 
+                alt="Sapphire Developments Luxury Property" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent p-8">
