@@ -9,17 +9,17 @@ const ContactUs = () => {
   const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.789!2d-95.46!3d29.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c9f1c1f1f1f1%3A0x1f1f1f1f1f1f1f1!2s3411%20Cummins%20ST%2C%20Houston%2C%20TX%2077027!5e0!3m2!1sen!2sus!4v1234567890`;
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start">
+    <main className="min-h-screen bg-white flex flex-col items-center justify-start" id="main-content">
       <PHeader />
       
       {/* Hero Section */}
-      <section className="self-stretch bg-slate-900 h-[400px] flex flex-col items-center justify-center mix-blend-normal relative overflow-hidden">
+      <section className="self-stretch bg-slate-900 h-[400px] flex flex-col items-center justify-center mix-blend-normal relative overflow-hidden" aria-labelledby="contact-hero-heading">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-400 rounded-full blur-3xl"></div>
         </div>
         <div className="text-center z-10 relative">
-          <h1 className="text-5xl md:text-7xl font-semibold text-white font-body-large-400 leading-[48px] mb-4">
+          <h1 id="contact-hero-heading" className="text-5xl md:text-7xl font-semibold text-white font-body-large-400 leading-[48px] mb-4">
             Contact Us
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 font-body-large-400 leading-[28px] max-w-2xl mx-auto">
@@ -172,7 +172,7 @@ const ContactUs = () => {
       </section>
 
       <PGFooter />
-    </div>
+    </main>
   );
 };
 

@@ -109,11 +109,11 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start">
+    <main className="min-h-screen bg-white flex flex-col items-center justify-start" id="main-content">
       <PHeader />
       
       {/* Hero Section - Improved */}
-      <section className="self-stretch bg-slate-900 h-[400px] flex flex-col items-center justify-center relative overflow-hidden">
+      <section className="self-stretch bg-slate-900 h-[400px] flex flex-col items-center justify-center relative overflow-hidden" aria-labelledby="about-hero-heading">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -132,7 +132,7 @@ const AboutUs = () => {
             <span className="text-white/80 text-sm font-medium">Since 2010</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+          <h1 id="about-hero-heading" className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-400">Us</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mt-4 max-w-2xl mx-auto">
@@ -425,7 +425,7 @@ const AboutUs = () => {
       </section>
 
       <PGFooter />
-    </div>
+    </main>
   );
 };
 
