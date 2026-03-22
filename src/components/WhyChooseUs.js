@@ -104,12 +104,12 @@ const WhyChooseUs = React.memo(() => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`bg-slate-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-500 border border-slate-100 hover:border-primary-100 hover:-translate-y-2 group ${
+              className={`feature-card ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 100}ms`, transitionDuration: '500ms' }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl mb-4 text-primary-500 shadow-md group-hover:scale-110 group-hover:bg-primary-500 group-hover:text-white transition-all duration-300">
+              <div className="feature-card-icon">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-3 group-hover:text-primary-600 transition-colors">{feature.title}</h3>
@@ -118,22 +118,22 @@ const WhyChooseUs = React.memo(() => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 bg-slate-900 rounded-2xl p-12 text-center">
-          <h3 className="text-3xl font-bold text-white mb-4">Ready to Find Your Dream Home?</h3>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+        {/* CTA Section - Premium styling */}
+        <div className="cta-premium mt-16">
+          <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Ready to Find Your Dream Home?</h3>
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto relative z-10">
             Browse our extensive collection of properties and find the perfect one for you.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 relative z-10">
             <Link
               to="/properties"
-              className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
+              className="btn-primary"
             >
               View Properties
             </Link>
             <Link
               to="/contact-us"
-              className="inline-block bg-white text-slate-800 px-8 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
+              className="btn-secondary"
             >
               Contact Us
             </Link>

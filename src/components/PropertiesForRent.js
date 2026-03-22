@@ -137,33 +137,33 @@ const PropertiesForRent = () => {
           {rentalProperties.map((property) => (
             <div
               key={property.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="property-card group bg-white rounded-2xl overflow-hidden"
             >
               {/* Image */}
-              <div className="relative h-[200px] overflow-hidden">
+              <div className="property-card-image relative h-[200px]">
                 <img
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover"
                   alt={property.title}
                   src={property.image}
                 />
                 {property.featured && (
-                  <div className="absolute top-3 left-3 bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="property-badge property-badge-featured absolute top-3 left-3">
                     Featured
                   </div>
                 )}
                 {!property.available && (
-                  <div className="absolute top-3 right-3 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="property-badge property-badge-rented absolute top-3 right-3">
                     Rented
                   </div>
                 )}
                 {/* Quick Actions */}
-                <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-50">
+                <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                  <button className="quick-action-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   </button>
-                  <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-50">
+                  <button className="quick-action-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                     </svg>
@@ -218,7 +218,7 @@ const PropertiesForRent = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <img
-                      className="w-8 h-8 rounded-full object-cover"
+                      className="w-8 h-8 rounded-full object-cover ring-2 ring-slate-100"
                       alt={property.agent.name}
                       src={property.agent.image}
                     />
@@ -226,7 +226,7 @@ const PropertiesForRent = () => {
                   </div>
                   <Link
                     to="/properties-grid-view"
-                    className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+                    className="view-details-link"
                   >
                     View Details
                   </Link>
@@ -236,17 +236,17 @@ const PropertiesForRent = () => {
           ))}
         </div>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons - Premium styling */}
         <div className="flex flex-wrap justify-center gap-4 mt-4">
           <Link
             to="/properties-grid-view"
-            className="inline-block bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-600 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-500/30"
+            className="btn-primary btn-primary-lg"
           >
             View All Rentals
           </Link>
           <Link
             to="/contact-us"
-            className="inline-block bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all duration-300"
+            className="btn-secondary"
           >
             Contact Agent
           </Link>

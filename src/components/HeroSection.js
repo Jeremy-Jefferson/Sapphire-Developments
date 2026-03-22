@@ -15,9 +15,11 @@ const HeroSection = () => {
         }}></div>
       </div>
       
-      {/* Gradient Orbs */}
+      {/* Enhanced Gradient Orbs - More depth and polish */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+      {/* Additional accent glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-900/30 rounded-full blur-3xl opacity-50"></div>
       
       {/* Floating Property Cards Animation */}
       <div className="absolute top-1/4 right-10 hidden xl:block opacity-20">
@@ -35,13 +37,13 @@ const HeroSection = () => {
         className="w-full max-w-[1200px] mx-auto flex flex-col items-center justify-center gap-12 relative z-10"
         id="Hero Contents"
       >
-        {/* Badge - Centered */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white/15 transition-colors cursor-pointer">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span className="text-white/80 text-sm font-medium">Trusted by 500+ Happy Homeowners</span>
+        {/* Badge - Centered - Enhanced with subtle glow */}
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full hover:bg-white/15 transition-all duration-300 cursor-pointer group ring-1 ring-white/10 hover:ring-white/20">
+          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></span>
+          <span className="text-white/90 text-sm font-medium">Trusted by 500+ Happy Homeowners</span>
         </div>
 
-        {/* Header - Centered */}
+        {/* Header - Centered - Improved hierarchy */}
         <h1
           className="m-0 relative leading-tight font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center text-white"
           id="hero-heading"
@@ -52,47 +54,53 @@ const HeroSection = () => {
           Your dream home is just a click away. Search through thousands of properties to find the perfect home that fits your lifestyle.
         </p>
 
-        {/* RentSale - Centered */}
-        <div className="w-full flex justify-center">
+        {/* RentSale - Centered - Now with glow effect */}
+        <div className="w-full flex justify-center search-panel-glow">
           <RentSale />
         </div>
 
-        {/* Trust Indicators - Centered */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-          <div className="flex items-center gap-2 text-white/70 hover:text-white transition-colors cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
+        {/* Trust Indicators - Centered - Improved spacing */}
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
+          <div className="flex items-center gap-2.5 text-white/70 hover:text-white transition-all duration-300 cursor-pointer group">
+            <div className="p-1.5 bg-green-500/20 rounded-full group-hover:bg-green-500/30 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
             <span className="text-sm font-medium">Free Property Valuation</span>
           </div>
-          <div className="flex items-center gap-2 text-white/70 hover:text-white transition-colors cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
+          <div className="flex items-center gap-2.5 text-white/70 hover:text-white transition-all duration-300 cursor-pointer group">
+            <div className="p-1.5 bg-green-500/20 rounded-full group-hover:bg-green-500/30 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
             <span className="text-sm font-medium">Expert Guidance</span>
           </div>
-          <div className="flex items-center gap-2 text-white/70 hover:text-white transition-colors cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
+          <div className="flex items-center gap-2.5 text-white/70 hover:text-white transition-all duration-300 cursor-pointer group">
+            <div className="p-1.5 bg-green-500/20 rounded-full group-hover:bg-green-500/30 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
             <span className="text-sm font-medium">0% Commission</span>
           </div>
         </div>
         
-        {/* Quick Links */}
+        {/* Quick Links - Enhanced buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
           <Link
             to="/properties"
-            className="inline-flex items-center gap-2 bg-primary-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-600 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-500/30"
+            className="btn-primary btn-primary-lg group"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             Browse Properties
           </Link>
           <Link
             to="/contact-us"
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20"
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 hover:shadow-lg hover:shadow-white/10 transition-all duration-300 border border-white/20 hover:border-white/30"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

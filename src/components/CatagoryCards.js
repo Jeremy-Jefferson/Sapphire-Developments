@@ -41,12 +41,13 @@ const CatagoryCards = () => {
       {categories.map((category) => (
         <div
           key={category.id}
-          className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+          className="category-card group relative bg-white rounded-2xl overflow-hidden cursor-pointer"
         >
-          {/* Icon Container */}
-          <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+          {/* Icon Container - Enhanced */}
+          <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center relative overflow-hidden`}>
+            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></div>
             <img
-              className="w-16 h-16 object-contain filter brightness-0 invert"
+              className="w-16 h-16 object-contain filter brightness-0 invert category-card-icon"
               alt={category.title}
               src={category.icon}
             />
@@ -54,21 +55,21 @@ const CatagoryCards = () => {
 
           {/* Content */}
           <div className="p-6 flex flex-col items-center text-center gap-4">
-            <h2 className="text-xl font-semibold text-slate-800 group-hover:text-primary-600 transition-colors">
+            <h2 className="text-xl font-semibold text-slate-800 group-hover:text-primary-600 transition-colors duration-300">
               {category.title}
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed">
               {category.description}
             </p>
             <Link to={category.link} className="w-full">
-              <button className="w-full px-6 py-3 rounded-full border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg">
+              <button className="btn-ghost w-full px-6 py-3 rounded-full font-medium">
                 Read More
               </button>
             </Link>
           </div>
 
           {/* Hover overlay effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
         </div>
       ))}
     </div>

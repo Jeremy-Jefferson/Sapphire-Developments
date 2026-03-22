@@ -35,11 +35,11 @@ const LPFooter = () => {
             <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
               Quick Links
             </h3>
-            <nav className="flex flex-col items-start gap-2" aria-label="Footer navigation">
-              <Link to="/" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Home</Link>
-              <Link to="/properties" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Properties</Link>
-              <Link to="/about-us" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">About Us</Link>
-              <Link to="/contact-us" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Contact</Link>
+            <nav className="flex flex-col items-start gap-3" aria-label="Footer navigation">
+              <Link to="/" className="footer-link">Home</Link>
+              <Link to="/properties" className="footer-link">Properties</Link>
+              <Link to="/about-us" className="footer-link">About Us</Link>
+              <Link to="/contact-us" className="footer-link">Contact</Link>
             </nav>
           </div>
           
@@ -48,11 +48,11 @@ const LPFooter = () => {
             <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
               Properties
             </h3>
-            <nav className="flex flex-col items-start gap-2" aria-label="Property links">
-              <Link to="/properties" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">For Sale</Link>
-              <Link to="/rent" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">For Rent</Link>
-              <Link to="/gallery" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Gallery</Link>
-              <Link to="/our-agents" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Our Agents</Link>
+            <nav className="flex flex-col items-start gap-3" aria-label="Property links">
+              <Link to="/properties" className="footer-link">For Sale</Link>
+              <Link to="/rent" className="footer-link">For Rent</Link>
+              <Link to="/gallery" className="footer-link">Gallery</Link>
+              <Link to="/our-agents" className="footer-link">Our Agents</Link>
             </nav>
           </div>
           
@@ -61,11 +61,11 @@ const LPFooter = () => {
             <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
               Legal
             </h3>
-            <nav className="flex flex-col items-start gap-2" aria-label="Legal links">
-              <Link to="/" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Terms of Services</Link>
-              <Link to="/" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Privacy Policy</Link>
-              <Link to="/" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Cookie Policy</Link>
-              <Link to="/" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Accessibility</Link>
+            <nav className="flex flex-col items-start gap-3" aria-label="Legal links">
+              <Link to="/" className="footer-link">Terms of Services</Link>
+              <Link to="/" className="footer-link">Privacy Policy</Link>
+              <Link to="/" className="footer-link">Cookie Policy</Link>
+              <Link to="/" className="footer-link">Accessibility</Link>
             </nav>
           </div>
         </div>
@@ -76,13 +76,13 @@ const LPFooter = () => {
         {/* Bottom Bar - Social & Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
           {/* Social Links - Only LinkedIn and GitHub */}
-          <div className="flex items-center gap-3" aria-label="Social media links">
+          <div className="flex items-center gap-4" aria-label="Social media links">
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/jeremyejefferson/" 
               rel="noopener noreferrer"
               target="_blank"
-              className="p-3 bg-white/10 rounded-full hover:bg-primary-500 hover:scale-110 transition-all duration-300 inline-flex items-center justify-center"
+              className="social-btn"
               aria-label="Visit our LinkedIn profile"
             >
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@ const LPFooter = () => {
               href="https://github.com/jeremy-jefferson" 
               rel="noopener noreferrer"
               target="_blank"
-              className="p-3 bg-white/10 rounded-full hover:bg-primary-500 hover:scale-110 transition-all duration-300 inline-flex items-center justify-center"
+              className="social-btn"
               aria-label="Visit our GitHub profile"
             >
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">

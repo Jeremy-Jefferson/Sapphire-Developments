@@ -110,8 +110,8 @@ const RentSale = () => {
         </button>
       </div>
 
-      {/* Search Form */}
-      <div className="self-stretch bg-white rounded-2xl shadow-2xl p-4 md:p-6">
+      {/* Search Form - Premium styling */}
+      <div className="self-stretch bg-white rounded-2xl shadow-2xl shadow-slate-200/50 p-5 md:p-6 border border-slate-100">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           {/* Location */}
           <SelectFilter 
@@ -137,13 +137,13 @@ const RentSale = () => {
             placeholder="Select price range"
           />
 
-          {/* Search Button */}
+          {/* Search Button - Premium styling */}
           <button
-            className="h-12 px-6 cursor-pointer font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl w-full"
+            className="h-12 px-6 cursor-pointer font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl w-full relative overflow-hidden group"
             onClick={onSearchCTAClick}
           >
-            <span className="flex items-center gap-2 justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span className="flex items-center gap-2 justify-center relative z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               Search
@@ -155,7 +155,7 @@ const RentSale = () => {
   );
 };
 
-// Simple SelectFilter component (shared from PropertiesGridView style)
+// Simple SelectFilter component (shared from PropertiesGridView style) - Premium styling
 const SelectFilter = ({ value, onChange, options, placeholder }) => {
   const [open, setOpen] = useState(false);
 
@@ -171,25 +171,26 @@ const SelectFilter = ({ value, onChange, options, placeholder }) => {
       <div className="relative">
         <button
           onClick={() => setOpen(!open)}
-          className="w-full h-12 text-left py-3 px-4 border border-slate-200 bg-slate-50 rounded-xl hover:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all justify-between flex items-center"
+          className="w-full h-12 text-left py-3 px-4 border border-slate-200 bg-slate-50 rounded-xl hover:border-primary-400 hover:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent focus:shadow-sm transition-all duration-200 justify-between flex items-center"
         >
-          <span className="block truncate">
+          <span className={`block truncate ${value ? 'text-slate-800' : 'text-slate-400'}`}>
             {value || placeholder}
           </span>
-          <svg className={`h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className={`h-5 w-5 text-slate-400 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         {open && (
-          <div className="absolute z-20 w-full mt-1 bg-white border border-slate-200 rounded-xl shadow-lg max-h-60 overflow-auto">
-            {options.map((option) => (
+          <div className="absolute z-30 w-full mt-1 bg-white border border-slate-200 rounded-xl shadow-xl shadow-slate-200/50 max-h-60 overflow-auto animate-in fade-in zoom-in-95 duration-150">
+            {options.map((option, index) => (
               <button
                 key={option.value}
                 onClick={() => {
                   onChange(option.value);
                   setOpen(false);
                 }}
-                className="w-full text-left px-4 py-2 text-sm hover:bg-slate-50 focus:outline-none focus:bg-slate-50 first:rounded-t-xl last:rounded-b-xl"
+                className="w-full text-left px-4 py-3 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600 focus:outline-none focus:bg-primary-50 focus:text-primary-600 transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
+                style={{ transitionDelay: `${index * 30}ms` }}
               >
                 {option.label || option.value}
               </button>

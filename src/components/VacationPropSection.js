@@ -197,17 +197,17 @@ const VacationPropSection = () => {
           ))}
         </div>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons - Premium styling */}
         <div className="flex flex-wrap justify-center gap-4 mt-4">
           <Link
             to="/properties-grid-view"
-            className="inline-block bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-600 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-500/30"
+            className="btn-primary btn-primary-lg"
           >
             View All Properties
           </Link>
           <Link
             to="/contact-us"
-            className="inline-block bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all duration-300"
+            className="btn-secondary"
           >
             Book Now
           </Link>
