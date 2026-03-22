@@ -11,7 +11,7 @@ const RentalCards = () => {
         <img
           className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           alt=""
-          src="/png/Rental 12@2x.png"
+          src="/luxury-home-16.jpg"
         />
         <div className="self-stretch flex flex-row items-start justify-start p-2.5">
           <div className="flex-1 relative leading-[20.32px] font-medium">
@@ -112,7 +112,7 @@ const RentalCards = () => {
           className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           id="Rental 2"
           alt=""
-          src="/png/Rental 22@2x.png"
+          src="/luxury-home-17.jpg"
         />
         <div className="self-stretch flex flex-row items-start justify-start p-2.5">
           <div className="flex-1 relative leading-[20.32px] font-medium">
@@ -208,7 +208,7 @@ const RentalCards = () => {
           className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           id="Rental 3"
           alt=""
-          src="/png/Rental 32@2x.png"
+          src="/luxury-home-18.jpg"
         />
         <div className="self-stretch flex flex-row items-start justify-start p-2.5">
           <h1 className="m-0 flex-1 relative text-inherit leading-[20.32px] font-medium font-inherit">
@@ -306,7 +306,7 @@ const RentalCards = () => {
         <img
           className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
           alt=""
-          src="/png/property-image42@2x.png"
+          src="/luxury-home-15.jpg"
         />
         <div className="self-stretch flex flex-row items-start justify-start p-2.5">
           <h1

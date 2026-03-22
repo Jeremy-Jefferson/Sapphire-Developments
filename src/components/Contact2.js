@@ -18,26 +18,7 @@ const Contact2 = () => {
         </span>
         <span className="relative text-3xl text-gray-300">contact@sapphiredev.com</span>
       </article>
-      <div className="w-[285px] h-14 flex flex-row items-center justify-between">
-        <button
-          className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
-          preload
-          aria-label="Facebook"
-        >
-          <a
-            className="[text-decoration:none] relative w-5 h-5"
-            id="FB Icon"
-            aria-label="Facebook"
-            href="https://www.facebook.com/jeremyejefferson/" rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              className="absolute h-[108.5%] w-6/12 top-[-4%] right-[25%] bottom-[-4.5%] left-[25%] max-w-full overflow-hidden max-h-full"
-              alt=""
-              src="/svg/vector.svg"
-            />
-          </a>
-        </button>
+      <div className="w-[120px] h-14 flex flex-row items-center justify-center gap-4">
         <button
           className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
           id="LinedIn"
@@ -53,23 +34,6 @@ const Contact2 = () => {
               className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full"
               alt=""
               src="/svg/vector11.svg"
-            />
-          </a>
-        </button>
-        <button
-          className="cursor-pointer [border:none] p-3.5 bg-white/10 rounded flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
-          id="IG"
-          aria-label="Instagram"
-        >
-          <a
-            className="[text-decoration:none] relative w-5 h-5 overflow-hidden shrink-0"
-            href="https://www.instagram.com/jeremyejefferson/"
-            aria-label="Instagram" rel="noopener noreferrer"
-          >
-            <img
-              className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full"
-              alt=""
-              src="/svg/vector21.svg"
             />
           </a>
         </button>

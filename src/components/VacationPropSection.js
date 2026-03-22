@@ -5,13 +5,13 @@ import VacationCards from "./VacationCards";
 
 const vacationProperties = [
   {
-    id: 1,
-    location: "Miami Beach, FL",
-    title: "Oceanfront Villa",
-    price: "$450/night",
-    rating: 4.9,
-    reviews: 128,
-    image: "/png/card-11@3x.png",
+    id: 8,
+    location: "Santorini, Greece",
+    title: "Sunset View Cave House",
+    price: "$680/night",
+    rating: 4.8,
+    reviews: 178,
+    image: "/luxury-home-10.jpg",
     features: ["4 Beds", "3 Baths", "2,500 sqft"],
     featured: true
   },
@@ -22,7 +22,7 @@ const vacationProperties = [
     price: "$650/night",
     rating: 4.8,
     reviews: 96,
-    image: "/png/card-21@3x.png",
+    image: "/luxury-home-2.jpg",
     features: ["5 Beds", "4 Baths", "3,200 sqft"],
     featured: true
   },
@@ -33,8 +33,63 @@ const vacationProperties = [
     price: "$550/night",
     rating: 4.7,
     reviews: 84,
-    image: "/png/card-31@3x.png",
+    image: "/luxury-home-3.jpg",
     features: ["4 Beds", "3 Baths", "2,800 sqft"],
+    featured: false
+  },
+  {
+    id: 4,
+    location: "Hawaii - Maui",
+    title: "Tropical Paradise Villa",
+    price: "$850/night",
+    rating: 5.0,
+    reviews: 215,
+    image: "/luxury-home-4.jpg",
+    features: ["6 Beds", "5 Baths", "4,500 sqft"],
+    featured: true
+  },
+  {
+    id: 5,
+    location: "Lake Tahoe, NV",
+    title: "Luxury Lakefront Cabin",
+    price: "$480/night",
+    rating: 4.9,
+    reviews: 156,
+    image: "/luxury-home-5.jpg",
+    features: ["4 Beds", "3 Baths", "3,000 sqft"],
+    featured: false
+  },
+  {
+    id: 6,
+    location: "Amalfi Coast, Italy",
+    title: "Cliffside Mediterranean Villa",
+    price: "$1,200/night",
+    rating: 4.9,
+    reviews: 89,
+    image: "/luxury-home-6.jpg",
+    features: ["5 Beds", "4 Baths", "3,800 sqft"],
+    featured: true
+  },
+  {
+    id: 7,
+    location: "Bora Bora",
+    title: "Overwater Bungalow Suite",
+    price: "$1,500/night",
+    rating: 5.0,
+    reviews: 312,
+    image: "/luxury-home-7.jpg",
+    features: ["2 Beds", "2 Baths", "1,800 sqft"],
+    featured: true
+  },
+  {
+    id: 8,
+    location: "Santorini, Greece",
+    title: "Sunset View Cave House",
+    price: "$680/night",
+    rating: 4.8,
+    reviews: 178,
+    image: "/luxury-home-8.jpg",
+    features: ["3 Beds", "2 Baths", "1,900 sqft"],
     featured: false
   },
   {

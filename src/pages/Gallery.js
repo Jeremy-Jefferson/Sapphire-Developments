@@ -4,18 +4,22 @@ import PHeader from "../components/PHeader";
 import PGFooter from "../components/PGFooter";
 
 const galleryImages = [
-  { id: 1, src: "/png/card-1@3x.png", category: "Interior", title: "Luxury Living Room", location: "Miami, FL", price: "$2,500,000" },
-  { id: 2, src: "/png/card-2@3x.png", category: "Exterior", title: "Modern Villa", location: "Los Angeles, CA", price: "$4,200,000" },
-  { id: 3, src: "/png/card-3@3x.png", category: "Interior", title: "Elegant Kitchen", location: "New York, NY", price: "$3,800,000" },
-  { id: 4, src: "/png/card-4@3x.png", category: "Bedroom", title: "Master Suite", location: "Houston, TX", price: "$1,900,000" },
-  { id: 5, src: "/png/card-5@3x.png", category: "Pool", title: "Private Pool", location: "Miami, FL", price: "$5,500,000" },
-  { id: 6, src: "/png/card-11@3x.png", category: "Interior", title: "Modern Dining", location: "Chicago, IL", price: "$2,100,000" },
-  { id: 7, src: "/png/Rental 1@2x.png", category: "Apartment", title: "City Apartment", location: "New York, NY", price: "$1,200,000" },
-  { id: 8, src: "/png/Rental 2@2x.png", category: "Interior", title: "Cozy Living", location: "Los Angeles, CA", price: "$1,800,000" },
-  { id: 9, src: "/png/Rental 3@2x.png", category: "Interior", title: "Modern Interior", location: "Miami, FL", price: "$2,300,000" },
-  { id: 10, src: "/png/category@3x.png", category: "Exterior", title: "Beach House", location: "Miami, FL", price: "$6,800,000" },
-  { id: 11, src: "/png/property-image4@2x.png", category: "Garden", title: "Beautiful Garden", location: "Houston, TX", price: "$1,500,000" },
-  { id: 12, src: "/png/property-image41@2x.png", category: "Interior", title: "Luxury Interior", location: "Los Angeles, CA", price: "$4,100,000" },
+  { id: 1, src: "/luxury-home-1.jpg", category: "Interior", title: "Luxury Living Room", location: "Miami, FL", price: "$2,500,000" },
+  { id: 2, src: "/luxury-home-2.jpg", category: "Exterior", title: "Modern Villa", location: "Los Angeles, CA", price: "$4,200,000" },
+  { id: 3, src: "/luxury-home-3.jpg", category: "Interior", title: "Elegant Kitchen", location: "New York, NY", price: "$3,800,000" },
+  { id: 4, src: "/luxury-home-4.jpg", category: "Bedroom", title: "Master Suite", location: "Houston, TX", price: "$1,900,000" },
+  { id: 5, src: "/luxury-home-5.jpg", category: "Pool", title: "Private Pool", location: "Miami, FL", price: "$5,500,000" },
+  { id: 6, src: "/luxury-home-6.jpg", category: "Interior", title: "Modern Dining", location: "Chicago, IL", price: "$2,100,000" },
+  { id: 7, src: "/luxury-home-7.jpg", category: "Apartment", title: "City Apartment", location: "New York, NY", price: "$1,200,000" },
+  { id: 8, src: "/luxury-home-8.jpg", category: "Interior", title: "Cozy Living", location: "Los Angeles, CA", price: "$1,800,000" },
+  { id: 9, src: "/luxury-home-9.jpg", category: "Interior", title: "Modern Interior", location: "Miami, FL", price: "$2,300,000" },
+  { id: 10, src: "/luxury-home-10.jpg", category: "Exterior", title: "Beach House", location: "Miami, FL", price: "$6,800,000" },
+  { id: 11, src: "/luxury-home-11.jpg", category: "Garden", title: "Beautiful Garden", location: "Houston, TX", price: "$1,500,000" },
+  { id: 12, src: "/luxury-home-12.jpg", category: "Interior", title: "Luxury Interior", location: "Los Angeles, CA", price: "$4,100,000" },
+  { id: 13, src: "/luxury-home-13.jpg", category: "Exterior", title: "Mountain Retreat", location: "Aspen, CO", price: "$8,500,000" },
+  { id: 14, src: "/luxury-home-14.jpg", category: "Interior", title: "Chef's Kitchen", location: "San Francisco, CA", price: "$3,200,000" },
+  { id: 15, src: "/luxury-home-15.jpg", category: "Pool", title: "Resort Style Pool", location: "Las Vegas, NV", price: "$4,500,000" },
+  { id: 16, src: "/luxury-home-16.jpg", category: "Exterior", title: "Lakefront Mansion", location: "Lake Tahoe, NV", price: "$12,500,000" },
 ];
 
 const categories = [
@@ -27,6 +31,17 @@ const categories = [
   { name: "Apartment", count: galleryImages.filter(img => img.category === "Apartment").length },
   { name: "Garden", count: galleryImages.filter(img => img.category === "Garden").length },
 ];
+
+// Map new luxury images to additional property listings
+const additionalProperties = [
+  { id: 17, src: "/luxury-home-17.jpg", category: "Apartment", title: "Executive Estate", location: "Beverly Hills, CA", price: "$8,500,000" },
+  { id: 18, src: "/luxury-home-18.jpg", category: "Interior", title: "Modern City Loft", location: "Manhattan, NY", price: "$3,200,000" },
+  { id: 19, src: "/luxury-home-19.jpg", category: "Pool", title: "Mediterranean Villa", location: "Palm Beach, FL", price: "$12,000,000" },
+  { id: 20, src: "/luxury-home-20.jpg", category: "Exterior", title: "Luxury Estate", location: "Malibu, CA", price: "$15,500,000" },
+];
+
+// Combine all properties for properties page
+const allProperties = [...galleryImages, ...additionalProperties];
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");

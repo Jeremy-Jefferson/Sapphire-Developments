@@ -5,7 +5,7 @@ const VacationCards = () => {
     <div className="self-stretch flex flex-row flex-wrap items-start justify-center gap-[40px] opacity-[0.75]">
       <CardLink
         location1="Houston, TX"
-        propBackgroundImage="url('/png/card-11@3x.png')"
+        propBackgroundImage="url('/luxury-home-1.jpg')"
       />
       <CardLink
         location1="New York, NY"
