@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import PHeader from "../components/PHeader";
-import PGFooter from "../components/PGFooter";
+import LPFooter from "../components/LPFooter";
 
 const galleryImages = [
   { id: 1, src: "/luxury-home-1.jpg", category: "Interior", title: "Luxury Living Room", location: "Miami, FL", price: "$2,500,000" },
@@ -71,8 +70,7 @@ const Gallery = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center justify-start" id="main-content">
-      <PHeader />
+    <main className="min-h-screen bg-white flex flex-col items-start justify-start pt-20" id="main-content">
       
       {/* Hero Section */}
       <section className="self-stretch bg-slate-900 h-[350px] flex flex-col items-center justify-center relative overflow-hidden" aria-labelledby="gallery-hero-heading">
@@ -360,7 +358,7 @@ const Gallery = () => {
         </div>
       )}
 
-      <PGFooter />
+      <LPFooter />
     </main>
   );
 };

@@ -1,8 +1,9 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
+import SharedHeader from "./components/SharedHeader";
 
 // Lazy load pages for better performance
 const LandingPage = lazy(() => import("./components/LandingPage"));
@@ -14,10 +15,15 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  
   return (
     <ErrorBoundary>
       <Suspense fallback={<LoadingSpinner />}>
         <ScrollToTop />
+        {/* Shared Header - transparent on home, solid on other pages */}
+        <SharedHeader variant={isHome ? "transparent" : "solid"} />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about-us" element={<AboutUs />} />

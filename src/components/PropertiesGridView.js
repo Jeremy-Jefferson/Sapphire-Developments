@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import PHeader from "./PHeader";
 import PGCards from "./PGCards";
-import PGFooter from "./PGFooter";
+import LPFooter from "./LPFooter";
 import { useSearchParams } from "react-router-dom";
 
 const PropertiesGridView = () => {
@@ -121,10 +120,9 @@ const PropertiesGridView = () => {
 
   return (
     <main
-      className="bg-white w-full min-h-screen flex flex-col items-start justify-start"
+      className="bg-white w-full min-h-screen flex flex-col items-start justify-start pt-20"
       id="Properties Grid View"
     >
-      <PHeader />
       
       {/* Hero Section */}
       <section
@@ -428,7 +426,7 @@ const PropertiesGridView = () => {
         </div>
       </section>
 
-      <PGFooter />
+      <LPFooter />
     </main>
   );
 };

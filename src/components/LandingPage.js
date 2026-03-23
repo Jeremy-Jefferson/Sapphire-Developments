@@ -11,7 +11,7 @@ import LPFooter from "./LPFooter";
 const LandingPage = () => {
   return (
     <main
-      className="bg-white w-full min-h-screen flex flex-col items-center justify-start"
+      className="bg-white w-full min-h-screen flex flex-col items-start justify-start"
       id="main-content"
     >
       <LPHeader />

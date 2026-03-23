@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import PHeader from "../components/PHeader";
-import PGFooter from "../components/PGFooter";
+import LPFooter from "../components/LPFooter";
 
 const agents = [
   {
@@ -249,8 +248,7 @@ const OurAgents = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center justify-start" id="main-content">
-      <PHeader />
+    <main className="min-h-screen bg-white flex flex-col items-start justify-start pt-20" id="main-content">
       
       {/* Hero Section */}
       <section className="self-stretch bg-slate-900 h-[350px] flex flex-col items-center justify-center mix-blend-normal relative overflow-hidden" aria-labelledby="agents-hero-heading">
@@ -791,7 +789,7 @@ const OurAgents = () => {
         </div>
       </section>
 
-      <PGFooter />
+      <LPFooter />
     </main>
   );
 };
