@@ -5,118 +5,88 @@ import LPFooter from "../components/LPFooter";
 const agents = [
   {
     id: 1,
-    name: "John Smith",
-    position: "Senior Real Estate Agent",
+    name: "James Mitchell",
+    position: "CEO & Founder",
     phone: "+1 (555) 123-4567",
-    email: "john.smith@sapphire.com",
+    email: "james.mitchell@sapphire.com",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&crop=face",
-    bio: "With over 15 years of experience, John has helped over 300 families find their dream homes.",
-    specialties: ["Luxury Homes", "First-Time Buyers", "Relocation"],
+    bio: "Leading with vision and integrity to transform the luxury real estate experience.",
+    specialties: ["Luxury Estates", "Strategic Advisory"],
     experience: "15+ Years",
     rating: 4.9,
     reviews: 127,
     sold: 300,
     featured: true,
     available: true,
-    badge: "Top Seller",
     languages: ["English", "Spanish"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
-    }
   },
   {
     id: 2,
-    name: "Sarah Johnson",
-    position: "Luxury Property Specialist",
+    name: "Sarah Chen",
+    position: "Head of Sales",
     phone: "+1 (555) 234-5678",
-    email: "sarah.johnson@sapphire.com",
+    email: "sarah.chen@sapphire.com",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop&crop=face",
-    bio: "Sarah specializes in high-end properties and has closed over $50M in luxury real estate.",
-    specialties: ["Luxury Estates", "Waterfront Properties", "New Construction"],
+    bio: "Specializing in exceptional properties for discerning clients worldwide.",
+    specialties: ["Waterfront Properties", "New Construction"],
     experience: "12+ Years",
     rating: 4.8,
     reviews: 98,
     sold: 150,
     featured: true,
     available: true,
-    badge: "Luxury Expert",
     languages: ["English", "French"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
-    }
   },
   {
     id: 3,
-    name: "Michael Brown",
-    position: "Commercial Property Agent",
+    name: "Michael Roberts",
+    position: "Property Director",
     phone: "+1 (555) 345-6789",
-    email: "michael.brown@sapphire.com",
+    email: "michael.roberts@sapphire.com",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
-    bio: "Michael brings 12 years of commercial real estate expertise to every transaction.",
-    specialties: ["Commercial Buildings", "Office Spaces", "Investment Properties"],
+    bio: "Delivering premium results through deep market knowledge and strategic negotiation.",
+    specialties: ["Commercial", "Investment Properties"],
     experience: "12+ Years",
     rating: 4.7,
     reviews: 85,
     sold: 120,
     featured: false,
     available: true,
-    badge: "Commercial Pro",
     languages: ["English", "Spanish"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
-    }
   },
   {
     id: 4,
-    name: "Emily Davis",
-    position: "Residential Property Expert",
+    name: "Emily Williams",
+    position: "Client Relations",
     phone: "+1 (555) 456-7890",
-    email: "emily.davis@sapphire.com",
+    email: "emily.williams@sapphire.com",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop&crop=face",
-    bio: "Emily is known for her patience and dedication to first-time home buyers.",
-    specialties: ["Residential Homes", "Condos", "Family Homes"],
+    bio: "Dedicated to creating seamless experiences for every client journey.",
+    specialties: ["Residential", "Family Homes"],
     experience: "8+ Years",
     rating: 4.9,
     reviews: 156,
     sold: 200,
     featured: false,
     available: true,
-    badge: "Client Favorite",
     languages: ["English", "Mandarin"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
-    }
   },
   {
     id: 5,
     name: "David Wilson",
-    position: "Investment Property Consultant",
+    position: "Investment Consultant",
     phone: "+1 (555) 567-8901",
     email: "david.wilson@sapphire.com",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
-    bio: "David helps investors maximize their returns with strategic property investments.",
-    specialties: ["Rental Properties", "Fixer-Uppers", "Multi-Family"],
+    bio: "Helping investors identify exceptional opportunities for long-term growth.",
+    specialties: ["Rental Properties", "Multi-Family"],
     experience: "10+ Years",
     rating: 4.6,
     reviews: 72,
     sold: 95,
     featured: false,
     available: false,
-    badge: "Investment Guru",
     languages: ["English"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
-    }
   },
   {
     id: 6,
@@ -125,8 +95,8 @@ const agents = [
     phone: "+1 (555) 678-9012",
     email: "jennifer.martinez@sapphire.com",
     image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=500&fit=crop&crop=face",
-    bio: "Jennifer manages over 100 properties and ensures both landlords and tenants are happy.",
-    specialties: ["Property Management", "Leasing", "Tenant Relations"],
+    bio: "Ensuring exceptional management for luxury properties across the portfolio.",
+    specialties: ["Property Management", "Leasing"],
     experience: "9+ Years",
     rating: 4.8,
     reviews: 110,
@@ -134,21 +104,15 @@ const agents = [
     propertiesManaged: 100,
     featured: false,
     available: true,
-    badge: "Best Manager",
     languages: ["English", "Spanish", "Portuguese"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      instagram: "#"
-    }
   }
 ];
 
 const teamStats = [
-  { number: "500+", label: "Properties Sold", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
-  { number: "200+", label: "Happy Clients", icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-  { number: "98%", label: "Satisfaction Rate", icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" },
-  { number: "$100M+", label: "In Sales", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" }
+  { number: "500+", label: "Properties Sold" },
+  { number: "200+", label: "Happy Clients" },
+  { number: "98%", label: "Satisfaction Rate" },
+  { number: "$100M+", label: "In Sales" }
 ];
 
 const specialties = [
@@ -162,42 +126,45 @@ const testimonials = [
   {
     id: 1,
     name: "Robert & Lisa Thompson",
-    text: "John Smith made our first home buying experience absolutely seamless. His patience and expertise helped us find the perfect family home.",
+    text: "Working with James was an exceptional experience. His attention to detail and understanding of the luxury market helped us find our dream home.",
     rating: 5,
-    agentId: 1
+    agentId: 1,
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
   },
   {
     id: 2,
     name: "James Henderson",
-    text: "Sarah's knowledge of luxury properties is unmatched. She found me my dream estate within weeks!",
+    text: "Sarah's expertise in waterfront properties is unmatched. She found my perfect estate within weeks. Truly professional service.",
     rating: 5,
-    agentId: 2
+    agentId: 2,
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
   },
   {
     id: 3,
     name: "Amanda Chen",
-    text: "Emily Davis was incredibly helpful throughout our entire journey. She answered every question and made us feel comfortable.",
+    text: "Emily made our first home buying journey seamless. Her patience and guidance throughout the process was invaluable.",
     rating: 5,
-    agentId: 4
+    agentId: 4,
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
   }
 ];
 
 const faqs = [
   {
     question: "How do I schedule a consultation with an agent?",
-    answer: "You can schedule a consultation by clicking the 'Contact Us' button or calling our office directly. Our agents are available Monday through Friday, 9 AM to 6 PM."
+    answer: "You can schedule a consultation by clicking the 'Schedule Consultation' button or calling our office directly. Our advisors are available Monday through Friday, 9 AM to 6 PM."
   },
   {
     question: "Do your agents work with first-time home buyers?",
-    answer: "Absolutely! Many of our agents specialize in helping first-time buyers navigate the home buying process with ease."
+    answer: "Absolutely. Many of our advisors specialize in guiding first-time buyers through the process with personalized support and expertise."
   },
   {
     question: "What areas do your agents serve?",
-    answer: "Our agents serve the greater Houston area and surrounding regions, including The Woodlands, Sugar Land, and Katy."
+    answer: "Our team serves the greater Houston area and surrounding regions, including The Woodlands, Sugar Land, and Katy."
   },
   {
-    question: "Are your agents available for virtual consultations?",
-    answer: "Yes, we offer virtual consultations via video call for clients who prefer remote meetings or are relocating from out of area."
+    question: "Are virtual consultations available?",
+    answer: "Yes, we offer video consultations for clients who prefer remote meetings or are relocating from out of area."
   }
 ];
 
@@ -205,26 +172,22 @@ const processSteps = [
   {
     step: 1,
     title: "Initial Consultation",
-    description: "We listen to your needs and preferences to understand what you're looking for.",
-    icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+    description: "We begin by understanding your vision, preferences, and goals to create a tailored property strategy.",
   },
   {
     step: 2,
     title: "Property Search",
-    description: "We curate listings that match your criteria and schedule viewings.",
-    icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+    description: "We curate exclusive listings that align with your criteria and arrange private viewings at your convenience.",
   },
   {
     step: 3,
     title: "Negotiation & Offer",
-    description: "We handle all negotiations to get you the best deal possible.",
-    icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+    description: "Our strategic approach ensures optimal terms while protecting your interests throughout the process.",
   },
   {
     step: 4,
     title: "Closing",
-    description: "We guide you through the paperwork to a successful close.",
-    icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+    description: "We guide you through every detail to ensure a seamless transition to your new property.",
   }
 ];
 
@@ -248,154 +211,108 @@ const OurAgents = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-start justify-start pt-20" id="main-content">
+    <main className="min-h-screen bg-white pt-20">
       
-      {/* Hero Section */}
-      <section className="self-stretch bg-slate-900 h-[350px] flex flex-col items-center justify-center mix-blend-normal relative overflow-hidden" aria-labelledby="agents-hero-heading">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary-600 rounded-full blur-3xl"></div>
+      {/* Hero Section - Centered */}
+      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/luxury-home-1.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/80" />
         </div>
-        <div className="text-center z-10 px-4">
-          <h1 id="agents-hero-heading" className="text-5xl md:text-6xl font-semibold text-white font-body-large-400 leading-[48px]">
-            Our Agents
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4">
+            Our Advisors
           </h1>
-          <p className="text-xl text-slate-300 mt-4 font-body-large-400 leading-[28px]">
-            Meet our team of expert real estate professionals
+          <p className="text-lg text-white/80 font-light">
+            Meet the team behind exceptional property experiences
           </p>
         </div>
       </section>
 
-      {/* Team Stats */}
-      <section className="self-stretch bg-slate-900 py-12 px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {/* Team Stats - Centered */}
+      <section className="py-16 lg:py-20 bg-slate-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {teamStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="w-14 h-14 bg-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d={stat.icon} />
-                  </svg>
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-lg text-slate-400">{stat.label}</div>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-2">{stat.number}</p>
+                <p className="text-sm text-slate-400 uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Agents */}
+      {/* Featured Advisors - Centered */}
       {featuredAgents.length > 0 && (
-        <section className="self-stretch bg-gradient-to-b from-primary-50 to-white py-16 px-8">
-          <div className="max-w-[1200px] mx-auto">
-            <div className="text-center mb-10">
-              <span className="inline-block px-4 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
-                ⭐ Top Performers
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                Featured Agents
+        <section className="py-20 lg:py-28 px-6 bg-gradient-to-b from-slate-50 to-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
+                Leadership
               </h2>
-              <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-                Our most experienced agents ready to help you find your dream property
-              </p>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900">
+                Featured Advisors
+              </h3>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
               {featuredAgents.map((agent) => (
                 <div 
                   key={agent.id} 
-                  className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
                   <div className="flex flex-col md:flex-row">
-                    <div className="md:w-2/5 h-[300px] md:h-auto relative overflow-hidden">
+                    <div className="md:w-2/5 h-[280px] md:h-auto relative overflow-hidden">
                       <img 
                         src={agent.image} 
                         alt={agent.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       {agent.available && (
-                        <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                          Available Now
-                        </div>
-                      )}
-                      {agent.badge && (
-                        <div className="absolute top-4 right-4 bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                          {agent.badge}
+                        <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-slate-800 px-3 py-1.5 rounded-full text-xs font-medium">
+                          Available
                         </div>
                       )}
                     </div>
-                    <div className="md:w-3/5 p-6 md:p-8">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <h3 className="text-2xl font-bold text-slate-800 mb-1">{agent.name}</h3>
-                          <p className="text-primary-600 font-medium">{agent.position}</p>
-                        </div>
-                        <div className="flex items-center gap-1 bg-primary-50 px-2 py-1 rounded-lg">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                          <span className="text-sm font-semibold text-slate-700">{agent.rating}</span>
-                          <span className="text-xs text-slate-400">({agent.reviews})</span>
-                        </div>
-                      </div>
+                    <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                      <h3 className="text-xl font-semibold text-slate-900 mb-1">{agent.name}</h3>
+                      <p className="text-slate-500 font-light mb-4">{agent.position}</p>
                       
-                      <p className="text-slate-500 mb-4">{agent.bio}</p>
+                      <p className="text-slate-600 font-light leading-relaxed mb-5 text-sm">
+                        {agent.bio}
+                      </p>
                       
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {agent.specialties.map((specialty, idx) => (
-                          <span 
-                            key={idx} 
-                            className="px-3 py-1 bg-primary-50 text-primary-600 text-xs font-medium rounded-full"
-                          >
-                            {specialty}
-                          </span>
-                        ))}
-                      </div>
-                      
-                      <div className="flex items-center gap-4 mb-4 text-sm text-slate-500">
+                      <div className="flex items-center gap-4 text-sm text-slate-500 mb-4">
                         <div className="flex items-center gap-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                           </svg>
                           {agent.experience}
                         </div>
                         {agent.sold > 0 && (
                           <div className="flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            {agent.sold} Properties Sold
+                            {agent.sold} Sold
                           </div>
                         )}
                       </div>
 
-                      {/* Languages */}
-                      <div className="flex items-center gap-2 mb-4 text-sm text-slate-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                        </svg>
-                        <span>{agent.languages.join(", ")}</span>
-                      </div>
-                      
                       <div className="flex gap-3">
                         <a 
                           href={`tel:${agent.phone}`}
-                          className="flex-1 bg-primary-500 text-white py-2.5 px-4 rounded-xl font-medium text-center hover:bg-primary-600 transition-colors flex items-center justify-center gap-2"
+                          className="flex-1 bg-slate-900 text-white py-2.5 px-4 rounded-lg font-medium text-center hover:bg-slate-800 transition-colors text-sm"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                          </svg>
-                          Call
+                          Contact
                         </a>
                         <a 
                           href={`mailto:${agent.email}`}
-                          className="flex-1 bg-slate-100 text-slate-700 py-2.5 px-4 rounded-xl font-medium text-center hover:bg-slate-200 transition-colors flex items-center justify-center gap-2"
+                          className="flex-1 bg-slate-100 text-slate-700 py-2.5 px-4 rounded-lg font-medium text-center hover:bg-slate-200 transition-colors text-sm"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                          </svg>
                           Email
                         </a>
                       </div>
@@ -408,78 +325,81 @@ const OurAgents = () => {
         </section>
       )}
 
-      {/* How It Works Section */}
-      <section className="self-stretch bg-white py-16 px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">How Our Agents Work</h2>
-            <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-              A streamlined process to help you find your perfect property
+      {/* How Our Advisors Work - Centered */}
+      <section className="py-20 lg:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
+              Our Approach
+            </h2>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900 mb-4">
+              How We Work
+            </h3>
+            <p className="text-slate-500 font-light max-w-xl mx-auto">
+              A refined approach to finding exceptional properties
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {processSteps.map((item, index) => (
-              <div key={index} className="text-center p-6">
-                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 relative">
-                  <span className="text-white font-bold text-xl">{item.step}</span>
-                  <div className="absolute -right-2 -bottom-2 w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                    </svg>
-                  </div>
+              <div key={index} className="text-center relative">
+                <div className="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <span className="text-slate-600 font-semibold text-lg">{item.step}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-800 mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm">{item.description}</p>
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h4>
+                <p className="text-slate-500 font-light text-sm leading-relaxed">{item.description}</p>
+                {index < processSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-7 left-[60%] w-[80%] h-px bg-slate-200" />
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="self-stretch flex-1 flex flex-col items-center justify-start py-12 px-8 gap-10 text-center text-primary-800 font-body-large-400">
-        <div className="max-w-[1200px] w-full">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Our Dedicated Team
+      {/* Search and Filter Section - Centered */}
+      <section className="py-16 lg:py-20 px-6 bg-slate-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
+              Meet The Team
             </h2>
-            <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-              Our experienced agents are committed to finding you the perfect property. With diverse expertise across all real estate sectors, we have the right professional for your needs.
+            <h3 className="text-3xl md:text-4xl font-light text-slate-900 mb-4">
+              Our Dedicated Advisors
+            </h3>
+            <p className="text-slate-500 font-light max-w-2xl mx-auto">
+              Our experienced team is committed to finding you the perfect property. 
+              With diverse expertise across all real estate sectors, we have the right professional for your needs.
             </p>
           </div>
-        </div>
 
-        {/* Search and Filter */}
-        <div className="max-w-[1200px] w-full">
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-slate-200">
+          {/* Search and Filter */}
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
             <div className="flex flex-col md:flex-row gap-4">
-              {/* Search Input */}
               <div className="flex-1 relative">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg className="h-5 w-5 absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <input
                   type="text"
-                  placeholder="Search agents by name or position..."
+                  placeholder="Search by name or role..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-slate-700"
+                  className="w-full pl-12 pr-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent text-slate-700"
                 />
               </div>
             </div>
             
-            {/* Specialty Filter Pills */}
-            <div className="mt-4">
-              <p className="text-sm text-slate-500 mb-3 text-left">Filter by specialty:</p>
+            <div className="mt-5">
+              <p className="text-xs text-slate-400 uppercase tracking-wider mb-3 text-left">Filter by specialty</p>
               <div className="flex flex-wrap gap-2">
-                {specialties.map((specialty) => (
+                {specialties.slice(0, 8).map((specialty) => (
                   <button
                     key={specialty}
                     onClick={() => setSelectedSpecialty(specialty)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                       selectedSpecialty === specialty
-                        ? "bg-primary-500 text-white shadow-md"
+                        ? "bg-slate-800 text-white"
                         : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                     }`}
                   >
@@ -490,224 +410,164 @@ const OurAgents = () => {
             </div>
           </div>
 
-          {/* Results Count */}
           <div className="flex items-center justify-between mb-6">
-            <p className="text-slate-500">
-              Showing <span className="font-semibold text-slate-700">{filteredAgents.length}</span> agents
+            <p className="text-slate-500 text-sm">
+              Showing <span className="font-semibold text-slate-700">{filteredAgents.length}</span> advisors
             </p>
           </div>
         </div>
         
-        {/* Agents Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px]">
-          {filteredAgents.map((agent) => (
-            <div 
-              key={agent.id} 
-              className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group"
-            >
-              <div className="h-[300px] bg-slate-100 flex items-center justify-center overflow-hidden relative">
-                <img 
-                  src={agent.image} 
-                  alt={agent.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4">
-                  {agent.available ? (
-                    <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      Available
-                    </span>
-                  ) : (
-                    <span className="bg-slate-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                      Unavailable
-                    </span>
-                  )}
-                </div>
-
-                {/* Badge */}
-                {agent.badge && (
-                  <div className="absolute top-4 left-4 bg-primary-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    {agent.badge}
-                  </div>
-                )}
-                
-                {/* Quick Actions */}
-                <div className="absolute bottom-4 left-4 right-4 flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a 
-                    href={`tel:${agent.phone}`}
-                    className="bg-white text-slate-800 p-3 rounded-full hover:bg-primary-500 hover:text-white transition-colors shadow-lg"
-                    aria-label="Call"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </a>
-                  <a 
-                    href={`mailto:${agent.email}`}
-                    className="bg-white text-slate-800 p-3 rounded-full hover:bg-primary-500 hover:text-white transition-colors shadow-lg"
-                    aria-label="Email"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </a>
-                  <a 
-                    href={agent.social.linkedin}
-                    className="bg-white text-slate-800 p-3 rounded-full hover:bg-primary-500 hover:text-white transition-colors shadow-lg"
-                    aria-label="LinkedIn"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-slate-800">{agent.name}</h3>
-                  <div className="flex items-center gap-1 bg-primary-50 px-2 py-1 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="text-xs font-semibold text-slate-700">{agent.rating}</span>
+        {/* Agents Grid - Centered */}
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {filteredAgents.map((agent) => (
+              <div 
+                key={agent.id} 
+                className="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="h-[260px] overflow-hidden relative">
+                  <img 
+                    src={agent.image} 
+                    alt={agent.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                  
+                  <div className="absolute top-3 right-3">
+                    {agent.available ? (
+                      <span className="bg-white/90 backdrop-blur-sm text-slate-800 px-2 py-1 rounded-full text-xs font-medium">
+                        Available
+                      </span>
+                    ) : (
+                      <span className="bg-slate-800/80 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        Unavailable
+                      </span>
+                    )}
                   </div>
                 </div>
-                <p className="text-primary-600 font-medium mb-2">{agent.position}</p>
-                <p className="text-slate-500 text-sm mb-3 line-clamp-2">{agent.bio}</p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {agent.specialties.map((specialty, idx) => (
-                    <span 
-                      key={idx} 
-                      className="px-3 py-1 bg-primary-50 text-primary-600 text-xs font-medium rounded-full"
-                    >
-                      {specialty}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex items-center gap-4 text-xs text-slate-500 mb-3 pt-3 border-t border-slate-100">
-                  <div className="flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    {agent.experience}
+                <div className="p-5">
+                  <div className="mb-3">
+                    <h3 className="text-lg font-semibold text-slate-900">{agent.name}</h3>
+                    <p className="text-slate-500 text-sm">{agent.position}</p>
                   </div>
-                  {agent.sold > 0 && (
-                    <div className="flex items-center gap-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {agent.sold} Sold
-                    </div>
-                  )}
-                  {agent.propertiesManaged && (
-                    <div className="flex items-center gap-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                      {agent.propertiesManaged} Managed
-                    </div>
-                  )}
-                </div>
-
-                {/* Languages */}
-                <div className="flex items-center gap-2 text-xs text-slate-500 mb-3 pb-3 border-b border-slate-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                  </svg>
-                  <span>{agent.languages.join(", ")}</span>
-                </div>
-                
-                <div className="space-y-2 text-slate-500 text-sm pt-3 border-t border-slate-100">
-                  <p className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    {agent.phone}
+                  
+                  <p className="text-slate-600 text-sm font-light leading-relaxed mb-4 line-clamp-2">
+                    {agent.bio}
                   </p>
-                  <p className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    {agent.email}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {filteredAgents.length === 0 && (
-          <div className="text-center py-16">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-slate-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <h3 className="text-xl font-semibold text-slate-700 mb-2">No agents found</h3>
-            <p className="text-slate-500">Try adjusting your search or filter criteria</p>
-            <button 
-              onClick={() => {setSelectedSpecialty("All"); setSearchQuery("");}}
-              className="mt-4 text-primary-600 hover:text-primary-700 font-medium"
-            >
-              Clear all filters
-            </button>
-          </div>
-        )}
-
-        {/* Testimonials Section */}
-        <div className="mt-12 max-w-[1200px] w-full">
-          <div className="bg-slate-50 rounded-3xl p-8 md:p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-slate-800 mb-4">What Our Clients Say</h2>
-              <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-                Don't just take our word for it - hear from our satisfied clients
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="bg-white rounded-2xl p-6 shadow-md">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                  
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {agent.specialties.slice(0, 2).map((specialty, idx) => (
+                      <span 
+                        key={idx} 
+                        className="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded"
+                      >
+                        {specialty}
+                      </span>
                     ))}
                   </div>
-                  <p className="text-slate-600 mb-4 italic">"{testimonial.text}"</p>
-                  <p className="font-semibold text-slate-800">{testimonial.name}</p>
+                  
+                  <div className="flex items-center gap-3 text-xs text-slate-500 pt-3 border-t border-slate-100">
+                    <span>{agent.experience}</span>
+                    {agent.sold > 0 && <span>• {agent.sold} sold</span>}
+                  </div>
+                  
+                  <div className="flex items-center gap-3 pt-3 mt-1">
+                    <a 
+                      href={`tel:${agent.phone}`}
+                      className="flex-1 bg-slate-900 text-white py-2 px-3 rounded-lg text-sm text-center hover:bg-slate-800 transition-colors"
+                    >
+                      Call
+                    </a>
+                    <a 
+                      href={`mailto:${agent.email}`}
+                      className="flex-1 bg-slate-100 text-slate-700 py-2 px-3 rounded-lg text-sm text-center hover:bg-slate-200 transition-colors"
+                    >
+                      Email
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {filteredAgents.length === 0 && (
+            <div className="text-center py-16">
+              <p className="text-slate-500">No advisors match your criteria</p>
+              <button 
+                onClick={() => {setSelectedSpecialty("All"); setSearchQuery("");}}
+                className="mt-4 text-slate-600 hover:text-slate-800 font-medium text-sm"
+              >
+                Clear all filters
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Testimonials - Centered */}
+      <section className="py-20 lg:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-slate-50 rounded-2xl p-8 md:p-12">
+            <div className="text-center mb-10">
+              <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
+                Client Stories
+              </h2>
+              <h3 className="text-3xl md:text-4xl font-light text-slate-900">
+                What They Say
+              </h3>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.id} className="bg-white p-6 rounded-xl">
+                  <svg className="w-8 h-8 text-slate-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="text-slate-600 font-light leading-relaxed mb-5 text-sm">
+                    {testimonial.text}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="text-slate-900 font-medium text-sm">{testimonial.name}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+      </section>
 
-        {/* FAQ Section */}
-        <div className="mt-12 max-w-[800px]">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-slate-500">
-              Common questions about working with our agents
-            </p>
+      {/* FAQ - Centered */}
+      <section className="py-20 lg:py-28 px-6 bg-slate-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
+              Common Questions
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-light text-slate-900">
+              Frequently Asked
+            </h3>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-xl border border-slate-200 overflow-hidden"
+                className="bg-white rounded-lg overflow-hidden border border-slate-200"
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition-colors"
+                  className="w-full px-5 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition-colors"
                 >
-                  <span className="font-semibold text-slate-800">{faq.question}</span>
+                  <span className="font-medium text-slate-800 text-sm">{faq.question}</span>
                   <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className={`h-5 w-5 text-slate-500 transition-transform duration-200 ${expandedFaq === index ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${expandedFaq === index ? 'rotate-180' : ''}`}
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -716,76 +576,44 @@ const OurAgents = () => {
                   </svg>
                 </button>
                 {expandedFaq === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-slate-500">{faq.answer}</p>
+                  <div className="px-5 pb-4">
+                    <p className="text-slate-500 text-sm font-light">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Why Work With Us */}
-        <div className="mt-12 max-w-[1200px]">
-          <div className="bg-gradient-to-r from-primary-50 to-slate-50 rounded-3xl p-8 md:p-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-slate-800 mb-4">Why Work With Our Team?</h2>
-              <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-                When you choose Sapphire Developments, you're choosing excellence, integrity, and results.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-6 rounded-2xl bg-white shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Personalized Service</h3>
-                <p className="text-slate-500">Every client receives dedicated attention and tailored solutions.</p>
-              </div>
-              <div className="text-center p-6 rounded-2xl bg-white shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Market Expertise</h3>
-                <p className="text-slate-500">Deep knowledge of local markets ensures the best deals.</p>
-              </div>
-              <div className="text-center p-6 rounded-2xl bg-white shadow-md hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Trusted Advisors</h3>
-                <p className="text-slate-500">We guide you through every step with transparency.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-8 bg-gradient-to-r from-slate-800 to-slate-900 rounded-3xl p-8 md:p-16 text-center max-w-[1200px]">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Want to Join Our Team?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals to join our growing team. If you're passionate about real estate, we'd love to hear from you.
+      {/* CTA - Centered */}
+      <section className="py-20 lg:py-24 px-6 bg-slate-900">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="w-12 h-px bg-white/20 mx-auto mb-8" />
+          <h2 className="text-3xl md:text-4xl font-light text-white mb-5">
+            Ready to find your extraordinary home?
+          </h2>
+          <p className="text-white/60 font-light max-w-xl mx-auto mb-8 leading-relaxed">
+            Schedule a private consultation with one of our advisors. 
+            Let's discuss your vision and find the perfect property that matches your lifestyle.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
               to="/contact-us"
-              className="inline-block bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-600 hover:scale-105 transition-all duration-300"
+              className="px-8 py-3 bg-white text-slate-900 font-semibold text-sm tracking-widest uppercase hover:bg-slate-100 transition-all duration-300"
             >
-              Contact Us
+              Schedule Consultation
             </Link>
             <a 
               href="tel:+15551234567"
-              className="inline-block bg-white/10 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              className="px-8 py-3 border border-white/30 text-white font-light text-sm tracking-widest uppercase hover:bg-white/10 transition-all duration-300"
             >
               Call Now
             </a>
           </div>
+          <p className="mt-8 text-sm text-white/40 font-light">
+            Or reach us at <span className="text-white/60">+1 (555) 123-4567</span>
+          </p>
         </div>
       </section>
 

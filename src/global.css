@@ -49,36 +49,38 @@
    REUSABLE LAYOUT UTILITIES
    ============================================ */
 
-/* Section Container - max-width + horizontal padding + center */
-.section-container {
-  @apply max-w-7xl mx-auto px-6;
-}
+@layer components {
+  /* Section Container - max-width + horizontal padding + center */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6;
+  }
 
-/* Section Spacing - consistent vertical rhythm */
-.section-spacing {
-  @apply py-20 lg:py-28;
-}
+  /* Section Spacing - consistent vertical rhythm */
+  .section-spacing {
+    @apply py-20 lg:py-28;
+  }
 
-/* Muted Text - lighter gray for body content */
-.text-muted {
-  @apply text-gray-500;
-}
+  /* Muted Text - lighter gray for body content */
+  .text-muted {
+    @apply text-gray-500;
+  }
 
-/* Glass Effect - subtle frosted glass */
-.glass-subtle {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
+  /* Glass Effect - subtle frosted glass */
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 
-/* Section Label - small uppercase with tracking */
-.section-label {
-  @apply text-sm font-medium tracking-widest uppercase;
-}
+  /* Section Label - small uppercase with tracking */
+  .section-label {
+    @apply text-sm font-medium tracking-widest uppercase;
+  }
 
-/* Heading Style */
-.heading-xl {
-  @apply text-3xl md:text-4xl lg:text-5xl font-light;
+  /* Heading Style */
+  .heading-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light;
+  }
 }
 
 html {
