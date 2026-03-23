@@ -49,7 +49,6 @@ const SharedHeader = ({ variant = "solid" }) => {
     { name: "ABOUT US", path: "/about-us" },
     { name: "OUR AGENTS", path: "/our-agents" },
     { name: "PROPERTIES", path: "/properties" },
-    { name: "GALLERY", path: "/gallery" },
     { name: "CONTACT US", path: "/contact-us" },
   ];
 

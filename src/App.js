@@ -10,7 +10,7 @@ const LandingPage = lazy(() => import("./components/LandingPage"));
 const PropertiesGridView = lazy(() => import("./components/PropertiesGridView"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const OurAgents = lazy(() => import("./pages/OurAgents"));
-const Gallery = lazy(() => import("./pages/Gallery"));
+
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -32,7 +32,6 @@ function App() {
           <Route path="/properties-grid-view" element={<PropertiesGridView />} />
           <Route path="/rent" element={<PropertiesGridView />} />
           <Route path="/sale" element={<PropertiesGridView />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

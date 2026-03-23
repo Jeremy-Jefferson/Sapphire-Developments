@@ -9,65 +9,48 @@ const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
   ];
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 w-full">
       {properties.map((property) => (
         <div 
           key={property.id}
-          className="bg-white rounded-xl overflow-hidden border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+          className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer group"
         >
-          {/* Image */}
-          <div className="relative h-52 overflow-hidden">
+          {/* Image - Taller crop with elegant presentation */}
+          <div className="relative h-64 md:h-72 overflow-hidden">
             <img 
               src={property.image}
               alt={property.address}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            {/* Status Badge */}
-            <div className="absolute top-3 left-3 bg-slate-900/80 text-white px-2 py-1 rounded text-xs font-medium">
-              For Sale
-            </div>
           </div>
 
-          {/* Content */}
-          <div className="p-5">
-            {/* Price - Primary emphasis */}
-            <p className="text-xl font-semibold text-slate-900 mb-2">
+          {/* Content - Refined spacing and hierarchy */}
+          <div className="p-6 md:p-8">
+            {/* Price - Most visually dominant */}
+            <p className="text-2xl md:text-3xl font-light text-slate-900 tracking-tight mb-3">
               {property.price}
             </p>
             
-            {/* Address */}
-            <p className="text-slate-600 font-light text-sm mb-4 leading-relaxed">
+            {/* Address - Clear but secondary */}
+            <p className="text-slate-600 font-light text-base md:text-lg mb-6 leading-relaxed">
               {property.address}
             </p>
             
-            {/* Specs - Clean horizontal layout */}
-            <div className="flex items-center gap-4 text-sm text-slate-500 mb-4 pb-4 border-b border-slate-100">
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-                {property.beds} beds
-              </span>
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                </svg>
-                {property.baths} baths
-              </span>
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                </svg>
-                {property.sqft} ft²
-              </span>
+            {/* Specs - Clean single row */}
+            <div className="flex items-center gap-6 text-sm text-slate-500 mb-6 pb-6 border-b border-slate-100">
+              <span className="font-medium">{property.beds} Beds</span>
+              <span className="text-slate-300">·</span>
+              <span className="font-medium">{property.baths} Baths</span>
+              <span className="text-slate-300">·</span>
+              <span className="font-medium">{property.sqft} ft²</span>
             </div>
             
-            {/* Agent - Subtle */}
+            {/* Agent - Subtle and low emphasis */}
             <div className="flex items-center justify-between">
-              <span className="text-xs text-slate-400">{property.agent}</span>
-              <button className="text-sm text-slate-600 font-medium hover:text-slate-900 transition-colors">
-                View Details
-              </button>
+              <span className="text-sm text-slate-400 font-light">Listed by {property.agent}</span>
+              <span className="text-slate-600 font-light text-sm group-hover:text-slate-900 transition-colors">
+                View Property <span className="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </span>
             </div>
           </div>
         </div>

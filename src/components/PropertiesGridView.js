@@ -280,9 +280,9 @@ const PropertiesGridView = () => {
       </section>
 
       {/* Properties Grid - Centered */}
-      <section className="py-8 px-6">
+      <section className="py-10 px-6 sm:px-8 lg:px-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             <PGCards 
               onFavorite={handleFavorite} 
               onShare={handleShare}
@@ -358,7 +358,7 @@ const PropertiesGridView = () => {
               Schedule Consultation
             </button>
             <button className="px-8 py-3 border border-white/30 text-white font-light text-sm tracking-widest uppercase hover:bg-white/10 transition-all duration-300">
-              Browse Gallery
+              Browse Properties
             </button>
           </div>
         </div>

@@ -25,7 +25,6 @@ const PGFooter = () => {
             <nav className="flex flex-col items-start gap-2" aria-label="Footer navigation">
               <Link to="/" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Home</Link>
               <Link to="/properties" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Properties</Link>
-              <Link to="/gallery" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Gallery</Link>
               <Link to="/contact-us" className="text-gray-400 hover:text-white no-underline transition-colors text-sm">Contact</Link>
             </nav>
           </div>

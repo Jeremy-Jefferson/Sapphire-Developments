@@ -60,7 +60,6 @@ const LPFooter = () => {
             <nav className="flex flex-col items-start gap-3" aria-label="Property links">
               <Link to="/properties" className="text-slate-300 hover:text-white text-sm transition-colors duration-200">For Sale</Link>
               <Link to="/rent" className="text-slate-300 hover:text-white text-sm transition-colors duration-200">For Rent</Link>
-              <Link to="/gallery" className="text-slate-300 hover:text-white text-sm transition-colors duration-200">Gallery</Link>
               <Link to="/our-agents" className="text-slate-300 hover:text-white text-sm transition-colors duration-200">Our Agents</Link>
             </nav>
           </div>

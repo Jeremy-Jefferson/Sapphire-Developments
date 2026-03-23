@@ -17,7 +17,6 @@ const MobileNav = ({ variant = "landing" }) => {
     { name: "About Us", path: "/about-us" },
     { name: "Our Agents", path: "/our-agents" },
     { name: "Properties", path: "/properties" },
-    { name: "Gallery", path: "/gallery" },
     { name: "Contact Us", path: "/contact-us" },
   ];
 

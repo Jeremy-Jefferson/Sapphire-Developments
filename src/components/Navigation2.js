@@ -35,12 +35,6 @@ const Navigation2 = () => {
       </Link>
       <Link
         className="cursor-pointer text-decoration-none relative leading-[22px] text-slate-700 hover:text-slate-900 transition-colors"
-        to="/gallery"
-      >
-        GALLERY
-      </Link>
-      <Link
-        className="cursor-pointer text-decoration-none relative leading-[22px] text-slate-700 hover:text-slate-900 transition-colors"
         to="/contact-us"
       >
         CONTACT US
