@@ -48,12 +48,12 @@ const HeroSection = () => {
 
         {/* Header - Centered - Enhanced hierarchy */}
         <h1
-          className="m-0 relative leading-tight font-bold text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem] text-center text-white tracking-tight"
+          className="m-0 relative leading-[1.1] font-bold text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem] text-center text-white tracking-tight"
           id="hero-heading"
         >
           Find Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-white to-blue-400 animate-gradient">Dream Home</span>
         </h1>
-        <p className="text-lg md:text-xl font-normal mt-6 text-slate-300 max-w-2xl leading-relaxed text-center mx-auto">
+        <p className="text-lg md:text-xl font-normal mt-4 md:mt-6 text-slate-400 max-w-2xl leading-relaxed text-center mx-auto">
           Your dream home is just a click away. Search through thousands of properties to find the perfect home that fits your lifestyle.
         </p>
 

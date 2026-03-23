@@ -10,29 +10,35 @@ const LPFooter = () => {
       aria-label="Footer"
     >
       <div className="w-full max-w-[1400px] mx-auto">
-        {/* Logo - Top Left */}
-        <div className="mb-12">
-          <Logo />
-        </div>
-        
         {/* Main Footer Content - Full Width Horizontal Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 mb-14 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12 w-full">
           {/* Column 1 - Contact */}
           <div className="flex flex-col items-start text-left">
-            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
+            <h3 className="m-0 text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Contact Us
             </h3>
-            <div className="flex flex-col gap-3.5 text-gray-400 text-[0.9375rem]">
-              <p>3411 Cummins ST</p>
-              <p>Houston, TX 77027</p>
-              <p className="mt-2">Phone: (555) 123-4567</p>
-              <p>Email: info@sapphire.com</p>
+            <div className="flex flex-col gap-4 text-gray-400 text-[0.9375rem]">
+              <p className="leading-relaxed">3411 Cummins ST</p>
+              <p className="leading-relaxed">Houston, TX 77027</p>
+              <div className="h-px bg-slate-700/50 w-full my-1"></div>
+              <p className="flex items-center gap-2 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                (555) 123-4567
+              </p>
+              <p className="flex items-center gap-2 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                info@sapphire.com
+              </p>
             </div>
           </div>
           
           {/* Column 2 - Quick Links */}
           <div className="flex flex-col items-start text-left" id="Quick Links">
-            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
+            <h3 className="m-0 text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Quick Links
             </h3>
             <nav className="flex flex-col items-start gap-3.5" aria-label="Footer navigation">
@@ -45,7 +51,7 @@ const LPFooter = () => {
           
           {/* Column 3 - Properties */}
           <div className="flex flex-col items-start text-left" id="Properties">
-            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
+            <h3 className="m-0 text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Properties
             </h3>
             <nav className="flex flex-col items-start gap-3.5" aria-label="Property links">
@@ -58,7 +64,7 @@ const LPFooter = () => {
           
           {/* Column 4 - Legal */}
           <div className="flex flex-col items-start text-left" id="Legal">
-            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
+            <h3 className="m-0 text-white text-sm font-semibold uppercase tracking-wider mb-6">
               Legal
             </h3>
             <nav className="flex flex-col items-start gap-3.5" aria-label="Legal links">

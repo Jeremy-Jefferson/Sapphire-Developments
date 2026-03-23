@@ -99,21 +99,19 @@ const WhyChooseUs = React.memo(() => {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Features Grid - Responsive 2-column for tablet/desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`feature-card ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`feature-card group p-6 bg-white rounded-xl border border-slate-100 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${index * 100}ms`, transitionDuration: '500ms' }}
             >
-              <div className="feature-card-icon">
+              <div className="feature-card-icon mb-4 text-primary-500 group-hover:text-primary-600 transition-colors">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-slate-800 mb-3 group-hover:text-primary-600 transition-colors">{feature.title}</h3>
-              <p className="text-slate-500 leading-relaxed">{feature.description}</p>
+              <h3 className="text-lg font-semibold text-slate-800 mb-2 group-hover:text-primary-600 transition-colors">{feature.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

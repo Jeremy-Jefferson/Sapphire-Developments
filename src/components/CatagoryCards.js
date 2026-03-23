@@ -41,30 +41,31 @@ const CatagoryCards = () => {
       {categories.map((category) => (
         <div
           key={category.id}
-          className="category-card group relative bg-white rounded-2xl overflow-hidden cursor-pointer"
+          className="category-card group relative bg-white rounded-2xl overflow-hidden cursor-pointer border border-slate-200/60 hover:border-primary-200"
         >
-          {/* Icon Container - Enhanced */}
-          <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center relative overflow-hidden`}>
+          {/* Icon Container - Refined to be more accent-like */}
+          <div className={`h-24 bg-gradient-to-r ${category.color} flex items-center justify-center relative overflow-hidden`}>
             <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300"></div>
             <img
-              className="w-14 h-14 object-contain filter brightness-0 invert category-card-icon relative z-10"
+              className="w-12 h-12 object-contain filter brightness-0 invert category-card-icon relative z-10 transition-transform duration-300 group-hover:scale-110"
               alt={category.title}
               src={category.icon}
             />
           </div>
 
           {/* Content */}
-          <div className="p-6 flex flex-col items-center text-center gap-4">
-            <h2 className="text-xl font-semibold text-slate-800 group-hover:text-primary-600 transition-colors duration-300">
+          <div className="p-5 flex flex-col items-center text-center gap-3">
+            <h2 className="text-lg font-semibold text-slate-800 group-hover:text-primary-600 transition-colors duration-300">
               {category.title}
             </h2>
-            <p className="text-slate-500 text-sm leading-relaxed">
+            <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">
               {category.description}
             </p>
-            <Link to={category.link} className="w-full">
-              <button className="btn-soft w-full px-6 py-2.5 rounded-xl font-medium">
-                Read More
-              </button>
+            <Link to={category.link} className="group/link inline-flex items-center gap-1.5 text-primary-600 font-medium text-sm hover:text-primary-700 transition-colors mt-1">
+              Explore
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
 

@@ -108,8 +108,8 @@ const RentSale = () => {
         </button>
       </div>
 
-      {/* Search Form - Premium styling */}
-      <div className="self-stretch bg-white rounded-2xl shadow-xl shadow-slate-900/10 p-5 md:p-6 border border-slate-100">
+      {/* Search Form - Premium styling with enhanced depth */}
+      <div className="self-stretch bg-white rounded-2xl shadow-2xl shadow-slate-900/15 p-5 md:p-6 border border-slate-200/80 ring-1 ring-slate-100">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           {/* Location */}
           <SelectFilter 
