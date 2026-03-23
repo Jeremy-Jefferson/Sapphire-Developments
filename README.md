@@ -184,8 +184,8 @@ Add screenshots:
 ```md
 ## 📸 Screenshots
 
-![Home](./screenshots/home.png)
-![Properties](./screenshots/properties.png)
-![Contact](./screenshots/contact.png)
+![Home](public/screenshots/home.png)
+![Properties](public/screenshots/properties.png)
+![Contact](public/screenshots/contact.png)
 ``
 ```
