@@ -56,11 +56,11 @@ const PGFooter = () => {
           </div>
         </div>
         
-        {/* Divider */}
-        <div className="w-full h-px bg-slate-700 mb-8"></div>
+        {/* Divider - Single clean line */}
+        <div className="w-full h-px bg-white/10 mb-8" />
         
         {/* Bottom Bar - Social & Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 border-t border-slate-700">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
           {/* Social Links */}
           <div className="flex items-center gap-4" aria-label="Social media links">
             <a

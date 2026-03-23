@@ -2,6 +2,40 @@
    SAPPHIRE DEVELOPMENTS - PREMIUM UI STYLES
    ============================================ */
 
+/* Design System - CSS Custom Properties */
+:root {
+  /* Brand Colors */
+  --color-navy: #08122b;
+  --color-navy-light: #1e2640;
+  --color-blue: #3b82f6;
+  --color-blue-dark: #2563eb;
+  --color-blue-darker: #1d4ed8;
+  --color-white: #ffffff;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+  --spacing-3xl: 4rem;    /* 64px */
+  --spacing-4xl: 5rem;    /* 80px */
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
@@ -10,6 +44,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ============================================
+   REUSABLE LAYOUT UTILITIES
+   ============================================ */
+
+/* Section Container - max-width + horizontal padding + center */
+.section-container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+/* Section Spacing - consistent vertical rhythm */
+.section-spacing {
+  @apply py-20 lg:py-28;
+}
+
+/* Muted Text - lighter gray for body content */
+.text-muted {
+  @apply text-gray-500;
+}
+
+/* Glass Effect - subtle frosted glass */
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Section Label - small uppercase with tracking */
+.section-label {
+  @apply text-sm font-medium tracking-widest uppercase;
+}
+
+/* Heading Style */
+.heading-xl {
+  @apply text-3xl md:text-4xl lg:text-5xl font-light;
+}
 
 html {
   scroll-behavior: smooth;

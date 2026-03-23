@@ -4,34 +4,35 @@ import PGFooter from "../components/PGFooter";
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-white pt-20">
-      {/* Hero section starts - SharedHeader is now globally applied via App.js */}
-
-      {/* ===== HERO SECTION - Premium Scale ===== */}
-      <section className="relative h-[50vh] md:h-[60vh] lg:h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* ===== HERO SECTION ===== */}
+      <section className="relative h-[55vh] md:h-[65vh] lg:h-[75vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/luxury-home-1.jpg')" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-black/80" />
         </div>
         
-        <div className="relative z-10 text-center px-6 max-w-5xl">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-tight mb-6">
-            About Us
+        <div className="relative z-10 text-center px-6 max-w-2xl">
+          <p className="text-sm md:text-base font-medium tracking-[0.3em] text-white/70 uppercase mb-6">
+            Sapphire Developments
+          </p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-tight mb-8 leading-[1.1]">
+            Defining the Art of Fine Living
           </h1>
-          <p className="text-lg md:text-2xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed">
-            Redefining luxury real estate with exceptional properties and unmatched service
+          <p className="text-lg md:text-xl text-white/80 font-light max-w-xl mx-auto leading-relaxed">
+            Where architectural excellence meets unparalleled service. We curate the world's most exceptional properties for those who demand nothing less than extraordinary.
           </p>
         </div>
       </section>
 
-      {/* ===== WHO WE ARE - Structured Content ===== */}
-      <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* ===== WHO WE ARE ===== */}
+      <section className="py-20 lg:py-28 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="aspect-[4/5] overflow-hidden rounded-xl">
                 <img 
                   src="/luxury-home-2.jpg" 
                   alt="Luxury property" 
@@ -39,7 +40,7 @@ const AboutUs = () => {
                 />
               </div>
               {/* Badge overlay */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 shadow-xl hidden lg:block">
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 shadow-xl hidden lg:block rounded-xl">
                 <p className="text-4xl font-light text-slate-900">15+</p>
                 <p className="text-sm text-slate-500">Years of Excellence</p>
               </div>
@@ -47,7 +48,7 @@ const AboutUs = () => {
             
             {/* Content */}
             <div>
-              <h2 className="text-sm font-medium tracking-widest text-slate-500 uppercase mb-4">
+              <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
                 Who We Are
               </h2>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900 mb-8 leading-tight">
@@ -77,9 +78,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ===== STATS SECTION - Clean Minimal Layout ===== */}
+      {/* ===== STATS SECTION ===== */}
       <section className="py-20 lg:py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {[
               { number: "500+", label: "Properties Sold" },
@@ -88,10 +89,10 @@ const AboutUs = () => {
               { number: "$2B+", label: "Property Value" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-4xl md:text-5xl lg:text-6xl font-light text-slate-900 mb-2">
+                <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-2">
                   {stat.number}
                 </p>
-                <p className="text-sm md:text-base text-slate-500 font-light">{stat.label}</p>
+                <p className="text-xs md:text-sm text-gray-400 font-light uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -99,8 +100,8 @@ const AboutUs = () => {
       </section>
 
       {/* ===== FULL-WIDTH VISUAL SECTION ===== */}
-      <section className="py-24 lg:py-32 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <section className="py-20 lg:py-28 bg-slate-900">
+        <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6">
             Crafting dreams into reality
           </h2>
@@ -110,11 +111,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ===== WHY CHOOSE US - Improved Cards ===== */}
-      <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* ===== ADVANTAGES SECTION (WHY CHOOSE SAPPHIRE) ===== */}
+      <section className="py-20 lg:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-medium tracking-widest text-slate-500 uppercase mb-4">
+            <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
               Our Advantages
             </h2>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900">
@@ -122,86 +123,90 @@ const AboutUs = () => {
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 icon: (
-                  <svg className="w-12 h-12 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-10 h-10 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 ), 
                 title: "Award Winning", 
-                desc: "Recognized industry-wide for excellence in luxury real estate" 
+                desc: "Recognized industry-wide for excellence in luxury real estate services and client satisfaction." 
               },
               { 
                 icon: (
-                  <svg className="w-12 h-12 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-10 h-10 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                   </svg>
                 ), 
                 title: "Exclusive Access", 
-                desc: "Private listings and off-market opportunities for discerning clients" 
+                desc: "Private listings and off-market opportunities available only to our distinguished clients." 
               },
               { 
                 icon: (
-                  <svg className="w-12 h-12 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-10 h-10 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 ), 
                 title: "Personal Service", 
-                desc: "Dedicated expertise throughout your entire property journey" 
+                desc: "Dedicated expertise and bespoke guidance throughout your entire property journey." 
               },
               { 
                 icon: (
-                  <svg className="w-12 h-12 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-10 h-10 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ), 
                 title: "Global Network", 
-                desc: "International connections to premium properties worldwide" 
+                desc: "International connections spanning the world's most prestigious property markets." 
               }
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="p-8 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="p-8 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
               >
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary-50 mb-6">{item.icon}</div>
-                <h4 className="text-xl font-light text-slate-900 mb-3">{item.title}</h4>
-                <p className="text-slate-500 font-light leading-relaxed">{item.desc}</p>
+                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white border border-slate-200 mb-5">
+                  {item.icon}
+                </div>
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h4>
+                <p className="text-sm text-gray-500 font-light leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== MISSION & VISION - Combined Section ===== */}
-      <section className="py-24 lg:py-32 bg-slate-50 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Mission - Primary */}
-            <div className="bg-slate-900 p-10 lg:p-12">
-              <h2 className="text-sm font-medium tracking-widest text-white/60 uppercase mb-4">
-                Mission
+      {/* ===== MISSION & VISION ===== */}
+      <section className="py-20 lg:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+            {/* Mission - Dark background */}
+            <div className="bg-[#08122b] p-10 md:p-12 rounded-xl flex flex-col justify-center">
+              <div className="w-12 h-[1px] bg-white/30 mb-6" />
+              <h2 className="text-xs font-medium tracking-[0.2em] text-white/50 uppercase mb-4">
+                Our Mission
               </h2>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-6 leading-tight">
                 To transform the way people experience luxury real estate
               </h3>
-              <p className="text-white/70 font-light leading-relaxed">
+              <p className="text-white/60 font-light leading-relaxed text-base">
                 We strive to create meaningful connections between extraordinary properties and 
                 the exceptional individuals who will call them home. Every interaction is an 
                 opportunity to exceed expectations and redefine what is possible.
               </p>
             </div>
             
-            {/* Vision */}
-            <div className="p-10 lg:p-12 border border-slate-200">
-              <h2 className="text-sm font-medium tracking-widest text-slate-500 uppercase mb-4">
-                Vision
+            {/* Vision - White background with better contrast */}
+            <div className="bg-white p-10 md:p-12 rounded-xl border border-slate-200 flex flex-col justify-center">
+              <div className="w-12 h-[1px] bg-slate-200 mb-6" />
+              <h2 className="text-xs font-medium tracking-[0.2em] text-slate-400 uppercase mb-4">
+                Our Vision
               </h2>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-slate-900 mb-6 leading-tight">
+              <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-5 leading-tight">
                 To be the most trusted name in luxury real estate
               </h3>
-              <p className="text-slate-500 font-light leading-relaxed">
+              <p className="text-slate-600 font-light leading-relaxed text-base">
                 We envision a future where every property transaction is seamless, transparent, 
                 and exceptional. Our commitment to innovation and integrity will continue to 
                 set new standards in the industry.
@@ -211,11 +216,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ===== CORE VALUES - 2 Column Layout ===== */}
-      <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* ===== CORE VALUES ===== */}
+      <section className="py-20 lg:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-medium tracking-widest text-slate-500 uppercase mb-4">
+            <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
               What Guides Us
             </h2>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900">
@@ -223,30 +228,52 @@ const AboutUs = () => {
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {/* Two-column grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { title: "Integrity", desc: "We operate with unwavering honesty and transparency in every interaction, building lasting trust with our clients." },
-              { title: "Excellence", desc: "We pursue the highest standards in everything we do, from property selection to client service." },
-              { title: "Innovation", desc: "We embrace new technologies and approaches that enhance the property journey." },
-              { title: "Client Focus", desc: "Your needs and aspirations are at the center of everything we do." }
+              { 
+                title: "Integrity", 
+                desc: "We operate with unwavering honesty and transparency in every interaction, building lasting trust with our clients. This commitment extends to every negotiation, every document, and every relationship we cultivate.",
+                number: "01"
+              },
+              { 
+                title: "Excellence", 
+                desc: "We pursue the highest standards in everything we do, from property selection to client service. Our team continuously refines our processes and expands our expertise to deliver results that consistently exceed expectations.",
+                number: "02"
+              },
+              { 
+                title: "Innovation", 
+                desc: "We embrace new technologies and approaches that enhance the property journey. From virtual tours to data-driven market analysis, we leverage every available tool to serve our clients more effectively.",
+                number: "03"
+              },
+              { 
+                title: "Client Focus", 
+                desc: "Your needs and aspirations are at the center of everything we do. We take the time to understand your unique vision, ensuring that every recommendation and every decision aligns with your ultimate goals.",
+                number: "04"
+              }
             ].map((value, index) => (
               <div 
-                key={index} 
-                className="p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                key={index}
+                className="border-b border-slate-100 pb-8 last:border-b-0"
               >
-                <h4 className="text-xl font-light text-slate-900 mb-3">{value.title}</h4>
-                <p className="text-slate-500 font-light leading-relaxed">{value.desc}</p>
+                <div className="flex items-start gap-6">
+                  <span className="text-sm font-semibold text-slate-300 flex-shrink-0 pt-1 w-8">{value.number}</span>
+                  <div>
+                    <h4 className="text-2xl lg:text-3xl font-semibold text-slate-900 mb-4">{value.title}</h4>
+                    <p className="text-gray-500 font-light leading-relaxed text-base">{value.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== TEAM SECTION - Larger Images ===== */}
-      <section className="py-24 lg:py-32 bg-slate-900 px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* ===== TEAM SECTION (OUR EXPERTS) ===== */}
+      <section className="py-20 lg:py-28 px-6 bg-slate-900">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-medium tracking-widest text-white/60 uppercase mb-4">
+            <h2 className="text-sm font-medium tracking-widest text-white/50 uppercase mb-4">
               Meet The Team
             </h2>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white">
@@ -254,37 +281,41 @@ const AboutUs = () => {
             </h3>
           </div>
           
+          {/* Unified portrait presentation */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {[
-              { name: "James Mitchell", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face" },
-              { name: "Sarah Chen", role: "Head of Sales", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face" },
-              { name: "Michael Roberts", role: "Property Director", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" },
-              { name: "Emily Williams", role: "Client Relations", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face" }
+              { name: "James Mitchell", role: "CEO & Founder", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=533&fit=crop&crop=face" },
+              { name: "Sarah Chen", role: "Head of Sales", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=533&fit=crop&crop=face" },
+              { name: "Michael Roberts", role: "Property Director", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop&crop=face" },
+              { name: "Emily Williams", role: "Client Relations", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=533&fit=crop&crop=face" }
             ].map((member, index) => (
               <div 
                 key={index} 
-                className="group text-center hover:scale-105 transition-transform duration-300"
+                className="group text-center"
               >
-                <div className="aspect-square overflow-hidden mb-4 bg-slate-800">
+                {/* Consistent 3:4 portrait with hover lift */}
+                <div className="relative aspect-[3/4] overflow-hidden bg-slate-800 shadow-lg mb-5 rounded-lg">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-300 ease-in-out group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <h4 className="text-lg font-light text-white mb-1">{member.name}</h4>
-                <p className="text-sm text-white/60">{member.role}</p>
+                {/* Enhanced typography hierarchy */}
+                <h4 className="text-lg font-semibold text-white mb-1 tracking-wide">{member.name}</h4>
+                <p className="text-sm text-gray-400 uppercase tracking-wide">{member.role}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS - Larger Quotes ===== */}
-      <section className="py-24 lg:py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* ===== TESTIMONIALS ===== */}
+      <section className="py-20 lg:py-28 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-medium tracking-widest text-slate-500 uppercase mb-4">
+            <h2 className="text-sm font-medium tracking-widest text-slate-400 uppercase mb-4">
               Client Stories
             </h2>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900">
@@ -292,7 +323,7 @@ const AboutUs = () => {
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { quote: "Sapphire Developments made finding our dream home an absolute pleasure. Their attention to detail and professional service exceeded all expectations.", author: "Robert Anderson", location: "Beverly Hills", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" },
               { quote: "The team understood exactly what we were looking for. Within weeks, we found the perfect property that matched our vision completely.", author: "Jennifer Martinez", location: "Malibu", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" },
@@ -300,12 +331,12 @@ const AboutUs = () => {
             ].map((testimonial, index) => (
               <div 
                 key={index} 
-                className="p-8 bg-slate-50 hover:shadow-xl transition-all duration-300 border border-slate-100"
+                className="p-10 bg-slate-50 border border-slate-100 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <svg className="w-10 h-10 text-primary-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                 </svg>
-                <p className="text-lg text-slate-700 font-light leading-relaxed mb-6">
+                <p className="text-base text-slate-700 font-light leading-relaxed mb-6">
                   {testimonial.quote}
                 </p>
                 <div className="flex items-center gap-4 border-t border-slate-200 pt-4">
@@ -315,13 +346,38 @@ const AboutUs = () => {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-slate-900 font-medium">{testimonial.author}</p>
-                    <p className="text-sm text-slate-500">{testimonial.location}</p>
+                    <p className="text-slate-900 font-semibold">{testimonial.author}</p>
+                    <p className="text-sm text-gray-400">{testimonial.location}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ===== PAGE ENDING - Consultation CTA ===== */}
+      <section className="py-20 lg:py-24 bg-slate-900 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="w-16 h-[1px] bg-white/20 mx-auto mb-8" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-tight">
+            Ready to find your extraordinary home?
+          </h2>
+          <p className="text-lg text-white/60 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            Our team of luxury property specialists is ready to guide you through an exceptional 
+            journey. Let's discuss your vision and find the perfect property that matches your lifestyle.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="px-8 py-4 bg-white text-slate-900 font-semibold text-sm tracking-widest uppercase hover:bg-slate-100 transition-all duration-300">
+              Schedule Consultation
+            </button>
+            <button className="px-8 py-4 border border-white/30 text-white font-light text-sm tracking-widest uppercase hover:bg-white/10 transition-all duration-300">
+              View Properties
+            </button>
+          </div>
+          <p className="mt-8 text-sm text-white/40 font-light">
+            Or call us at <span className="text-white/60">+1 (555) 123-4567</span>
+          </p>
         </div>
       </section>
 
