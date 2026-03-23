@@ -113,10 +113,10 @@ const PropertiesGridView = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/80" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4">
+          <h1 className="text-5xl md:text-6xl font-light text-white mb-5 tracking-tight">
             Exceptional Properties
           </h1>
-          <p className="text-lg text-white/80 font-light">
+          <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed">
             Discover luxury homes tailored to your lifestyle
           </p>
         </div>
@@ -243,7 +243,7 @@ const PropertiesGridView = () => {
       </section>
 
       {/* Sort and Results Info */}
-      <section className="py-6 px-6">
+      <section className="py-6 px-6 sm:px-8 lg:px-10">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
           <div className="text-slate-500 text-sm">
             Showing <span className="font-semibold text-slate-700">6</span> properties
@@ -358,7 +358,7 @@ const PropertiesGridView = () => {
               Schedule Consultation
             </button>
             <button className="px-8 py-3 border border-white/30 text-white font-light text-sm tracking-widest uppercase hover:bg-white/10 transition-all duration-300">
-              Browse Properties
+              Contact an Agent
             </button>
           </div>
         </div>

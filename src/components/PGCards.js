@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
   const properties = [
     { id: 1, price: "$2,660,840", address: "2166 Marlin Ct. Miami, FL 33134", beds: 4, baths: 4, sqft: "2,096", image: "/luxury-home-1.jpg", agent: "Jenny Wilson" },
@@ -11,9 +13,10 @@ const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 w-full">
       {properties.map((property) => (
-        <div 
+        <Link 
+          to={`/properties?id=${property.id}`}
           key={property.id}
-          className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer group"
+          className="block bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group"
         >
           {/* Image - Taller crop with elegant presentation */}
           <div className="relative h-64 md:h-72 overflow-hidden">
@@ -25,35 +28,35 @@ const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
           </div>
 
           {/* Content - Refined spacing and hierarchy */}
-          <div className="p-6 md:p-8">
+          <div className="p-6 md:p-7">
             {/* Price - Most visually dominant */}
-            <p className="text-2xl md:text-3xl font-light text-slate-900 tracking-tight mb-3">
+            <p className="text-2xl md:text-3xl font-medium text-slate-900 tracking-tight mb-2">
               {property.price}
             </p>
             
             {/* Address - Clear but secondary */}
-            <p className="text-slate-600 font-light text-base md:text-lg mb-6 leading-relaxed">
+            <p className="text-slate-700 font-light text-base md:text-lg mb-5 leading-relaxed">
               {property.address}
             </p>
             
-            {/* Specs - Clean single row */}
-            <div className="flex items-center gap-6 text-sm text-slate-500 mb-6 pb-6 border-b border-slate-100">
-              <span className="font-medium">{property.beds} Beds</span>
+            {/* Specs - Compact and typographic */}
+            <div className="flex items-center gap-4 text-sm text-slate-500 mb-5 pb-5 border-b border-slate-50">
+              <span className="font-medium text-slate-600">{property.beds} Beds</span>
               <span className="text-slate-300">·</span>
-              <span className="font-medium">{property.baths} Baths</span>
+              <span className="font-medium text-slate-600">{property.baths} Baths</span>
               <span className="text-slate-300">·</span>
-              <span className="font-medium">{property.sqft} ft²</span>
+              <span className="font-medium text-slate-600">{property.sqft} ft²</span>
             </div>
             
             {/* Agent - Subtle and low emphasis */}
             <div className="flex items-center justify-between">
               <span className="text-sm text-slate-400 font-light">Listed by {property.agent}</span>
-              <span className="text-slate-600 font-light text-sm group-hover:text-slate-900 transition-colors">
+              <span className="text-slate-500 font-light text-sm group-hover:text-slate-800 transition-colors">
                 View Property <span className="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
