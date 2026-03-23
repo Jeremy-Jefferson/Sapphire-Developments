@@ -129,9 +129,9 @@ const VacationPropSection = () => {
 
         {/* Properties Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-          {vacationProperties.map((property) => (
+          {vacationProperties.map((property, index) => (
             <Link
-              key={property.id}
+              key={`${property.id}-${index}`}
               to="/properties-grid-view"
               className="group cursor-pointer relative overflow-hidden rounded-2xl h-[400px] bg-slate-100"
             >

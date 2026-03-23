@@ -16,7 +16,6 @@ const PHeader = () => {
         <div
           className="shrink-0 flex flex-row items-center justify-center sm:flex"
           id="NAV"
-          NAV="1"
         >
           <div className="hidden lg:flex">
             <Navigation2 />

@@ -20,7 +20,6 @@ const Navigation1 = () => {
     <nav
       className="m-0 shrink-0 flex flex-row items-center justify-center gap-4 xl:gap-[30px] text-center text-base xl:text-xl text-primary-900 font-body-large-400"
       id="Nav1"
-      NAV="1"
       aria-label="Main navigation"
     >
       {navLinks.map((link) => (
