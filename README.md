@@ -177,15 +177,13 @@ with your actual deployed URL
 
 ---
 
-# 🧨 Optional upgrade (if you want to go harder)
-
-Add screenshots:
-
-```md
 ## 📸 Screenshots
 
 ![Home](public/screenshots/home.png)
 ![Properties](public/screenshots/properties.png)
 ![Contact](public/screenshots/contact.png)
 ``
+
+```
+
 ```
