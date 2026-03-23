@@ -58,62 +58,90 @@ const Form = () => {
   };
 
   return (
-    <div className="self-stretch rounded-xl bg-white shadow-[0px_25px_25px_rgba(59,_77,_129,_0.25)] flex flex-col items-center justify-start p-11 gap-4">
-      <textarea
-        className="border-none bg-transparent w-full text-5xl font-bold text-slate-800 outline-none resize-none mb-4"
-        rows="3"
-        placeholder="Inquiry Form"
-        defaultValue="Are you looking for details about a certain property? Ask us a question using the form below."
-        readOnly
-      />
-      <div className="w-full flex flex-col items-center gap-3">
-        <div className="w-full flex flex-row gap-3 md:flex-col lg:flex-row">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      {/* Name Fields Row */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
           <input
-            className={`w-full p-4 rounded border ${errors.firstName ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all`}
-            placeholder="First name *"
+            className={`w-full px-4 py-3.5 rounded-lg border bg-slate-50 text-slate-700 placeholder-slate-400 text-sm transition-all duration-200 ${
+              errors.firstName 
+                ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-100' 
+                : 'border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+            } focus:outline-none`}
+            placeholder="First Name *"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             aria-invalid={!!errors.firstName}
           />
-          {errors.firstName && <span className="text-red-500 text-sm w-full">{errors.firstName}</span>}
+          {errors.firstName && <span className="text-red-500 text-xs mt-1 block">{errors.firstName}</span>}
+        </div>
+        <div>
           <input
-            className={`w-full p-4 rounded border ${errors.lastName ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all`}
-            placeholder="Last name *"
+            className={`w-full px-4 py-3.5 rounded-lg border bg-slate-50 text-slate-700 placeholder-slate-400 text-sm transition-all duration-200 ${
+              errors.lastName 
+                ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-100' 
+                : 'border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+            } focus:outline-none`}
+            placeholder="Last Name *"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             aria-invalid={!!errors.lastName}
           />
-          {errors.lastName && <span className="text-red-500 text-sm w-full">{errors.lastName}</span>}
+          {errors.lastName && <span className="text-red-500 text-xs mt-1 block">{errors.lastName}</span>}
         </div>
+      </div>
+
+      {/* Email Field */}
+      <div>
         <input
-          className={`w-full p-4 rounded border ${errors.email ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all`}
-          placeholder="Email id *"
+          className={`w-full px-4 py-3.5 rounded-lg border bg-slate-50 text-slate-700 placeholder-slate-400 text-sm transition-all duration-200 ${
+            errors.email 
+              ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-100' 
+              : 'border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+          } focus:outline-none`}
+          placeholder="Email Address *"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           aria-invalid={!!errors.email}
         />
-        {errors.email && <span className="text-red-500 text-sm w-full">{errors.email}</span>}
+        {errors.email && <span className="text-red-500 text-xs mt-1 block">{errors.email}</span>}
+      </div>
+
+      {/* Message Textarea */}
+      <div>
         <textarea
-          className={`w-full p-3 rounded border ${errors.messageText ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-vertical h-[105px]`}
-          placeholder="Comments or questions *"
+          className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-700 placeholder-slate-400 text-sm transition-all duration-200 resize-none ${
+            errors.messageText 
+              ? 'border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-100' 
+              : 'border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100'
+          } focus:outline-none`}
+          placeholder="Your message *"
+          rows="5"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
           aria-invalid={!!errors.messageText}
         />
-        {errors.messageText && <span className="text-red-500 text-sm w-full">{errors.message}</span>}
-        {isSubmitted && <div className="w-full text-green-600 font-semibold text-center">Thank you! Your message has been sent successfully.</div>}
-        <button 
-          className="w-[222px] px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-300"
-          onClick={handleSubmit}
-          disabled={isSubmitted}
-        >
-          {isSubmitted ? 'Sent!' : 'Submit'}
-        </button>
+        {errors.messageText && <span className="text-red-500 text-xs mt-1 block">{errors.messageText}</span>}
       </div>
-    </div>
+
+      {/* Success Message */}
+      {isSubmitted && (
+        <div className="w-full bg-green-50 text-green-700 font-medium text-sm text-center py-3 rounded-lg border border-green-200">
+          Thank you! Your message has been sent successfully.
+        </div>
+      )}
+
+      {/* Submit Button - More prominent */}
+      <button 
+        type="submit"
+        className="w-full px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-200"
+        disabled={isSubmitted}
+      >
+        {isSubmitted ? 'Message Sent!' : 'Send Message'}
+      </button>
+    </form>
   );
 };
 
 export default Form;
-

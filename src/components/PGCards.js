@@ -11,15 +11,15 @@ const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-10 w-full">
       {properties.map((property) => (
         <Link 
           to={`/properties?id=${property.id}`}
           key={property.id}
           className="block bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group"
         >
-          {/* Image - Taller crop with elegant presentation */}
-          <div className="relative h-64 md:h-72 overflow-hidden">
+          {/* Image - Wider and more dominant */}
+          <div className="relative h-72 md:h-80 overflow-hidden">
             <img 
               src={property.image}
               alt={property.address}
@@ -30,7 +30,7 @@ const PGCards = ({ onFavorite, onShare, onAddToCompare, favorites = [] }) => {
           {/* Content - Refined spacing and hierarchy */}
           <div className="p-6 md:p-7">
             {/* Price - Most visually dominant */}
-            <p className="text-2xl md:text-3xl font-medium text-slate-900 tracking-tight mb-2">
+            <p className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight mb-2">
               {property.price}
             </p>
             

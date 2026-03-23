@@ -144,7 +144,7 @@ const PropertiesGridView = () => {
       </section>
 
       {/* Search and Filter Bar - Refined */}
-      <section className="bg-slate-50 py-6 px-6">
+      <section className="bg-slate-50 py-6 px-6 sm:px-8 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             {/* Search Input - Prominent */}
@@ -282,7 +282,7 @@ const PropertiesGridView = () => {
       {/* Properties Grid - Centered */}
       <section className="py-10 px-6 sm:px-8 lg:px-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-10 w-full">
             <PGCards 
               onFavorite={handleFavorite} 
               onShare={handleShare}
@@ -294,7 +294,7 @@ const PropertiesGridView = () => {
       </section>
 
       {/* Pagination - Improved */}
-      <section className="py-12 px-6">
+      <section className="py-12 px-6 sm:px-8 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <nav className="flex items-center justify-center gap-2">
             <button 
