@@ -82,25 +82,25 @@ const WhyChooseUs = React.memo(() => {
       id="why-choose-us"
       className="self-stretch bg-white flex flex-col items-center justify-start py-[80px] px-[50px] gap-[60px] relative overflow-hidden"
     >
-      {/* Background Decoration */}
-      <div className="absolute top-20 -left-32 w-64 h-64 bg-primary-50 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-20 -right-32 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+      {/* Background Decoration - Enhanced */}
+      <div className="absolute top-20 -left-32 w-64 h-64 bg-primary-50 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-20 -right-32 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-40"></div>
 
       <div className="max-w-[1200px] w-full relative z-10">
-        {/* Section Header */}
+        {/* Section Header - Premium styling */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2.5 bg-primary-50/80 backdrop-blur-sm px-4 py-2 rounded-full mb-5 ring-1 ring-primary-100">
             <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
-            <span className="text-primary-600 text-sm font-medium">Why Choose Us</span>
+            <span className="text-primary-600 text-sm font-semibold uppercase tracking-wider">Why Choose Us</span>
           </div>
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Why Choose Us</h2>
-          <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4 tracking-tight">Why Choose Us</h2>
+          <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
             Discover the Sapphire Developments difference and find your perfect home with confidence.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div 
               key={index}

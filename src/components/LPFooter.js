@@ -11,18 +11,18 @@ const LPFooter = () => {
     >
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Logo - Top Left */}
-        <div className="mb-10">
+        <div className="mb-12">
           <Logo />
         </div>
         
         {/* Main Footer Content - Full Width Horizontal Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 mb-14 w-full">
           {/* Column 1 - Contact */}
           <div className="flex flex-col items-start text-left">
-            <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
+            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
               Contact Us
             </h3>
-            <div className="flex flex-col gap-3 text-gray-400 text-sm">
+            <div className="flex flex-col gap-3.5 text-gray-400 text-[0.9375rem]">
               <p>3411 Cummins ST</p>
               <p>Houston, TX 77027</p>
               <p className="mt-2">Phone: (555) 123-4567</p>
@@ -32,10 +32,10 @@ const LPFooter = () => {
           
           {/* Column 2 - Quick Links */}
           <div className="flex flex-col items-start text-left" id="Quick Links">
-            <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
+            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
               Quick Links
             </h3>
-            <nav className="flex flex-col items-start gap-3" aria-label="Footer navigation">
+            <nav className="flex flex-col items-start gap-3.5" aria-label="Footer navigation">
               <Link to="/" className="footer-link">Home</Link>
               <Link to="/properties" className="footer-link">Properties</Link>
               <Link to="/about-us" className="footer-link">About Us</Link>
@@ -45,10 +45,10 @@ const LPFooter = () => {
           
           {/* Column 3 - Properties */}
           <div className="flex flex-col items-start text-left" id="Properties">
-            <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
+            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
               Properties
             </h3>
-            <nav className="flex flex-col items-start gap-3" aria-label="Property links">
+            <nav className="flex flex-col items-start gap-3.5" aria-label="Property links">
               <Link to="/properties" className="footer-link">For Sale</Link>
               <Link to="/rent" className="footer-link">For Rent</Link>
               <Link to="/gallery" className="footer-link">Gallery</Link>
@@ -58,10 +58,10 @@ const LPFooter = () => {
           
           {/* Column 4 - Legal */}
           <div className="flex flex-col items-start text-left" id="Legal">
-            <h3 className="m-0 text-white text-lg font-semibold uppercase tracking-wide mb-4">
+            <h3 className="m-0 text-white text-base font-semibold uppercase tracking-wider mb-5">
               Legal
             </h3>
-            <nav className="flex flex-col items-start gap-3" aria-label="Legal links">
+            <nav className="flex flex-col items-start gap-3.5" aria-label="Legal links">
               <Link to="/" className="footer-link">Terms of Services</Link>
               <Link to="/" className="footer-link">Privacy Policy</Link>
               <Link to="/" className="footer-link">Cookie Policy</Link>
@@ -71,7 +71,7 @@ const LPFooter = () => {
         </div>
         
         {/* Divider */}
-        <div className="w-full h-px bg-slate-700 mb-8"></div>
+        <div className="w-full h-px bg-slate-700/60 mb-8"></div>
         
         {/* Bottom Bar - Social & Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">

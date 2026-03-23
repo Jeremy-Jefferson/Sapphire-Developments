@@ -32,8 +32,8 @@ const CityCardsRow1 = () => {
           to="/properties-grid-view"
           style={{ backgroundImage: `url('${city.image}')` }}
         >
-          {/* Enhanced Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 group-hover:opacity-95 transition-all duration-300" />
+          {/* Enhanced Gradient Overlay - Better text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-80 group-hover:opacity-90 transition-all duration-300" />
           
           {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 p-6">

@@ -77,19 +77,18 @@ const RentSale = () => {
       className="self-stretch flex flex-col items-center justify-start gap-6 w-full max-w-[1000px] mx-auto"
       id="HeroMain"
     >
-      {/* Rent/Sale Toggle */}
+      {/* Rent/Sale Toggle - Premium styling */}
       <div
-        className="flex items-center justify-center gap-2 p-1.5 bg-white/10 backdrop-blur-sm rounded-full"
+        className="flex items-center justify-center gap-1.5 p-1.5 bg-white/5 backdrop-blur-md rounded-full ring-1 ring-white/10"
         id="Buttons"
         role="tablist"
         aria-label="Property type selection"
       >
         <button 
           onClick={() => handlePropertyTypeChange("rent")}
-          className={`px-8 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg ${
-            propertyType === "rent" 
-              ? "bg-primary-500 text-white" 
-              : "bg-white/20 text-white border border-white/40 hover:bg-white/30"
+          className={`px-8 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg ${propertyType === "rent" 
+            ? "bg-primary-500 text-white shadow-primary-500/25" 
+            : "bg-white/10 text-white/80 border border-white/20 hover:bg-white/20 hover:text-white"
           }`}
           aria-selected={propertyType === "rent"}
           role="tab"
@@ -98,10 +97,9 @@ const RentSale = () => {
         </button>
         <button 
           onClick={() => handlePropertyTypeChange("sale")}
-          className={`px-8 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg ${
-            propertyType === "sale" 
-              ? "bg-primary-500 text-white" 
-              : "bg-white/20 text-white border border-white/40 hover:bg-white/30"
+          className={`px-8 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-lg ${propertyType === "sale" 
+            ? "bg-primary-500 text-white shadow-primary-500/25" 
+            : "bg-white/10 text-white/80 border border-white/20 hover:bg-white/20 hover:text-white"
           }`}
           aria-selected={propertyType === "sale"}
           role="tab"
@@ -111,7 +109,7 @@ const RentSale = () => {
       </div>
 
       {/* Search Form - Premium styling */}
-      <div className="self-stretch bg-white rounded-2xl shadow-2xl shadow-slate-200/50 p-5 md:p-6 border border-slate-100">
+      <div className="self-stretch bg-white rounded-2xl shadow-xl shadow-slate-900/10 p-5 md:p-6 border border-slate-100">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           {/* Location */}
           <SelectFilter 
@@ -171,7 +169,7 @@ const SelectFilter = ({ value, onChange, options, placeholder }) => {
       <div className="relative">
         <button
           onClick={() => setOpen(!open)}
-          className="w-full h-12 text-left py-3 px-4 border border-slate-200 bg-slate-50 rounded-xl hover:border-primary-400 hover:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent focus:shadow-sm transition-all duration-200 justify-between flex items-center"
+          className="w-full h-12 text-left py-3 px-4 border border-slate-200 bg-slate-50 rounded-xl hover:border-primary-400 hover:bg-white focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400 focus:shadow-sm transition-all duration-200 justify-between flex items-center font-medium text-slate-700"
         >
           <span className={`block truncate ${value ? 'text-slate-800' : 'text-slate-400'}`}>
             {value || placeholder}
@@ -181,7 +179,7 @@ const SelectFilter = ({ value, onChange, options, placeholder }) => {
           </svg>
         </button>
         {open && (
-          <div className="absolute z-30 w-full mt-1 bg-white border border-slate-200 rounded-xl shadow-xl shadow-slate-200/50 max-h-60 overflow-auto animate-in fade-in zoom-in-95 duration-150">
+          <div className="absolute z-30 w-full mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl shadow-slate-200/50 max-h-60 overflow-auto animate-in fade-in zoom-in-95 duration-150">
             {options.map((option, index) => (
               <button
                 key={option.value}
@@ -189,7 +187,7 @@ const SelectFilter = ({ value, onChange, options, placeholder }) => {
                   onChange(option.value);
                   setOpen(false);
                 }}
-                className="w-full text-left px-4 py-3 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600 focus:outline-none focus:bg-primary-50 focus:text-primary-600 transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
+                className="w-full text-left px-4 py-3 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600 focus:outline-none focus:bg-primary-50 focus:text-primary-600 transition-colors duration-150 font-medium first:rounded-t-xl last:rounded-b-xl"
                 style={{ transitionDelay: `${index * 30}ms` }}
               >
                 {option.label || option.value}

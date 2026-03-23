@@ -45,9 +45,9 @@ const CatagoryCards = () => {
         >
           {/* Icon Container - Enhanced */}
           <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center relative overflow-hidden`}>
-            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></div>
+            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300"></div>
             <img
-              className="w-16 h-16 object-contain filter brightness-0 invert category-card-icon"
+              className="w-14 h-14 object-contain filter brightness-0 invert category-card-icon relative z-10"
               alt={category.title}
               src={category.icon}
             />
@@ -62,7 +62,7 @@ const CatagoryCards = () => {
               {category.description}
             </p>
             <Link to={category.link} className="w-full">
-              <button className="btn-ghost w-full px-6 py-3 rounded-full font-medium">
+              <button className="btn-soft w-full px-6 py-2.5 rounded-xl font-medium">
                 Read More
               </button>
             </Link>

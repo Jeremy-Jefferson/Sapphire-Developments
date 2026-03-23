@@ -8,18 +8,21 @@ const HeroSection = () => {
       id="Hero Section"
       aria-labelledby="hero-heading"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Background Pattern - Subtle premium texture */}
+      <div className="absolute inset-0 opacity-[0.06]">
         <div className="absolute top-0 left-0 w-full h-full" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
       
-      {/* Enhanced Gradient Orbs - More depth and polish */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+      {/* Premium Ambient Lighting */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-slate-900/50 via-transparent to-slate-900/80 pointer-events-none"></div>
+      
+      {/* Enhanced Gradient Orbs - Layered depth */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary-600 rounded-full blur-[100px] opacity-20 animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-[120px] opacity-15"></div>
       {/* Additional accent glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-900/30 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-900/40 rounded-full blur-[140px] opacity-40"></div>
       
       {/* Floating Property Cards Animation */}
       <div className="absolute top-1/4 right-10 hidden xl:block opacity-20">
@@ -37,15 +40,15 @@ const HeroSection = () => {
         className="w-full max-w-[1200px] mx-auto flex flex-col items-center justify-center gap-12 relative z-10"
         id="Hero Contents"
       >
-        {/* Badge - Centered - Enhanced with subtle glow */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full hover:bg-white/15 transition-all duration-300 cursor-pointer group ring-1 ring-white/10 hover:ring-white/20">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></span>
-          <span className="text-white/90 text-sm font-medium">Trusted by 500+ Happy Homeowners</span>
+        {/* Badge - Centered - Premium styling with subtle glow */}
+        <div className="inline-flex items-center gap-2.5 bg-white/5 backdrop-blur-md px-5 py-2.5 rounded-full hover:bg-white/10 transition-all duration-300 cursor-pointer group ring-1 ring-white/10 hover:ring-white/25">
+          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/60"></span>
+          <span className="text-white/90 text-sm font-medium tracking-wide">Trusted by 500+ Happy Homeowners</span>
         </div>
 
-        {/* Header - Centered - Improved hierarchy */}
+        {/* Header - Centered - Enhanced hierarchy */}
         <h1
-          className="m-0 relative leading-tight font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center text-white"
+          className="m-0 relative leading-tight font-bold text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem] text-center text-white tracking-tight"
           id="hero-heading"
         >
           Find Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-white to-blue-400 animate-gradient">Dream Home</span>
@@ -100,9 +103,9 @@ const HeroSection = () => {
           </Link>
           <Link
             to="/contact-us"
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 hover:shadow-lg hover:shadow-white/10 transition-all duration-300 border border-white/20 hover:border-white/30"
+            className="btn-secondary group"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             Get in Touch
