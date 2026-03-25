@@ -149,7 +149,7 @@ This is a concept project intended for portfolio and demonstration purposes.
 
 
 
-👉 [View Live Site](https://your-vercel-link.vercel.app)
+👉 [View Live Site](https://sapphire-developments-8ir6g2wz3-jeremy-e-jeffersons-projects.vercel.app/)
 
 ---
 
