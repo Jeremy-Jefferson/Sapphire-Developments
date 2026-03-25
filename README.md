@@ -147,33 +147,9 @@ Designed & Built by **Hungry Ghost DEV**
 
 This is a concept project intended for portfolio and demonstration purposes.
 
-````
 
----
 
-# 🧠 Why this README is better (real talk)
-
-Your old one:
-> “here’s react… here’s tailwind… ok bye”
-
-This one:
-- tells a **story**
-- explains your **decisions**
-- shows **intentional design thinking**
-- makes recruiters/devs think:
-  👉 “this person actually knows what they’re doing”
-
----
-
-# ⚡ ONE thing you MUST update
-
-Replace:
-
-```md
 👉 [View Live Site](https://your-vercel-link.vercel.app)
-````
-
-with your actual deployed URL
 
 ---
 
