@@ -87,7 +87,7 @@ const LPFooter = () => {
           <div className="text-slate-500 text-sm order-2 md:order-1">
             <span className="text-slate-400">Designed & Built by </span>
             <a 
-              href="https://hungryghost.dev" 
+              href="https://www.hungryghost.dev/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-300 hover:text-white transition-colors font-medium"
